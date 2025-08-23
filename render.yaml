@@ -1,0 +1,32 @@
+# Configuração para deploy no Render.com
+services:
+  - type: web
+    name: vina-rag-api
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: ENVIRONMENT
+        value: production
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: WORKERS
+        value: 1
+      - key: LOG_LEVEL
+        value: info
+      - key: PYTHONPATH
+        value: /opt/render/project/src
+      - key: OPENAI_API_KEY
+        sync: false  # Será configurado manualmente no painel do Render
+    autoDeploy: true
+    disk:
+      name: rag-data
+      mountPath: /opt/render/project/data
+      sizeGB: 1

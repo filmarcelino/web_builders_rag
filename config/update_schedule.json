@@ -1,0 +1,56 @@
+{
+  "weekly_update": {
+    "enabled": true,
+    "day": "sunday",
+    "time": "02:00",
+    "max_sources_per_run": 50,
+    "timeout_minutes": 120,
+    "priority_sources": [
+      "shadcn-ui",
+      "nextjs-docs",
+      "tailwind-docs",
+      "radix-ui",
+      "react-docs"
+    ]
+  },
+  "monthly_review": {
+    "enabled": true,
+    "day_of_month": 1,
+    "time": "01:00",
+    "full_reindex": true,
+    "cleanup_old_data": true,
+    "generate_analytics": true,
+    "backup_before_cleanup": true
+  },
+  "emergency_update": {
+    "enabled": true,
+    "trigger_threshold": 0.1,
+    "max_frequency_hours": 24,
+    "critical_sources_only": true,
+    "notification_channels": ["log", "metrics"]
+  },
+  "quality_thresholds": {
+    "minimum_content_length": 100,
+    "minimum_metadata_completeness": 0.7,
+    "maximum_link_failure_rate": 0.2,
+    "minimum_freshness_hours": 168
+  },
+  "performance_limits": {
+    "max_concurrent_updates": 5,
+    "request_delay_ms": 1000,
+    "max_memory_usage_mb": 512,
+    "max_execution_time_minutes": 180
+  },
+  "notification_settings": {
+    "send_completion_reports": true,
+    "send_error_alerts": true,
+    "send_quality_warnings": true,
+    "report_recipients": ["system_admin"]
+  },
+  "data_retention": {
+    "keep_logs_days": 90,
+    "keep_reports_days": 365,
+    "keep_cache_days": 30,
+    "keep_error_logs_days": 180
+  }
+}
