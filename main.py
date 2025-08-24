@@ -19,10 +19,9 @@ load_dotenv()
 # Adicionar src ao path
 sys.path.append(str(Path(__file__).parent / "src"))
 
-from fastapi import FastAPI, HTTPException, Depends, Security
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 import uvicorn
 
@@ -98,24 +97,23 @@ app.add_middleware(
 )
 
 # Configurar segurança
-security = HTTPBearer()
 RAG_API_KEY = os.getenv("RAG_API_KEY")
 
 # Rate limiting simples (em produção usar Redis)
 from collections import defaultdict
 rate_limit_storage = defaultdict(list)
 
-def verify_api_key(credentials: HTTPAuthorizationCredentials = Security(security)):
-    """Verifica a chave de API"""
+def verify_api_key(request):
+    """Verifica a chave de API via cabeçalho X-API-Key"""
     if not RAG_API_KEY:
         # Se não há chave configurada, permite acesso (modo desenvolvimento)
         return True
     
-    if credentials.credentials != RAG_API_KEY:
+    api_key = request.headers.get("X-API-Key")
+    if not api_key or api_key != RAG_API_KEY:
         raise HTTPException(
-            status_code=401,
-            detail="Chave de API inválida",
-            headers={"WWW-Authenticate": "Bearer"},
+            status_code=403,
+            detail="Chave de API inválida ou ausente. Use o cabeçalho X-API-Key.",
         )
     return True
 
@@ -209,27 +207,30 @@ async def root():
 # Rotas de busca
 @app.get("/search")
 async def search_endpoint(
+    request: Request,
     query: str,
     limit: int = 10,
     category: str = None,
-    source_type: str = None,
-    authenticated: bool = Depends(verify_api_key)
+    source_type: str = None
 ):
     """Endpoint principal de busca com autenticação"""
+    verify_api_key(request)
     return await _search_logic(query, limit, category, source_type)
 
 @app.post("/search")
 async def search_post_endpoint(
-    request: dict,
-    authenticated: bool = Depends(verify_api_key)
+    request: Request
 ):
     """Endpoint POST de busca conforme especificação do roteiro"""
-    query = request.get("query")
+    verify_api_key(request)
+    
+    body = await request.json()
+    query = body.get("query")
     if not query:
         raise HTTPException(status_code=400, detail="Campo 'query' é obrigatório")
     
-    filtros = request.get("filtros", {})
-    top_k = request.get("top_k", 6)
+    filtros = body.get("filtros", {})
+    top_k = body.get("top_k", 6)
     
     return await _search_logic(
         query=query,
@@ -293,8 +294,10 @@ async def _search_logic(
 
 # Rota de métricas
 @app.get("/metrics")
-async def metrics_endpoint(authenticated: bool = Depends(verify_api_key)):
+async def metrics_endpoint(request: Request):
     """Endpoint para métricas do sistema"""
+    verify_api_key(request)
+    
     try:
         # Métricas básicas do sistema
         metrics = {
