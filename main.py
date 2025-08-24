@@ -47,7 +47,7 @@ logging_manager = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Gerencia o ciclo de vida da aplicação"""
-    global search_api, metrics_collector, logging_manager
+    global search_engine, metrics_collector, logging_manager
     
     try:
         # Inicializar componentes
