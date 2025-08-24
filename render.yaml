@@ -23,8 +23,39 @@ services:
         value: info
       - key: PYTHONPATH
         value: /opt/render/project/src
+      # Chaves de API (configurar no painel do Render)
       - key: OPENAI_API_KEY
-        sync: false  # Será configurado manualmente no painel do Render
+        sync: false
+      - key: RAG_API_KEY
+        sync: false
+      - key: VECTOR_API_KEY
+        sync: false
+      # URLs de serviços externos
+      - key: VECTOR_URL
+        sync: false
+      - key: DB_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      # Configurações de modelos
+      - key: EMBEDDINGS_MODEL
+        value: text-embedding-ada-002
+      - key: EMBEDDINGS_MODEL_VERSION
+        value: v1
+      - key: RERANK_MODEL
+        value: gpt-4
+      # Configurações de scheduler
+      - key: SCHEDULER_CONFIG
+        value: '{"ingest_cron":"0 2 * * 0","review_cron":"0 2 1 * *"}'
+      # Configurações de segurança
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: API_RATE_LIMIT
+        value: 60
+      - key: API_RATE_WINDOW
+        value: 60
     autoDeploy: true
     disk:
       name: rag-data

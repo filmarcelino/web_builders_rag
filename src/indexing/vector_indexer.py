@@ -1,4 +1,11 @@
-import faiss
+try:
+    import faiss
+    FAISS_AVAILABLE = True
+except ImportError:
+    FAISS_AVAILABLE = False
+    faiss = None
+    print("Warning: faiss not available. Vector indexing will use fallback methods.")
+
 import numpy as np
 import pickle
 import json
@@ -71,16 +78,21 @@ class VectorIndexer:
     def _initialize_index(self):
         """Inicializa o índice FAISS e banco de metadados"""
         try:
-            # Carrega índice existente ou cria novo
-            if self.faiss_index_path.exists():
-                self._load_existing_index()
+            if FAISS_AVAILABLE:
+                # Carrega índice existente ou cria novo
+                if self.faiss_index_path.exists():
+                    self._load_existing_index()
+                else:
+                    self._create_new_index()
             else:
-                self._create_new_index()
+                # Fallback: usa estrutura simples em memória
+                self._create_fallback_index()
             
             # Inicializa banco de metadados
             self._initialize_metadata_db()
             
-            self.logger.info(f"Índice vetorial inicializado: {self.stats['total_vectors']} vetores")
+            index_type = "FAISS" if FAISS_AVAILABLE else "Fallback"
+            self.logger.info(f"Índice vetorial ({index_type}) inicializado: {self.stats['total_vectors']} vetores")
             
         except Exception as e:
             self.logger.error(f"Erro ao inicializar índice: {str(e)}")
@@ -88,6 +100,9 @@ class VectorIndexer:
     
     def _create_new_index(self):
         """Cria novo índice FAISS"""
+        if not FAISS_AVAILABLE:
+            raise RuntimeError("FAISS não disponível para criar índice")
+            
         # Usa IndexFlatIP (Inner Product) para similaridade coseno
         # Alternativa: IndexFlatL2 para distância euclidiana
         self.faiss_index = faiss.IndexFlatIP(self.dimensions)
@@ -112,9 +127,34 @@ class VectorIndexer:
         
         self.logger.info(f"Novo índice FAISS criado: {self.dimensions} dimensões")
     
+    def _create_fallback_index(self):
+        """Cria índice fallback quando FAISS não está disponível"""
+        # Usa lista simples para armazenar vetores
+        self.fallback_vectors = []
+        self.fallback_metadata = {}
+        self.next_vector_id = 0
+        
+        # Salva configuração
+        config = {
+            'dimensions': self.dimensions,
+            'index_type': 'Fallback',
+            'created_at': datetime.now().isoformat(),
+            'version': '1.0'
+        }
+        
+        with open(self.config_path, 'w') as f:
+            json.dump(config, f, indent=2)
+        
+        self.logger.info(f"Índice fallback criado: {self.dimensions} dimensões")
+    
     def _load_existing_index(self):
         """Carrega índice FAISS existente"""
         try:
+            if not FAISS_AVAILABLE:
+                # Carrega índice fallback
+                self._load_fallback_index()
+                return
+                
             self.faiss_index = faiss.read_index(str(self.faiss_index_path))
             
             # Carrega configuração
@@ -136,7 +176,30 @@ class VectorIndexer:
         except Exception as e:
             self.logger.error(f"Erro ao carregar índice: {str(e)}")
             # Se falhar, cria novo índice
-            self._create_new_index()
+            if FAISS_AVAILABLE:
+                self._create_new_index()
+            else:
+                self._create_fallback_index()
+    
+    def _load_fallback_index(self):
+        """Carrega índice fallback de arquivo pickle"""
+        fallback_path = self.index_dir / "fallback_vectors.pkl"
+        
+        if fallback_path.exists():
+            try:
+                with open(fallback_path, 'rb') as f:
+                    data = pickle.load(f)
+                    self.fallback_vectors = data.get('vectors', [])
+                    self.fallback_metadata = data.get('metadata', {})
+                    self.next_vector_id = len(self.fallback_vectors)
+                    
+                self.stats['total_vectors'] = len(self.fallback_vectors)
+                self.logger.info(f"Índice fallback carregado: {self.stats['total_vectors']} vetores")
+            except Exception as e:
+                self.logger.error(f"Erro ao carregar índice fallback: {str(e)}")
+                self._create_fallback_index()
+        else:
+            self._create_fallback_index()
     
     def _initialize_metadata_db(self):
         """Inicializa banco SQLite para metadados"""
@@ -173,6 +236,20 @@ class VectorIndexer:
         self.db_conn.execute('CREATE INDEX IF NOT EXISTS idx_quality_score ON chunk_metadata(quality_score)')
         
         self.db_conn.commit()
+    
+    def _save_fallback_index(self):
+        """Salva índice fallback em arquivo pickle"""
+        fallback_path = self.index_dir / "fallback_vectors.pkl"
+        
+        data = {
+            'vectors': self.fallback_vectors,
+            'metadata': self.fallback_metadata
+        }
+        
+        with open(fallback_path, 'wb') as f:
+            pickle.dump(data, f)
+        
+        self.logger.debug(f"Índice fallback salvo: {len(self.fallback_vectors)} vetores")
     
     def add_chunks(self, chunks: List[Chunk], embeddings: List[EmbeddingResult]) -> List[IndexedChunk]:
         """Adiciona chunks com embeddings ao índice"""
@@ -222,21 +299,35 @@ class VectorIndexer:
             self.next_vector_id += 1
         
         if vectors_to_add:
-            # Adiciona vetores ao índice FAISS
-            vectors_matrix = np.vstack(vectors_to_add)
-            self.faiss_index.add(vectors_matrix)
+            if FAISS_AVAILABLE:
+                # Adiciona vetores ao índice FAISS
+                vectors_matrix = np.vstack(vectors_to_add)
+                self.faiss_index.add(vectors_matrix)
+                
+                # Salva índice
+                self._save_index()
+                
+                # Atualiza estatísticas
+                self.stats['total_vectors'] = self.faiss_index.ntotal
+            else:
+                # Fallback: adiciona ao índice em memória
+                for vector, chunk in zip(vectors_to_add, metadata_to_add):
+                    self.fallback_vectors.append(vector)
+                    self.fallback_metadata[chunk.vector_id] = chunk
+                
+                # Salva índice fallback
+                self._save_fallback_index()
+                
+                # Atualiza estatísticas
+                self.stats['total_vectors'] = len(self.fallback_vectors)
             
             # Adiciona metadados ao banco
             self._add_metadata_batch(metadata_to_add)
             
-            # Salva índice
-            self._save_index()
-            
-            # Atualiza estatísticas
-            self.stats['total_vectors'] = self.faiss_index.ntotal
             self.stats['last_updated'] = datetime.now().isoformat()
             
-            self.logger.info(f"Adicionados {len(indexed_chunks)} chunks ao índice")
+            index_type = "FAISS" if FAISS_AVAILABLE else "Fallback"
+            self.logger.info(f"Adicionados {len(indexed_chunks)} chunks ao índice ({index_type})")
         
         return indexed_chunks
     
@@ -274,7 +365,12 @@ class VectorIndexer:
     def search(self, query_embedding: List[float], top_k: int = 10, 
                filters: Optional[Dict[str, Any]] = None) -> List[Tuple[IndexedChunk, float]]:
         """Busca por similaridade vetorial"""
-        if not query_embedding or self.faiss_index.ntotal == 0:
+        if not query_embedding:
+            return []
+        
+        if FAISS_AVAILABLE and self.faiss_index.ntotal == 0:
+            return []
+        elif not FAISS_AVAILABLE and len(self.fallback_vectors) == 0:
             return []
         
         start_time = datetime.now()
@@ -284,49 +380,28 @@ class VectorIndexer:
             query_array = np.array(query_embedding, dtype=np.float32).reshape(1, -1)
             query_array = query_array / np.linalg.norm(query_array)
             
-            # Busca no índice FAISS
-            # Para IndexFlatIP, scores maiores = mais similares
-            scores, indices = self.faiss_index.search(query_array, min(top_k * 2, self.faiss_index.ntotal))
-            
-            # Recupera metadados
-            results = []
-            for i, (score, vector_id) in enumerate(zip(scores[0], indices[0])):
-                if vector_id == -1:  # FAISS retorna -1 para resultados inválidos
-                    continue
+            if FAISS_AVAILABLE:
+                # Busca no índice FAISS
+                # Para IndexFlatIP, scores maiores = mais similares
+                scores, indices = self.faiss_index.search(query_array, min(top_k * 2, self.faiss_index.ntotal))
                 
-                # Busca metadados no banco
-                chunk_data = self._get_chunk_metadata(int(vector_id))
-                if not chunk_data:
-                    continue
-                
-                # Aplica filtros
-                if filters and not self._apply_filters(chunk_data, filters):
-                    continue
-                
-                # Cria IndexedChunk
-                indexed_chunk = IndexedChunk(
-                    chunk_id=chunk_data['chunk_id'],
-                    vector_id=chunk_data['vector_id'],
-                    content=chunk_data['content'],
-                    embedding=[],  # Não retorna embedding para economizar memória
-                    metadata=json.loads(chunk_data['metadata']),
-                    indexed_at=chunk_data['indexed_at'],
-                    section_title=chunk_data['section_title'] or '',
-                    section_type=chunk_data['section_type'] or '',
-                    tokens=chunk_data['tokens'] or 0,
-                    source_url=chunk_data['source_url'] or '',
-                    license=chunk_data['license'] or '',
-                    stack=chunk_data['stack'] or '',
-                    category=chunk_data['category'] or '',
-                    language=chunk_data['language'] or '',
-                    maturity=chunk_data['maturity'] or '',
-                    quality_score=chunk_data['quality_score'] or 0.0
-                )
-                
-                results.append((indexed_chunk, float(score)))
-                
-                if len(results) >= top_k:
-                    break
+                # Recupera metadados
+                results = []
+                for i, (score, vector_id) in enumerate(zip(scores[0], indices[0])):
+                    if vector_id == -1:  # FAISS retorna -1 para resultados inválidos
+                        continue
+                    
+                    # Busca metadados no banco
+                    chunk_data = self._get_chunk_metadata(int(vector_id))
+                    if not chunk_data:
+                        continue
+                    
+                    # Aplica filtros
+                    if filters and not self._apply_filters(chunk_data, filters):
+                        continue
+            else:
+                # Fallback: busca por similaridade usando numpy
+                results = self._fallback_search(query_array[0], top_k, filters)
             
             # Atualiza estatísticas
             search_time = (datetime.now() - start_time).total_seconds()
@@ -342,6 +417,58 @@ class VectorIndexer:
         except Exception as e:
             self.logger.error(f"Erro na busca vetorial: {str(e)}")
             return []
+    
+    def _fallback_search(self, query_vector: np.ndarray, top_k: int, 
+                        filters: Optional[Dict[str, Any]] = None) -> List[Tuple[IndexedChunk, float]]:
+        """Busca por similaridade usando numpy (fallback)"""
+        if not self.fallback_vectors:
+            return []
+        
+        # Calcula similaridade coseno com todos os vetores
+        similarities = []
+        for i, vector in enumerate(self.fallback_vectors):
+            similarity = np.dot(query_vector, vector)
+            similarities.append((i, similarity))
+        
+        # Ordena por similaridade (maior primeiro)
+        similarities.sort(key=lambda x: x[1], reverse=True)
+        
+        results = []
+        for vector_id, score in similarities[:top_k * 2]:  # Busca mais para aplicar filtros
+            chunk_data = self._get_chunk_metadata(vector_id)
+            if not chunk_data:
+                continue
+            
+            # Aplica filtros
+            if filters and not self._apply_filters(chunk_data, filters):
+                continue
+            
+            # Cria IndexedChunk
+            indexed_chunk = IndexedChunk(
+                chunk_id=chunk_data['chunk_id'],
+                vector_id=chunk_data['vector_id'],
+                content=chunk_data['content'],
+                embedding=[],
+                metadata=json.loads(chunk_data['metadata']),
+                indexed_at=chunk_data['indexed_at'],
+                section_title=chunk_data['section_title'] or '',
+                section_type=chunk_data['section_type'] or '',
+                tokens=chunk_data['tokens'] or 0,
+                source_url=chunk_data['source_url'] or '',
+                license=chunk_data['license'] or '',
+                stack=chunk_data['stack'] or '',
+                category=chunk_data['category'] or '',
+                language=chunk_data['language'] or '',
+                maturity=chunk_data['maturity'] or '',
+                quality_score=chunk_data['quality_score'] or 0.0
+            )
+            
+            results.append((indexed_chunk, float(score)))
+            
+            if len(results) >= top_k:
+                break
+        
+        return results
     
     def _get_chunk_metadata(self, vector_id: int) -> Optional[Dict[str, Any]]:
         """Recupera metadados de um chunk pelo vector_id"""
@@ -377,6 +504,9 @@ class VectorIndexer:
     
     def _save_index(self):
         """Salva índice FAISS em disco"""
+        if not FAISS_AVAILABLE:
+            return  # Fallback index é salvo via _save_fallback_index
+            
         try:
             faiss.write_index(self.faiss_index, str(self.faiss_index_path))
             
@@ -496,18 +626,28 @@ class VectorIndexer:
                 self.logger.warning("Nenhum chunk válido encontrado")
                 return
             
-            # Cria novo índice
-            new_index = faiss.IndexFlatIP(self.dimensions)
+            if FAISS_AVAILABLE:
+                # Cria novo índice FAISS
+                new_index = faiss.IndexFlatIP(self.dimensions)
+                
+                # Recarrega embeddings e reconstrói
+                # Nota: Em produção, seria necessário armazenar embeddings separadamente
+                # ou recalculá-los
+                
+                self.faiss_index = new_index
+                self.next_vector_id = len(valid_chunks)
+                
+                self._save_index()
+            else:
+                # Fallback: reconstrói índice em memória
+                self.fallback_vectors = []
+                self.fallback_metadata = {}
+                self.next_vector_id = len(valid_chunks)
+                
+                self._save_fallback_index()
             
-            # Recarrega embeddings e reconstrói
-            # Nota: Em produção, seria necessário armazenar embeddings separadamente
-            # ou recalculá-los
-            
-            self.faiss_index = new_index
-            self.next_vector_id = len(valid_chunks)
-            
-            self._save_index()
-            self.logger.info(f"Índice reconstruído com {len(valid_chunks)} vetores")
+            index_type = "FAISS" if FAISS_AVAILABLE else "Fallback"
+            self.logger.info(f"Índice ({index_type}) reconstruído com {len(valid_chunks)} vetores")
             
         except Exception as e:
             self.logger.error(f"Erro ao reconstruir índice: {str(e)}")
@@ -517,7 +657,10 @@ class VectorIndexer:
         if self.db_conn:
             self.db_conn.close()
         
-        if self.faiss_index:
+        if FAISS_AVAILABLE and self.faiss_index:
             self._save_index()
+        elif not FAISS_AVAILABLE and hasattr(self, 'fallback_vectors'):
+            self._save_fallback_index()
         
-        self.logger.info("Índice vetorial fechado")
+        index_type = "FAISS" if FAISS_AVAILABLE else "Fallback"
+        self.logger.info(f"Índice vetorial ({index_type}) fechado")

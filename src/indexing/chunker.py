@@ -1,9 +1,17 @@
 import re
-import tiktoken
 from typing import List, Dict, Any, Optional, Tuple
 from dataclasses import dataclass
 import logging
 from datetime import datetime
+
+# Import tiktoken with fallback
+try:
+    import tiktoken
+    TIKTOKEN_AVAILABLE = True
+except ImportError:
+    TIKTOKEN_AVAILABLE = False
+    tiktoken = None
+    print("Warning: tiktoken not available. Some features may be limited.")
 
 from config.config import RAGConfig
 
@@ -33,11 +41,19 @@ class ContentChunker:
         self.overlap_percent = RAGConfig.CHUNK_OVERLAP_PERCENT
         
         # Tokenizer
-        try:
-            self.tokenizer = tiktoken.encoding_for_model(model_name)
-        except KeyError:
-            self.logger.warning(f"Modelo {model_name} não encontrado, usando cl100k_base")
-            self.tokenizer = tiktoken.get_encoding("cl100k_base")
+        self.tokenizer = None
+        if TIKTOKEN_AVAILABLE and tiktoken is not None:
+            try:
+                self.tokenizer = tiktoken.encoding_for_model(model_name)
+            except KeyError:
+                self.logger.warning(f"Modelo {model_name} não encontrado, usando cl100k_base")
+                try:
+                    self.tokenizer = tiktoken.get_encoding("cl100k_base")
+                except Exception as e:
+                    self.logger.error(f"Erro ao inicializar tiktoken: {e}")
+                    self.tokenizer = None
+        else:
+            self.logger.warning("tiktoken não disponível, usando contagem aproximada de tokens")
         
         # Padrões para quebra de texto
         self.sentence_endings = r'[.!?]\s+'
@@ -52,6 +68,17 @@ class ContentChunker:
             'word': 20,
             'character': 1
         }
+    
+    def _count_tokens(self, text: str) -> int:
+        """Conta tokens no texto, com fallback se tiktoken não estiver disponível"""
+        if self.tokenizer is not None:
+            try:
+                return len(self.tokenizer.encode(text))
+            except Exception as e:
+                self.logger.warning(f"Erro ao contar tokens com tiktoken: {e}")
+        
+        # Fallback: estimativa aproximada (1 token ≈ 4 caracteres)
+        return max(1, len(text) // 4)
     
     def chunk_content(self, content: Dict[str, Any]) -> List[Chunk]:
         """Chunka conteúdo completo em pedaços menores"""
@@ -129,9 +156,8 @@ class ContentChunker:
         """Divide texto em chunks respeitando limites de tokens"""
         chunks = []
         
-        # Tokeniza o texto completo
-        tokens = self.tokenizer.encode(text)
-        total_tokens = len(tokens)
+        # Conta tokens do texto completo
+        total_tokens = self._count_tokens(text)
         
         if total_tokens <= self.max_chunk_size:
             # Texto cabe em um chunk
@@ -148,46 +174,42 @@ class ContentChunker:
             return [chunk]
         
         # Precisa dividir em múltiplos chunks
+        if self.tokenizer is not None:
+            # Usa tokenização precisa
+            return self._split_with_tokenizer(text, section_title, section_type, metadata)
+        else:
+            # Usa fallback baseado em caracteres
+            return self._split_with_char_fallback(text, section_title, section_type, metadata)
+    
+    def _split_with_tokenizer(self, text: str, section_title: str, section_type: str, metadata: Dict[str, Any]) -> List[Chunk]:
+        """Divide texto usando tokenização precisa"""
+        chunks = []
+        tokens = self.tokenizer.encode(text)
+        total_tokens = len(tokens)
         current_pos = 0
-        chunk_index = 0
         
         while current_pos < total_tokens:
-            # Calcula tamanho do chunk
             chunk_size = min(self.max_chunk_size, total_tokens - current_pos)
             
-            # Se é muito pequeno, ajusta
             if chunk_size < self.min_chunk_size and current_pos > 0:
-                # Estende o chunk anterior se possível
                 if chunks:
                     last_chunk = chunks[-1]
-                    remaining_tokens = tokens[current_pos:]
-                    
-                    # Adiciona tokens restantes ao chunk anterior
-                    extended_tokens = self.tokenizer.encode(last_chunk.content) + remaining_tokens
-                    extended_text = self.tokenizer.decode(extended_tokens)
-                    
-                    last_chunk.content = extended_text
-                    last_chunk.tokens = len(extended_tokens)
+                    remaining_text = text[last_chunk.end_char:]
+                    last_chunk.content += remaining_text
+                    last_chunk.tokens = self._count_tokens(last_chunk.content)
                     last_chunk.end_char = len(text)
-                
                 break
             
-            # Encontra melhor ponto de quebra
             end_pos = current_pos + chunk_size
-            break_pos = self._find_best_break_point(
-                text, tokens, current_pos, end_pos
-            )
+            break_pos = self._find_best_break_point_tokenized(text, tokens, current_pos, end_pos)
             
-            # Extrai chunk
             chunk_tokens = tokens[current_pos:break_pos]
             chunk_text = self.tokenizer.decode(chunk_tokens)
-            
-            # Calcula posições de caractere
             start_char = len(self.tokenizer.decode(tokens[:current_pos]))
             end_char = len(self.tokenizer.decode(tokens[:break_pos]))
             
             chunk = Chunk(
-                id="",  # Será gerado depois
+                id="",
                 content=chunk_text.strip(),
                 tokens=len(chunk_tokens),
                 start_char=start_char,
@@ -199,11 +221,59 @@ class ContentChunker:
             
             chunks.append(chunk)
             current_pos = break_pos
-            chunk_index += 1
         
         return chunks
     
-    def _find_best_break_point(self, text: str, tokens: List[int], 
+    def _split_with_char_fallback(self, text: str, section_title: str, section_type: str, metadata: Dict[str, Any]) -> List[Chunk]:
+        """Divide texto usando fallback baseado em caracteres"""
+        chunks = []
+        # Estima caracteres por chunk (4 chars ≈ 1 token)
+        chars_per_chunk = self.max_chunk_size * 4
+        current_pos = 0
+        
+        while current_pos < len(text):
+            end_pos = min(current_pos + chars_per_chunk, len(text))
+            
+            # Procura por quebra natural
+            if end_pos < len(text):
+                # Procura por quebra de parágrafo
+                para_break = text.rfind('\n\n', current_pos, end_pos)
+                if para_break > current_pos:
+                    end_pos = para_break + 2
+                else:
+                    # Procura por quebra de sentença
+                    sent_break = max(
+                        text.rfind('. ', current_pos, end_pos),
+                        text.rfind('! ', current_pos, end_pos),
+                        text.rfind('? ', current_pos, end_pos)
+                    )
+                    if sent_break > current_pos:
+                        end_pos = sent_break + 2
+                    else:
+                        # Procura por espaço
+                        space_break = text.rfind(' ', current_pos, end_pos)
+                        if space_break > current_pos:
+                            end_pos = space_break + 1
+            
+            chunk_text = text[current_pos:end_pos].strip()
+            if chunk_text:
+                chunk = Chunk(
+                    id="",
+                    content=chunk_text,
+                    tokens=self._count_tokens(chunk_text),
+                    start_char=current_pos,
+                    end_char=end_pos,
+                    section_title=section_title,
+                    section_type=section_type,
+                    metadata=metadata.copy()
+                )
+                chunks.append(chunk)
+            
+            current_pos = end_pos
+        
+        return chunks
+    
+    def _find_best_break_point_tokenized(self, text: str, tokens: List[int], 
                               start_pos: int, end_pos: int) -> int:
         """Encontra o melhor ponto para quebrar o texto"""
         # Se estamos no final, retorna a posição final
@@ -263,10 +333,14 @@ class ContentChunker:
     
     def _char_to_token_pos(self, text: str, tokens: List[int], char_pos: int) -> int:
         """Converte posição de caractere para posição de token"""
-        # Aproximação: tokeniza até a posição do caractere
-        text_until_pos = text[:char_pos]
-        tokens_until_pos = self.tokenizer.encode(text_until_pos)
-        return len(tokens_until_pos)
+        if self.tokenizer and TIKTOKEN_AVAILABLE:
+            # Aproximação: tokeniza até a posição do caractere
+            text_until_pos = text[:char_pos]
+            tokens_until_pos = self.tokenizer.encode(text_until_pos)
+            return len(tokens_until_pos)
+        else:
+            # Fallback: estimativa baseada em caracteres
+            return int(char_pos / 4)  # Aproximação: 4 chars por token
     
     def _add_overlaps(self, chunks: List[Chunk]) -> List[Chunk]:
         """Adiciona overlaps entre chunks consecutivos"""
@@ -284,17 +358,22 @@ class ContentChunker:
                 overlap_size = int(prev_chunk.tokens * self.overlap_percent)
                 
                 if overlap_size > 0:
-                    # Pega tokens do final do chunk anterior
-                    prev_tokens = self.tokenizer.encode(prev_chunk.content)
-                    overlap_tokens = prev_tokens[-overlap_size:]
-                    overlap_text = self.tokenizer.decode(overlap_tokens)
+                    if self.tokenizer and TIKTOKEN_AVAILABLE:
+                        # Pega tokens do final do chunk anterior
+                        prev_tokens = self.tokenizer.encode(prev_chunk.content)
+                        overlap_tokens = prev_tokens[-overlap_size:]
+                        overlap_text = self.tokenizer.decode(overlap_tokens)
+                    else:
+                        # Fallback: usa caracteres em vez de tokens
+                        char_overlap = int(len(prev_chunk.content) * self.overlap_percent)
+                        overlap_text = prev_chunk.content[-char_overlap:]
                     
                     # Adiciona ao início do chunk atual
                     new_content = overlap_text + " " + chunk.content
                     new_chunk = Chunk(
                         id=chunk.id,
                         content=new_content,
-                        tokens=len(self.tokenizer.encode(new_content)),
+                        tokens=self._count_tokens(new_content),
                         start_char=chunk.start_char,
                         end_char=chunk.end_char,
                         section_title=chunk.section_title,
