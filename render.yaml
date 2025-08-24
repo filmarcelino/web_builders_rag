@@ -23,6 +23,29 @@ services:
         value: info
       - key: PYTHONPATH
         value: /opt/render/project/src
+      # Configurações de busca
+      - key: MAX_SEARCH_RESULTS
+        value: 50
+      - key: SEARCH_TIMEOUT
+        value: 30
+      - key: RERANK_ENABLED
+        value: true
+      - key: RERANK_TOP_K
+        value: 10
+      # Configurações de cache
+      - key: CACHE_ENABLED
+        value: true
+      - key: CACHE_TTL
+        value: 3600
+      - key: CACHE_MAX_SIZE
+        value: 1000
+      # Configurações de CORS
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: API_RATE_LIMIT
+        value: 100
+      - key: API_RATE_WINDOW
+        value: 60
       # Chaves de API (configurar no painel do Render)
       - key: OPENAI_API_KEY
         sync: false
@@ -39,13 +62,25 @@ services:
         sync: false
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
-      # Configurações de modelos
+      # Configurações de modelos (atualizadas)
+      - key: OPENAI_MODEL
+        value: gpt-4o
+      - key: GPT5_FULL_MODEL
+        value: gpt-4o
+      - key: GPT5_NANO_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-large
       - key: EMBEDDINGS_MODEL
-        value: text-embedding-ada-002
+        value: text-embedding-3-large
       - key: EMBEDDINGS_MODEL_VERSION
         value: v1
       - key: RERANK_MODEL
-        value: gpt-4
+        value: gpt-4o
+      - key: MAX_TOKENS
+        value: 4000
+      - key: TEMPERATURE
+        value: 0.7
       # Configurações de scheduler
       - key: SCHEDULER_CONFIG
         value: '{"ingest_cron":"0 2 * * 0","review_cron":"0 2 1 * *"}'
