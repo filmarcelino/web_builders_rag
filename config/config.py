@@ -8,8 +8,8 @@ class RAGConfig:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
     
     # Modelos GPT
-    GPT5_FULL_MODEL = "gpt-5"  # Para query rewriting e reranking
-    GPT5_NANO_MODEL = "gpt-5-nano"  # Para tarefas em lote
+    GPT5_FULL_MODEL = os.getenv("GPT5_FULL_MODEL", "gpt-5")  # Para query rewriting e reranking
+    GPT5_NANO_MODEL = os.getenv("GPT5_NANO_MODEL", "gpt-5-nano")  # Para tarefas em lote
     
     # Configurações de Chunking
     CHUNK_SIZE_MIN = 300
@@ -23,7 +23,7 @@ class RAGConfig:
     SEARCH_TIMEOUT_SECONDS = 2
     
     # Configurações de Embeddings
-    EMBEDDING_MODEL = "text-embedding-3-large"
+    EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
     EMBEDDING_DIMENSIONS = 3072
     EMBEDDING_BATCH_SIZE = 100
     

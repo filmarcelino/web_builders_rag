@@ -55,6 +55,10 @@ Baseado no seu `.env.example`, estas são as variáveis mais importantes:
 OPENAI_API_KEY=sk-your-openai-api-key-here
 RAG_API_KEY=your-rag-api-key-here
 VECTOR_API_KEY=your-vector-api-key
+
+# Novos modelos GPT-5 (disponíveis)
+GPT5_FULL_MODEL=gpt-5
+GPT5_NANO_MODEL=gpt-5-nano
 ```
 
 ### 🌐 URLs e Conexões
