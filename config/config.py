@@ -8,8 +8,8 @@ class RAGConfig:
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
     
     # Modelos GPT
-    GPT5_FULL_MODEL = os.getenv("GPT5_FULL_MODEL", "gpt-5")  # Para query rewriting e reranking
-    GPT5_NANO_MODEL = os.getenv("GPT5_NANO_MODEL", "gpt-5-nano")  # Para tarefas em lote
+    GPT5_FULL_MODEL = os.getenv("GPT5_FULL_MODEL", "gpt-4o")  # Para query rewriting e reranking
+    GPT5_NANO_MODEL = os.getenv("GPT5_NANO_MODEL", "gpt-4o-mini")  # Para tarefas em lote
     
     # Configurações de Chunking
     CHUNK_SIZE_MIN = 300

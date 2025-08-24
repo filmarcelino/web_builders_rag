@@ -12,6 +12,10 @@ import time
 from pathlib import Path
 from contextlib import asynccontextmanager
 
+# Carregar variáveis de ambiente do arquivo .env
+from dotenv import load_dotenv
+load_dotenv()
+
 # Adicionar src ao path
 sys.path.append(str(Path(__file__).parent / "src"))
 
