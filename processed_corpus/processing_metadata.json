@@ -1,0 +1,50 @@
+{
+  "total_chunks": 68307,
+  "total_batches": 69,
+  "batch_size": 1000,
+  "processing_config": {
+    "max_chunk_size": 500,
+    "chunk_overlap": 100,
+    "supported_extensions": [
+      ".md",
+      ".markdown",
+      ".txt",
+      ".html",
+      ".htm",
+      ".py",
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".css",
+      ".scss",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".xml",
+      ".rst"
+    ]
+  },
+  "statistics": {
+    "total_chunks": 68307,
+    "avg_token_count": 591.4908720921721,
+    "min_token_count": 3,
+    "max_token_count": 139094,
+    "source_type_distribution": {
+      "git_repo": 65431,
+      "documentation": 2876
+    },
+    "file_type_distribution": {
+      "yaml": 6460,
+      "javascript": 1673,
+      "json": 4992,
+      "markdown": 45592,
+      "typescript": 1455,
+      "css": 4056,
+      "html": 2877,
+      "text": 11,
+      "tsx": 1172,
+      "python": 19
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "total_chunks": 5,
+  "total_batches": 1,
+  "batch_size": 1000,
+  "processing_config": {
+    "max_chunk_size": 1000,
+    "chunk_overlap": 200,
+    "supported_extensions": [
+      ".md",
+      ".markdown",
+      ".txt",
+      ".html",
+      ".htm",
+      ".py",
+      ".js",
+      ".ts",
+      ".jsx",
+      ".tsx",
+      ".css",
+      ".scss",
+      ".json",
+      ".yaml",
+      ".yml",
+      ".xml",
+      ".rst"
+    ]
+  },
+  "statistics": {
+    "total_chunks": 5,
+    "avg_token_count": 145.8,
+    "min_token_count": 108,
+    "max_token_count": 174,
+    "source_type_distribution": {
+      "documentation": 5
+    },
+    "file_type_distribution": {
+      "markdown": 5
+    }
+  }
+}

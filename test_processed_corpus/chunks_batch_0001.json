@@ -1,0 +1,87 @@
+[
+  {
+    "id": "0321de708669cedf1d992824e95acb7b",
+    "source_file": "C:\\Users\\luisf\\OneDrive\\Área de Trabalho\\vina_base_agent\\test_corpus\\css_fundamentals.md",
+    "source_type": "documentation",
+    "title": "CSS Fundamentals",
+    "content": "CSS Fundamentals\nCSS (Cascading Style Sheets) é usado para estilizar elementos HTML.\nSeletores Básicos\n```css\n/ Seletor de elemento /\nh1 {\ncolor: blue;\nfont-size: 24px;\n}\n/ Seletor de classe /\n.minha-classe {\nbackground-color: yellow;\n}\n/ Seletor de ID /\nmeu-id {\nmargin: 10px;\n}\n```\nBox Model\nO modelo de caixa CSS consiste em:\n- Content (conteúdo)\n- Padding (preenchimento)\n- Border (borda)\n- Margin (margem)",
+    "metadata": {
+      "file_extension": ".md",
+      "file_type": "markdown",
+      "file_size": 485,
+      "relative_path": "css_fundamentals.md",
+      "source_type": "documentation"
+    },
+    "token_count": 130,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "970fb669a41ff23b6239c4eed4e73951",
+    "source_file": "C:\\Users\\luisf\\OneDrive\\Área de Trabalho\\vina_base_agent\\test_corpus\\html_basics.md",
+    "source_type": "documentation",
+    "title": "Título da Página",
+    "content": "HTML Básico\nHTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web.\nEstrutura Básica\n```html\nTítulo da Página\nMeu Primeiro Cabeçalho\nMeu primeiro parágrafo.\n```\nTags Importantes\n<h1> a <h6>: Cabeçalhos\n<p>: Parágrafos\n<div>: Divisões\n<span>: Elementos inline\n<a>: Links\n<img>: Imagens",
+    "metadata": {
+      "file_extension": ".md",
+      "file_type": "markdown",
+      "file_size": 505,
+      "relative_path": "html_basics.md",
+      "source_type": "documentation"
+    },
+    "token_count": 108,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "d24f05515fad04ed44e1a0692a844f03",
+    "source_file": "C:\\Users\\luisf\\OneDrive\\Área de Trabalho\\vina_base_agent\\test_corpus\\react_basics.md",
+    "source_type": "documentation",
+    "title": "React Básico",
+    "content": "React Básico\nReact é uma biblioteca JavaScript para construir interfaces de usuário.\nComponentes\n```jsx\n// Componente funcional\nfunction MeuComponente(props) {\nreturn (\nOlá, {props.nome}!\n);\n}\n// Componente com hooks\nimport React, { useState } from 'react';\nfunction Contador() {\nconst [count, setCount] = useState(0);\nreturn (\n<div>\n<p>Você clicou {count} vezes</p>\n<button onClick={() => setCount(count + 1)}>\nClique aqui\n</button>\n</div>\n);\n}\n```\nProps e State\nProps: Dados passados de componente pai para filho\nState: Dados internos do componente que podem mudar",
+    "metadata": {
+      "file_extension": ".md",
+      "file_type": "markdown",
+      "file_size": 781,
+      "relative_path": "react_basics.md",
+      "source_type": "documentation"
+    },
+    "token_count": 152,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "c528903c590a228862e8d29fcd18e298",
+    "source_file": "C:\\Users\\luisf\\OneDrive\\Área de Trabalho\\vina_base_agent\\test_corpus\\javascript_intro.md",
+    "source_type": "documentation",
+    "title": "Introdução ao JavaScript",
+    "content": "Introdução ao JavaScript\nJavaScript é uma linguagem de programação que permite criar páginas web interativas.\nVariáveis\njavascript\n// Declaração de variáveis\nlet nome = \"João\";\nconst idade = 25;\nvar cidade = \"São Paulo\";\nFunções\n```javascript\n// Função tradicional\nfunction saudacao(nome) {\nreturn \"Olá, \" + nome + \"!\";\n}\n// Arrow function\nconst saudacaoArrow = (nome) => {\nreturn Olá, ${nome}!;\n};\n```\nDOM Manipulation\n```javascript\n// Selecionar elementos\nconst elemento = document.getElementById(\"meuId\");\nconst elementos = document.querySelectorAll(\".minhaClasse\");\n// Modificar conteúdo\nelemento.textContent = \"Novo texto\";\nelemento.innerHTML = \"Texto em negrito\";\n```",
+    "metadata": {
+      "file_extension": ".md",
+      "file_type": "markdown",
+      "file_size": 787,
+      "relative_path": "javascript_intro.md",
+      "source_type": "documentation"
+    },
+    "token_count": 174,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "2703ef2ce4db31d2d58d4a56011644f4",
+    "source_file": "C:\\Users\\luisf\\OneDrive\\Área de Trabalho\\vina_base_agent\\test_corpus\\web_accessibility.md",
+    "source_type": "documentation",
+    "title": "Acessibilidade Web",
+    "content": "Acessibilidade Web\nA acessibilidade web garante que sites sejam usáveis por pessoas com deficiências.\nPrincípios WCAG\nPerceptível: Informação deve ser apresentada de forma que usuários possam perceber\nOperável: Interface deve ser operável por todos os usuários\nCompreensível: Informação e operação da interface devem ser compreensíveis\nRobusto: Conteúdo deve ser robusto o suficiente para ser interpretado por tecnologias assistivas\nBoas Práticas\n```html\nEmail:\nTítulo Principal\nSubtítulo\nSub-subtítulo\n```\nARIA\nARIA (Accessible Rich Internet Applications) fornece semântica adicional:\n```html\n×\nMensagem de sucesso\n```",
+    "metadata": {
+      "file_extension": ".md",
+      "file_type": "markdown",
+      "file_size": 1103,
+      "relative_path": "web_accessibility.md",
+      "source_type": "documentation"
+    },
+    "token_count": 165,
+    "chunk_index": 0,
+    "total_chunks": 1
+  }
+]
