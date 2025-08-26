@@ -350,23 +350,23 @@ Inclua exemplos de código e estrutura quando disponível.
             return response.choices[0].message.content
             
         except Exception as e:
-            return f"❌ Erro ao gerar resposta: {e}"
+            return f"Erro ao gerar resposta: {e}"
             
     def demonstrate_rag_process(self):
         """Demonstra o processo completo do RAG"""
         query = "crie um dashboard financeiro"
         
-        print(f"\n🎯 Demonstração RAG - Prompt: '{query}'")
+        print(f"\nDemonstracao RAG - Prompt: '{query}'")
         print("=" * 70)
         
         # Simular busca
-        print("\n🔍 1. BUSCA SEMÂNTICA")
+        print("\n1. BUSCA SEMANTICA")
         print("-" * 30)
         print("O RAG converte o prompt em embedding e busca chunks similares...")
         
         relevant_chunks = self.simulate_search_results(query)
         
-        print(f"\n📋 2. CHUNKS ENCONTRADOS ({len(relevant_chunks)}):")
+        print(f"\n2. CHUNKS ENCONTRADOS ({len(relevant_chunks)}):")
         print("-" * 40)
         for chunk in relevant_chunks:
             source = chunk.get('source', 'Desconhecido')
@@ -377,14 +377,14 @@ Inclua exemplos de código e estrutura quando disponível.
             print(f"     Preview: {content_preview}...\n")
             
         # Gerar resposta RAG
-        print("\n🤖 3. GERAÇÃO DA RESPOSTA")
+        print("\n3. GERACAO DA RESPOSTA")
         print("-" * 30)
         print("Enviando contexto + prompt para o modelo de linguagem...")
         
         rag_response = self.generate_rag_response(query, relevant_chunks)
         
         # Mostrar resposta
-        print("\n📝 4. RESPOSTA FINAL DO RAG:")
+        print("\n4. RESPOSTA FINAL DO RAG:")
         print("=" * 50)
         print(rag_response)
         print("=" * 50)
@@ -409,10 +409,10 @@ Inclua exemplos de código e estrutura quando disponível.
         with open("rag_dashboard_demonstration.json", "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
             
-        print(f"\n💾 Demonstração salva em: rag_dashboard_demonstration.json")
+        print(f"\nDemonstracao salva em: rag_dashboard_demonstration.json")
         
 def main():
-    print("🧪 Demonstração do Sistema RAG")
+    print("Demonstracao do Sistema RAG")
     print("Como o RAG responde ao prompt: 'crie um dashboard financeiro'")
     print("=" * 70)
     
@@ -423,15 +423,15 @@ def main():
         # Executar demonstração
         simulator.demonstrate_rag_process()
         
-        print("\n✅ Demonstração concluída!")
-        print("\n💡 RESUMO DO PROCESSO RAG:")
-        print("1. 🔍 Busca semântica encontra chunks relevantes sobre dashboards")
-        print("2. 📊 Recupera informações sobre React, CSS, HTML e JavaScript")
-        print("3. 🤖 Combina conhecimento para criar resposta personalizada")
-        print("4. ✨ Gera código e instruções específicas para dashboard financeiro")
+        print("\nDemonstracao concluida!")
+        print("\nRESUMO DO PROCESSO RAG:")
+        print("1. Busca semantica encontra chunks relevantes sobre dashboards")
+        print("2. Recupera informacoes sobre React, CSS, HTML e JavaScript")
+        print("3. Combina conhecimento para criar resposta personalizada")
+        print("4. Gera codigo e instrucoes especificas para dashboard financeiro")
         
     except Exception as e:
-        print(f"❌ Erro na demonstração: {e}")
+        print(f"Erro na demonstracao: {e}")
         
 if __name__ == "__main__":
     main()

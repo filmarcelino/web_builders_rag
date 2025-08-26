@@ -1,0 +1,78 @@
+{
+  "timestamp": "2025-08-25T23:15:49.774968",
+  "total_queries": 5,
+  "queries_tested": [
+    {
+      "query": "Como criar animações CSS avançadas com keyframes e transformações?",
+      "response_length": 5556,
+      "chunks_retrieved": 5,
+      "animation_keywords_found": [
+        "scale"
+      ],
+      "animation_score": 1.8,
+      "has_css_code": true,
+      "has_keyframes": false,
+      "has_transitions": false,
+      "has_transforms": false,
+      "status": "success"
+    },
+    {
+      "query": "Quais são as melhores práticas para efeitos de transição suaves?",
+      "response_length": 4560,
+      "chunks_retrieved": 5,
+      "animation_keywords_found": [
+        "scale"
+      ],
+      "animation_score": 1.8,
+      "has_css_code": true,
+      "has_keyframes": false,
+      "has_transitions": false,
+      "has_transforms": false,
+      "status": "success"
+    },
+    {
+      "query": "Como implementar animações de hover e focus em botões?",
+      "response_length": 5503,
+      "chunks_retrieved": 5,
+      "animation_keywords_found": [
+        "scale"
+      ],
+      "animation_score": 1.8,
+      "has_css_code": true,
+      "has_keyframes": false,
+      "has_transitions": false,
+      "has_transforms": false,
+      "status": "success"
+    },
+    {
+      "query": "Como criar animações de loading e spinners com CSS?",
+      "status": "timeout"
+    },
+    {
+      "query": "Quais propriedades CSS usar para animações performáticas?",
+      "response_length": 5503,
+      "chunks_retrieved": 5,
+      "animation_keywords_found": [
+        "scale"
+      ],
+      "animation_score": 1.8,
+      "has_css_code": true,
+      "has_keyframes": false,
+      "has_transitions": false,
+      "has_transforms": false,
+      "status": "success"
+    }
+  ],
+  "animation_coverage_analysis": {},
+  "summary": {
+    "successful_queries": 4,
+    "success_rate": 80.0,
+    "average_animation_score": 1.8,
+    "average_response_length": 5280.5,
+    "css_code_coverage": 100.0,
+    "keyframes_coverage": 0.0,
+    "transitions_coverage": 0.0,
+    "transforms_coverage": 0.0,
+    "overall_animation_quality": "INSUFICIENTE"
+  }
+}

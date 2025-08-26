@@ -1,0 +1,457 @@
+{
+  "timestamp": "2025-08-25T19:46:16.593682",
+  "corpus_stats": {
+    "total_chunks": 27610,
+    "animation_related_chunks": 4797,
+    "animation_coverage_percentage": 17.37
+  },
+  "category_breakdown": {
+    "css_animations": {
+      "chunks_count": 193,
+      "percentage": 0.7,
+      "chunks": [
+        {
+          "index": 4,
+          "source": "unknown",
+          "content_preview": "{\n  \"rules\": {\n    \"no-invalid-double-slash-comments\": true,\n    \"no-duplicate-selectors\": true,\n    \"font-family-no-duplicate-names\": true,\n    \"declaration-block-no-shorthand-property-overrides\": true,\n    \"declaration-block-no-duplicate-custom-properties\": true,\n    \"declaration-block-no-duplicat...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "keyframe"
+          ]
+        },
+        {
+          "index": 42,
+          "source": "unknown",
+          "content_preview": "when your prospective employers or freelance clients click that link, they'll see a verified certification specific to you The one exception to this is if we discover violations of our Academic Honesty Policy When we catch people unambiguously plagiarizing (submitting other people's code or projects...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "transform",
+            "animation"
+          ]
+        },
+        {
+          "index": 5379,
+          "source": "unknown",
+          "content_preview": "Projet Terrarium Partie 2 : Introduction au CSS\nSketchnote par Tomomi Imura\nQuiz Pré-Conférence\nQuiz pré-conférence\nIntroduction\nLe CSS, ou Cascading Style Sheets, résout un problème important du développement web : comment rendre votre site web attrayant Styliser vos applications les rend plus util...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "transform",
+            "animation"
+          ]
+        },
+        {
+          "index": 5398,
+          "source": "unknown",
+          "content_preview": "// highlight the next word typedValueElement className = ''; } else { // error state typedValueElement className = 'error'; } }); ``` Décomposons le code Nous commençons par récupérer le mot actuel et la valeur que le joueur a tapée jusqu'à présent Ensuite, nous avons une logique en cascade, où nous...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "animation"
+          ]
+        },
+        {
+          "index": 5399,
+          "source": "unknown",
+          "content_preview": "arrivons ici, il y a une erreur Définition de className de typedValueElement sur error Tester votre application Vous êtes arrivé à la fin La dernière étape consiste à vérifier que notre application fonctionne Essayez-la Ne vous inquiétez pas s'il y a des erreurs ; tous les développeurs rencontrent d...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "active",
+            "animation"
+          ]
+        }
+      ]
+    },
+    "transitions": {
+      "chunks_count": 1703,
+      "percentage": 6.17,
+      "chunks": [
+        {
+          "index": 10,
+          "source": "unknown",
+          "content_preview": "was originally a clone of StackOverflow - List of Freely Available Programming Books with contributions from Karan Bhangui and George Stocker The list was moved to GitHub by Victor Felder for collaborative updating and maintenance It has grown to become one of GitHub's most popular repositories [ [G...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "ease"
+          ]
+        },
+        {
+          "index": 11,
+          "source": "unknown",
+          "content_preview": "com/EbookFoundation/free-programming-books/archive/refs/heads/main zip) The Free Ebook Foundation now administers the repo, a not-for-profit organization devoted to promoting the creation, distribution, archiving, and sustainability of free ebooks Donations to the Free Ebook Foundation are tax-deduc...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "ease"
+          ]
+        },
+        {
+          "index": 25,
+          "source": "unknown",
+          "content_preview": "startDate, endDate: filters endDate, category: filters category, department: filters department }); fetch(`/api/financial-data ${params}`) then(response => response json()) then(data => refreshDashboard(data)); } ``` Estrutura HTML do Dashboard ```html Dashboard Financeiro Dashboard Financeiro Hoje ...",
+          "keyword_matches": 5,
+          "matched_keywords": [
+            "transform",
+            "ease",
+            "translate",
+            "hover",
+            "transition"
+          ]
+        },
+        {
+          "index": 26,
+          "source": "unknown",
+          "content_preview": "15px rgba(0,0,0,0 1); border-left: 4px solid #667eea; transition: transform 0 2s ease; } metric-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0 15); } metric-card h3 { margin: 0 0 0 5rem 0; color: #666; font-size: 0 9rem; text-transform: uppercase; letter-spacing: 0 5px...",
+          "keyword_matches": 5,
+          "matched_keywords": [
+            "transform",
+            "ease",
+            "translate",
+            "hover",
+            "transition"
+          ]
+        },
+        {
+          "index": 41,
+          "source": "unknown",
+          "content_preview": "freeCodeCamp org's open-source codebase and curriculum\nfreeCodeCamp org is a friendly community where you can learn to code for free It is run by a donor-supported 501(c)(3) charity to help millions of busy adults transition into tech Our community has already helped more than 100,000 people get the...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "active",
+            "transition"
+          ]
+        }
+      ]
+    },
+    "transforms": {
+      "chunks_count": 2037,
+      "percentage": 7.38,
+      "chunks": [
+        {
+          "index": 14,
+          "source": "unknown",
+          "content_preview": "Czech / čeština / český jazyk Dutch / Nederlands English Finnish / Suomi French / français German / Deutsch Hebrew / עברית Indonesian / Bahasa Indonesia Persian / Farsi (Iran) / فارسى Polish / polski / język polski / polszczyzna Portuguese (Brazil) Portuguese (Portugal) Russian / Русский язык Sinhal...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "translate"
+          ]
+        },
+        {
+          "index": 16,
+          "source": "unknown",
+          "content_preview": "module.exports = {\n  testPathIgnorePatterns: ['/node_modules/', 'api/', 'e2e/'],\n  moduleNameMapper: {\n    '\\\\.(jpg|jpeg|png|svg|woff|woff2)$':\n      '<rootDir>/client/src/__mocks__/file-mock.ts',\n    // Plain CSS - match css files that don't end with\n    // '.module.css' https://regex101.com/r/Vzwr...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "transform"
+          ]
+        },
+        {
+          "index": 17,
+          "source": "unknown",
+          "content_preview": "const babelOptions = {\n  presets: [\n    [\n      '@babel/preset-env',\n      {\n        targets: {\n          node: 18\n        }\n      }\n    ],\n    '@babel/react',\n    '@babel/preset-typescript'\n  ]\n};\n\n// TODO: is there a way to do this without a separate transform? i.e. can we\n// just use the existing...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "transform"
+          ]
+        },
+        {
+          "index": 25,
+          "source": "unknown",
+          "content_preview": "startDate, endDate: filters endDate, category: filters category, department: filters department }); fetch(`/api/financial-data ${params}`) then(response => response json()) then(data => refreshDashboard(data)); } ``` Estrutura HTML do Dashboard ```html Dashboard Financeiro Dashboard Financeiro Hoje ...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "transform",
+            "translate"
+          ]
+        },
+        {
+          "index": 26,
+          "source": "unknown",
+          "content_preview": "15px rgba(0,0,0,0 1); border-left: 4px solid #667eea; transition: transform 0 2s ease; } metric-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0 15); } metric-card h3 { margin: 0 0 0 5rem 0; color: #666; font-size: 0 9rem; text-transform: uppercase; letter-spacing: 0 5px...",
+          "keyword_matches": 2,
+          "matched_keywords": [
+            "transform",
+            "translate"
+          ]
+        }
+      ]
+    },
+    "effects": {
+      "chunks_count": 1541,
+      "percentage": 5.58,
+      "chunks": [
+        {
+          "index": 13,
+          "source": "unknown",
+          "content_preview": "from Code of Conduct too (translations also available) Click on these badges to see how you might be able to help: [[GitHub repo Issues](https://img shields io/github/issues/EbookFoundation/free-programming-books style=flat&logo=github&logoColor=red&label=Issues)](https://github com/EbookFoundation/...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "active"
+          ]
+        },
+        {
+          "index": 25,
+          "source": "unknown",
+          "content_preview": "startDate, endDate: filters endDate, category: filters category, department: filters department }); fetch(`/api/financial-data ${params}`) then(response => response json()) then(data => refreshDashboard(data)); } ``` Estrutura HTML do Dashboard ```html Dashboard Financeiro Dashboard Financeiro Hoje ...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "hover"
+          ]
+        },
+        {
+          "index": 26,
+          "source": "unknown",
+          "content_preview": "15px rgba(0,0,0,0 1); border-left: 4px solid #667eea; transition: transform 0 2s ease; } metric-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0 15); } metric-card h3 { margin: 0 0 0 5rem 0; color: #666; font-size: 0 9rem; text-transform: uppercase; letter-spacing: 0 5px...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "hover"
+          ]
+        },
+        {
+          "index": 41,
+          "source": "unknown",
+          "content_preview": "freeCodeCamp org's open-source codebase and curriculum\nfreeCodeCamp org is a friendly community where you can learn to code for free It is run by a donor-supported 501(c)(3) charity to help millions of busy adults transition into tech Our community has already helped more than 100,000 people get the...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "active"
+          ]
+        },
+        {
+          "index": 52,
+          "source": "unknown",
+          "content_preview": "Awesome-opensource-apps\nAn awesome curated list of open source crafted web & mobile applications - Learn, Fork, Contribute & Most Importantly Enjoy You want to develop an app, write tests for a feature or implement a feature and you don't know how to go about it, there might just be one app/reposito...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "active"
+          ]
+        }
+      ]
+    },
+    "js_animations": {
+      "chunks_count": 10,
+      "percentage": 0.04,
+      "chunks": [
+        {
+          "index": 18453,
+          "source": "unknown",
+          "content_preview": "peerDependencies: gatsby: ^3.0.0-next.0 postcss: ^8.0.5 gatsby-plugin-react-helmet@4.15.0: resolution: {integrity: sha512-wA3DbF7njlp4TkgWz3M8kBV3OBahE/1TJmF20rFAm5OBt3ak9VCg8x6CjB73qVdJPsyd4ETF7fhxjgrgVmXwpw==} engines: {node: '>=12.13.0'} peerDependencies: gatsby: ^3.0.0-next.0 react-helmet: ^5.1....",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gsap"
+          ]
+        },
+        {
+          "index": 18454,
+          "source": "unknown",
+          "content_preview": "{node: '>=12.13.0'} peerDependencies: gatsby: ^3.0.0-next.0 react-helmet: ^5.1.3 || ^6.0.0 gatsby-plugin-remove-serviceworker@1.0.0: resolution: {integrity: sha512-8uQ/6PiM718BTZAgmQeEO6ULrJgLugmDVAkUGv5xxF0luBNrbboDgpsG0z1fbsotSDTzLWyULR0zzGNfWZaY7w==} gatsby-plugin-typescript@3.15.0: resolution: {...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gsap"
+          ]
+        },
+        {
+          "index": 18455,
+          "source": "unknown",
+          "content_preview": "|| ^6.0.0 gatsby-plugin-remove-serviceworker@1.0.0: resolution: {integrity: sha512-8uQ/6PiM718BTZAgmQeEO6ULrJgLugmDVAkUGv5xxF0luBNrbboDgpsG0z1fbsotSDTzLWyULR0zzGNfWZaY7w==} gatsby-plugin-typescript@3.15.0: resolution: {integrity: sha512-xJYN9LqQnKCTCOXChAMSpG9fZXQ8e73SkJTkAaK3eKLGEN3olTSwCMov6rrK19d...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gsap"
+          ]
+        },
+        {
+          "index": 18456,
+          "source": "unknown",
+          "content_preview": "engines: {node: '>=12.13.0'} peerDependencies: gatsby: ^3.0.0-next.0 gatsby-plugin-utils@1.15.0: resolution: {integrity: sha512-QAvZ6BlQJL+6sllOp0frlX2YoYt/6OebMn4JN7/pip7c3rDQPuMC/fnAnmrjUdm0dKg24O5M2zacvj0zU1RxZQ==} engines: {node: '>=12.13.0'} peerDependencies: gatsby: ^3.0.0-next.0 graphql: ^15....",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gsap"
+          ]
+        },
+        {
+          "index": 18457,
+          "source": "unknown",
+          "content_preview": "resolution: {integrity: sha512-QAvZ6BlQJL+6sllOp0frlX2YoYt/6OebMn4JN7/pip7c3rDQPuMC/fnAnmrjUdm0dKg24O5M2zacvj0zU1RxZQ==} engines: {node: '>=12.13.0'} peerDependencies: gatsby: ^3.0.0-next.0 graphql: ^15.0.0 gatsby-plugin-webpack-bundle-analyser-v2@1.1.32: resolution: {integrity: sha512-w6OJAR3CTyiKE...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gsap"
+          ]
+        }
+      ]
+    },
+    "performance": {
+      "chunks_count": 86,
+      "percentage": 0.31,
+      "chunks": [
+        {
+          "index": 9218,
+          "source": "unknown",
+          "content_preview": "quality Efficiency You'll save time in the long run by not having to re-run entire applications just to make sure little parts work Assignment 1 Read up on the [9 Benefits of Test-Driven Development](https://www madetech com/blog/9-benefits-of-test-driven-development) for additional insight on this ...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "will-change"
+          ]
+        },
+        {
+          "index": 9671,
+          "source": "unknown",
+          "content_preview": "Unit Testing in JavaScript video series](https://www youtube com/playlist list=PL0zVEGEvSaeF_zoW9o66wa_UCNE3a7BEr) 1 Follow along to [Jest's Getting Started tutorial](https://jestjs io/docs/getting-started) For the upcoming testing practice and project, you only need to follow the instructions for i...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "will-change"
+          ]
+        },
+        {
+          "index": 13585,
+          "source": "unknown",
+          "content_preview": "specific axis These are the additional transform function values to rotate an element in a 3D space: css element { transform: rotateX(); transform: rotateY(); transform: rotateZ(); transform: rotate3d(); } Below is a CodePen that shows how the first three values affects the target element See the Pe...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gpu"
+          ]
+        },
+        {
+          "index": 13586,
+          "source": "unknown",
+          "content_preview": "benefit of using transform is that it occurs during composition This makes it cheaper to use compared to many other CSS properties You can see what triggers are executed with each CSS property in this table of CSS triggers Another benefit of transform is that it can be hardware-accelerated via a dev...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gpu"
+          ]
+        },
+        {
+          "index": 17078,
+          "source": "unknown",
+          "content_preview": "engines: {node: '>=6.9.0'} peerDependencies: '@babel/core': ^7.0.0-0 '@babel/plugin-transform-optional-chaining@7.23.4': resolution: {integrity: sha512-ZU8y5zWOfjM5vZ+asjgAPwDaBjJzgufjES89Rs4Lpq63O300R/kOz30WCLo6BxxX6QVEilwSlpClnG5cZaikTA==} engines: {node: '>=6.9.0'} peerDependencies: '@babel/core'...",
+          "keyword_matches": 1,
+          "matched_keywords": [
+            "gpu"
+          ]
+        }
+      ]
+    }
+  },
+  "source_distribution": {
+    "unknown": 4797
+  },
+  "query_simulation": [
+    {
+      "query": "Como criar animações CSS suaves?",
+      "relevant_chunks": 321,
+      "relevance_percentage": 6.7
+    },
+    {
+      "query": "Efeitos de transição em JavaScript",
+      "relevant_chunks": 3833,
+      "relevance_percentage": 79.9
+    },
+    {
+      "query": "Animações performáticas para web",
+      "relevant_chunks": 671,
+      "relevance_percentage": 14.0
+    },
+    {
+      "query": "Keyframes e transformações CSS",
+      "relevant_chunks": 4791,
+      "relevance_percentage": 99.9
+    },
+    {
+      "query": "Bibliotecas de animação modernas",
+      "relevant_chunks": 3429,
+      "relevance_percentage": 71.5
+    }
+  ],
+  "top_animation_chunks": [
+    {
+      "index": 4,
+      "source": "unknown",
+      "content_preview": "{\n  \"rules\": {\n    \"no-invalid-double-slash-comments\": true,\n    \"no-duplicate-selectors\": true,\n    \"font-family-no-duplicate-names\": true,\n    \"declaration-block-no-shorthand-property-overrides\": true,\n    \"declaration-block-no-duplicate-custom-properties\": true,\n    \"declaration-block-no-duplicat...",
+      "keyword_matches": 1,
+      "matched_keywords": [
+        "keyframe"
+      ]
+    },
+    {
+      "index": 42,
+      "source": "unknown",
+      "content_preview": "when your prospective employers or freelance clients click that link, they'll see a verified certification specific to you The one exception to this is if we discover violations of our Academic Honesty Policy When we catch people unambiguously plagiarizing (submitting other people's code or projects...",
+      "keyword_matches": 2,
+      "matched_keywords": [
+        "transform",
+        "animation"
+      ]
+    },
+    {
+      "index": 5379,
+      "source": "unknown",
+      "content_preview": "Projet Terrarium Partie 2 : Introduction au CSS\nSketchnote par Tomomi Imura\nQuiz Pré-Conférence\nQuiz pré-conférence\nIntroduction\nLe CSS, ou Cascading Style Sheets, résout un problème important du développement web : comment rendre votre site web attrayant Styliser vos applications les rend plus util...",
+      "keyword_matches": 2,
+      "matched_keywords": [
+        "transform",
+        "animation"
+      ]
+    },
+    {
+      "index": 5398,
+      "source": "unknown",
+      "content_preview": "// highlight the next word typedValueElement className = ''; } else { // error state typedValueElement className = 'error'; } }); ``` Décomposons le code Nous commençons par récupérer le mot actuel et la valeur que le joueur a tapée jusqu'à présent Ensuite, nous avons une logique en cascade, où nous...",
+      "keyword_matches": 1,
+      "matched_keywords": [
+        "animation"
+      ]
+    },
+    {
+      "index": 5399,
+      "source": "unknown",
+      "content_preview": "arrivons ici, il y a une erreur Définition de className de typedValueElement sur error Tester votre application Vous êtes arrivé à la fin La dernière étape consiste à vérifier que notre application fonctionne Essayez-la Ne vous inquiétez pas s'il y a des erreurs ; tous les développeurs rencontrent d...",
+      "keyword_matches": 2,
+      "matched_keywords": [
+        "active",
+        "animation"
+      ]
+    },
+    {
+      "index": 6809,
+      "source": "unknown",
+      "content_preview": "den Wert zu erfassen, den der Spieler bisher getippt hat Dann haben wir eine Wasserfall-Logik, bei der wir überprüfen, ob das Zitat abgeschlossen ist, das Wort abgeschlossen ist, das Wort korrekt ist oder (schließlich), ob ein Fehler vorliegt Das Zitat ist abgeschlossen, angezeigt durch typedValue, ...",
+      "keyword_matches": 1,
+      "matched_keywords": [
+        "animation"
+      ]
+    },
+    {
+      "index": 6810,
+      "source": "unknown",
+      "content_preview": "Setzen von className auf typedValueElement auf error Testen Sie Ihre Anwendung Sie haben es bis zum Ende geschafft Der letzte Schritt besteht darin, sicherzustellen, dass unsere Anwendung funktioniert Probieren Sie es aus Machen Sie sich keine Sorgen, wenn es Fehler gibt; alle Entwickler haben Fehle...",
+      "keyword_matches": 1,
+      "matched_keywords": [
+        "animation"
+      ]
+    },
+    {
+      "index": 6813,
+      "source": "unknown",
+      "content_preview": "Terrarium-Projekt Teil 2: Einführung in CSS\nSketchnote von Tomomi Imura\nQuiz vor der Vorlesung\nQuiz vor der Vorlesung\nEinführung\nCSS, oder Cascading Style Sheets, lösen ein wichtiges Problem der Webentwicklung: Wie man eine Website ansprechend gestaltet Das Styling deiner Apps macht sie benutzerfreu...",
+      "keyword_matches": 2,
+      "matched_keywords": [
+        "transform",
+        "animation"
+      ]
+    },
+    {
+      "index": 6985,
+      "source": "unknown",
+      "content_preview": "and a for-loop\", \"answerOptions\": [ { \"answerText\": \"A for-loop has a counter and iteration-expression, where while only has a condition\", \"isCorrect\": \"true\" }, { \"answerText\": \"A while has a counter and iteration-expression where for-loop only has a condition\", \"isCorrect\": \"false\" }, { \"answerTex...",
+      "keyword_matches": 1,
+      "matched_keywords": [
+        "animation"
+      ]
+    },
+    {
+      "index": 6990,
+      "source": "unknown",
+      "content_preview": "moved\", \"isCorrect\": \"true\" }, { \"answerText\": \"Time has passed\", \"isCorrect\": \"false\" } ] } ] }, { \"id\": 35, \"title\": \"Lesson 18 - Space Game - Adding A Laser and Detecting Collisions: Pre-Lecture Quiz\", \"quiz\": [ { \"questionText\": \"Collision detection is how we detect if two things have collided\",...",
+      "keyword_matches": 2,
+      "matched_keywords": [
+        "animate",
+        "effect"
+      ]
+    }
+  ]
+}

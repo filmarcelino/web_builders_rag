@@ -1,0 +1,20 @@
+{
+  "processing_summary": {
+    "total_chunks": 3716,
+    "content_types": {
+      "documentation": 29,
+      "repository": 3654,
+      "course": 29,
+      "technique": 4
+    },
+    "average_animation_score": 0.118,
+    "high_quality_chunks": 104,
+    "quality_percentage": 2.8
+  },
+  "quality_distribution": {
+    "excellent (>0.8)": 1,
+    "good (0.5-0.8)": 150,
+    "fair (0.2-0.5)": 725,
+    "poor (<0.2)": 2840
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-08-25T19:39:30.761462",
+  "comparison_type": "simple_vs_detailed_prompt",
+  "simple_prompt": "faça um app financeiro completo",
+  "detailed_prompt": "crie um dashboard financeiro",
+  "simple_analysis": {
+    "metrics": {
+      "word_count": 377,
+      "char_count": 4231,
+      "line_count": 138,
+      "code_blocks": 3,
+      "sections": 4,
+      "lists": 0
+    },
+    "rag_metrics": {
+      "chunks_count": 5,
+      "avg_similarity": 0.798
+    },
+    "content_analysis": {
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Chart.js",
+        "Grid",
+        "API",
+        "Redux",
+        "Context API"
+      ],
+      "features": [
+        "Responsividade",
+        "Gráficos",
+        "KPI/Métricas",
+        "Dashboard"
+      ],
+      "tech_count": 9,
+      "feature_count": 4
+    }
+  },
+  "detailed_analysis": {
+    "metrics": {
+      "word_count": 557,
+      "char_count": 5650,
+      "line_count": 224,
+      "code_blocks": 5,
+      "sections": 6,
+      "lists": 0
+    },
+    "rag_metrics": {
+      "chunks_count": 5,
+      "avg_similarity": 0.798
+    },
+    "content_analysis": {
+      "technologies": [
+        "React",
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "Chart.js",
+        "Grid",
+        "Flexbox"
+      ],
+      "features": [
+        "Responsividade",
+        "Gráficos",
+        "KPI/Métricas",
+        "Dashboard"
+      ],
+      "tech_count": 7,
+      "feature_count": 4
+    }
+  },
+  "improvements": {
+    "word_count_improvement_pct": 47.7,
+    "code_blocks_improvement": 2,
+    "features_improvement": 0
+  }
+}
