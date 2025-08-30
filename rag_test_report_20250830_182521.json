@@ -1,0 +1,121 @@
+{
+  "total_queries": 8,
+  "successful_queries": 0,
+  "failed_queries": 0,
+  "total_results_found": 0,
+  "queries_with_results": 0,
+  "test_details": [
+    {
+      "query": "CSS animations",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 2.1729581356048584,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "JavaScript functions",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.6403496265411377,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "HTML elements",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.7793271541595459,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "React components",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 1.66599440574646,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "web development",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.7412989139556885,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "responsive design",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.7517874240875244,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "accessibility",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.9850997924804688,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    },
+    {
+      "query": "flexbox layout",
+      "num_results": 0,
+      "has_content": false,
+      "processing_time": 0.6597158908843994,
+      "access_control": {
+        "access_granted": true,
+        "access_level": "public",
+        "restricted_count": 0,
+        "authorization_found": false,
+        "message": "Sistema de controle de acesso desabilitado"
+      },
+      "status": "NO_RESULTS"
+    }
+  ]
+}

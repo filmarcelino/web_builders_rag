@@ -29,21 +29,21 @@ class AccessController:
         # Palavra-chave de autorização para criação de agentes
         self.AGENT_BUILDER_AUTH_KEY = "vinapermitecriar"
         
-        # Categorias de conteúdo restrito
+        # Categorias de conteúdo restrito - MAIS ESPECÍFICAS
         self.restricted_categories = {
             'agent_building': {
                 'keywords': [
-                    'agent', 'agente', 'ai agent', 'building agents', 'agent framework',
-                    'langchain', 'langgraph', 'autogen', 'crewai', 'agent architecture',
-                    'multi-agent', 'agent planning', 'agent memory', 'agent tools',
-                    'rag agent', 'conversational agent', 'task agent', 'autonomous agent',
-                    'agent deployment', 'agent orchestration', 'agent workflow',
-                    'openai agent', 'anthropic agent', 'agent builder', 'agent creation',
-                    'agent development', 'agent design patterns', 'agent best practices'
+                    'agent builder', 'agent creation', 'building agents', 'create agent',
+                    'agent development', 'agent framework development', 'agent architecture design',
+                    'langchain agent tutorial', 'langgraph agent creation', 'autogen setup',
+                    'crewai implementation', 'multi-agent system development',
+                    'agent deployment guide', 'agent orchestration setup',
+                    'how to build agent', 'agent development tutorial',
+                    'agent design patterns implementation', 'agent best practices guide'
                 ],
                 'auth_required': self.AGENT_BUILDER_AUTH_KEY,
                 'access_level': 'restricted',
-                'description': 'Informações sobre criação e desenvolvimento de agentes AI'
+                'description': 'Informações específicas sobre criação e desenvolvimento de agentes AI'
             }
         }
         

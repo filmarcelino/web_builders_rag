@@ -9,10 +9,12 @@ from config.config import RAGConfig
 from src.indexing.index_manager import IndexManager, SearchResult as IndexSearchResult
 from .query_processor import QueryProcessor, ProcessedQuery
 from .search_cache import SearchCache
-from .access_control import AccessController, AccessControlResult
+# from .access_control import AccessController, AccessControlResult  # REMOVIDO
 from src.reranking.animation_reranker import AnimationReranker
 from src.prompts.animation_prompt_enhancer import AnimationPromptEnhancer
 from src.response.rag_response_generator import RAGResponseGenerator, RAGResponse
+from src.templates.animation_templates import animation_templates, AnimationTemplate
+from src.search.semantic_animation_search import semantic_search, AnimationConcept
 
 @dataclass
 class SearchRequest:
@@ -46,8 +48,12 @@ class SearchEngine:
         self.index_manager = IndexManager(api_key, index_dir)
         self.query_processor = QueryProcessor(api_key)
         self.search_cache = SearchCache()
-        self.access_controller = AccessController()
+        # self.access_controller = AccessController()  # REMOVIDO
         self.animation_reranker = AnimationReranker()
+        
+        # Novos componentes especializados
+        self.animation_templates = animation_templates
+        self.semantic_search = semantic_search
         self.animation_prompt_enhancer = AnimationPromptEnhancer()
         self.rag_response_generator = RAGResponseGenerator()
         
@@ -123,20 +129,7 @@ class SearchEngine:
             # 3. Formata resultados
             formatted_results = self._format_results(search_results, processed_query)
             
-            # 3.1. Aplica controle de acesso
-            access_result = self.access_controller.check_access(
-                processed_query.original_query,
-                formatted_results,
-                request.context
-            )
-            
-            # Filtra resultados baseado no controle de acesso
-            formatted_results = access_result.filtered_chunks
-            
-            # Log de controle de acesso
-            if access_result.restricted_count > 0:
-                access_message = self.access_controller.get_access_message(access_result)
-                self.logger.info(f"Controle de acesso aplicado: {access_message}")
+            # 3.1. Controle de acesso REMOVIDO - todos os resultados são liberados
             
             # 3.5. Aplica re-ranking especializado para animações
             if request.rerank and self.animation_reranker.is_animation_query(processed_query.original_query):
@@ -163,13 +156,13 @@ class SearchEngine:
             else:
                 search_stats['animation_reranking'] = {'applied': False}
             
-            # Adiciona estatísticas de controle de acesso
+            # Controle de acesso removido - sem restrições
             search_stats['access_control'] = {
-                'access_granted': access_result.access_granted,
-                'access_level': access_result.access_level,
-                'restricted_count': access_result.restricted_count,
-                'authorization_found': access_result.authorization_found,
-                'message': access_result.message
+                'access_granted': True,
+                'access_level': 'public',
+                'restricted_count': 0,
+                'authorization_found': False,
+                'message': 'Sistema de controle de acesso desabilitado'
             }
             
             # 5. Monta resposta
@@ -533,6 +526,140 @@ class SearchEngine:
         self.search_cache.clear()
         self.query_processor.clear_cache()
         self.logger.info("Caches de busca limpos")
+    
+    async def search_animation_templates(self, query: str) -> List[Dict[str, Any]]:
+        """Busca templates de animação baseado na query"""
+        try:
+            # Análise semântica da query
+            semantic_analysis = self.semantic_search.analyze_query(query)
+            
+            # Se não é uma query de animação, retorna vazio
+            if not semantic_analysis['is_animation_query']:
+                return []
+            
+            # Busca templates relevantes
+            relevant_templates = []
+            
+            # Busca por nome/descrição
+            search_results = self.animation_templates.search_templates(query)
+            relevant_templates.extend(search_results)
+            
+            # Busca por conceitos semânticos
+            for match in semantic_analysis['semantic_matches']:
+                if match.concept == AnimationConcept.MOVEMENT:
+                    movement_templates = ['slide_in_left', 'bounce', 'scale_rotate']
+                elif match.concept == AnimationConcept.VISUAL_EFFECT:
+                    movement_templates = ['fade_in', 'color_transition', 'spinner', 'pulse_dots']
+                elif match.concept == AnimationConcept.INTERACTION:
+                    movement_templates = ['smooth_hover', 'scale_rotate']
+                elif match.concept == AnimationConcept.VISUAL_EFFECT:
+                    movement_templates = ['spinner', 'pulse_dots']
+                else:
+                    movement_templates = []
+                
+                for template_name in movement_templates:
+                    template = self.animation_templates.get_template(template_name)
+                    if template and template not in relevant_templates:
+                        relevant_templates.append(template)
+            
+            # Formatar resultados
+            formatted_results = []
+            for template in relevant_templates[:5]:  # Limita a 5 templates
+                formatted_results.append({
+                    'type': 'animation_template',
+                    'template_name': template.name,
+                    'template_type': template.type.value,
+                    'complexity': template.complexity_level,
+                    'description': template.description,
+                    'css_code': template.css_code,
+                    'html_structure': template.html_structure,
+                    'use_cases': template.use_cases,
+                    'properties': template.properties,
+                    'formatted_response': self.animation_templates.generate_template_response(template)
+                })
+            
+            return formatted_results
+            
+        except Exception as e:
+            self.logger.error(f"Erro na busca de templates: {str(e)}")
+            return []
+    
+    def get_semantic_suggestions(self, query: str) -> Dict[str, Any]:
+        """Gera sugestões semânticas para uma query"""
+        try:
+            analysis = self.semantic_search.analyze_query(query)
+            suggestions = self.semantic_search.generate_search_suggestions(query)
+            related_concepts = self.semantic_search.get_related_concepts(query)
+            enhanced_terms = self.semantic_search.enhance_search_terms(query)
+            
+            return {
+                'original_query': query,
+                'is_animation_query': analysis['is_animation_query'],
+                'animation_score': analysis['animation_score'],
+                'semantic_matches': [{
+                    'term': match.term,
+                    'concept': match.concept.value,
+                    'confidence': match.confidence,
+                    'related_terms': match.related_terms,
+                    'css_properties': match.css_properties
+                } for match in analysis['semantic_matches']],
+                'intent_matches': analysis['intent_matches'],
+                'search_suggestions': suggestions,
+                'related_concepts': [concept.value for concept in related_concepts],
+                'enhanced_terms': enhanced_terms[:10],  # Limita a 10 termos
+                'css_properties': analysis['css_properties']
+            }
+            
+        except Exception as e:
+            self.logger.error(f"Erro na análise semântica: {str(e)}")
+            return {
+                'original_query': query,
+                'is_animation_query': False,
+                'error': str(e)
+            }
+    
+    async def enhanced_animation_search(self, request: SearchRequest) -> SearchResponse:
+        """Busca aprimorada que combina busca tradicional com templates e análise semântica"""
+        try:
+            # Análise semântica inicial
+            semantic_analysis = self.semantic_search.analyze_query(request.query)
+            
+            # Busca tradicional
+            traditional_response = await self.search(request)
+            
+            # Se é uma query de animação, adiciona templates relevantes
+            if semantic_analysis['is_animation_query']:
+                template_results = await self.search_animation_templates(request.query)
+                
+                # Combina resultados
+                combined_results = []
+                
+                # Adiciona templates primeiro (mais relevantes para animações)
+                combined_results.extend(template_results)
+                
+                # Adiciona resultados tradicionais
+                for result in traditional_response.results:
+                    result['type'] = 'traditional_search'
+                    combined_results.append(result)
+                
+                # Atualiza resposta
+                traditional_response.results = combined_results[:request.top_k]
+                traditional_response.total_results = len(combined_results)
+                
+                # Adiciona informações semânticas
+                traditional_response.query_info['semantic_analysis'] = {
+                    'is_animation_query': semantic_analysis['is_animation_query'],
+                    'animation_score': semantic_analysis['animation_score'],
+                    'semantic_matches_count': len(semantic_analysis['semantic_matches']),
+                    'templates_found': len(template_results)
+                }
+            
+            return traditional_response
+            
+        except Exception as e:
+            self.logger.error(f"Erro na busca aprimorada: {str(e)}")
+            # Fallback para busca tradicional
+            return await self.search(request)
     
     def close(self):
         """Fecha motor de busca e libera recursos"""

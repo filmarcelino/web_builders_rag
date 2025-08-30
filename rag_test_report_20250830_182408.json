@@ -1,0 +1,49 @@
+{
+  "total_queries": 8,
+  "successful_queries": 0,
+  "failed_queries": 8,
+  "total_results_found": 0,
+  "queries_with_results": 0,
+  "test_details": [
+    {
+      "query": "CSS animations",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "JavaScript functions",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "HTML elements",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "React components",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "web development",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "responsive design",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "accessibility",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "flexbox layout",
+      "error": "'coroutine' object has no attribute 'results'",
+      "status": "ERROR"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "total_queries": 8,
+  "successful_queries": 0,
+  "failed_queries": 8,
+  "total_results_found": 0,
+  "queries_with_results": 0,
+  "test_details": [
+    {
+      "query": "CSS animations",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "JavaScript functions",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "HTML elements",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "React components",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "web development",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "responsive design",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "accessibility",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    },
+    {
+      "query": "flexbox layout",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "status": "ERROR"
+    }
+  ]
+}
