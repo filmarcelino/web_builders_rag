@@ -12,10 +12,59 @@ Serviço RAG independente que fornece contexto confiável e aplicável (docs, pa
 4. **Busca**: Híbrida (keyword + vetorial) com filtros
 5. **Reranking**: GPT-5 Full com rationale explicativo
 
-### API Interna
-- **Endpoint**: `/search`
+### API de Busca
+- **Endpoint de Produção**: `https://vina-rag-system.onrender.com/search`
+- **Endpoint Local**: `http://localhost:8000/search`
+- **Método**: POST
+- **Autenticação**: Header `X-API-Key: 050118045`
 - **Modelos**: GPT-5 Full para rewriting e reranking
 - **Latência**: ≤1-2s para top-5/8 resultados
+
+#### Formato da Requisição
+```json
+{
+  "query": "sua consulta aqui",
+  "top_k": 5,
+  "search_type": "semantic",
+  "filters": {
+    "fonte": ["mdn", "w3c"],
+    "licenca": ["MIT"]
+  }
+}
+```
+
+#### Exemplo de Uso
+```bash
+curl -X POST https://vina-rag-system.onrender.com/search \
+  -H "X-API-Key: 050118045" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "React hooks useState",
+    "top_k": 3,
+    "search_type": "semantic"
+  }'
+```
+
+#### Resposta
+```json
+{
+  "results": [
+    {
+      "chunk": "conteúdo completo do documento",
+      "fonte": "react-docs",
+      "licenca": "MIT",
+      "score": 0.85,
+      "rationale": "Relevante porque explica useState em detalhes",
+      "metadata": {...},
+      "highlights": [...]
+    }
+  ],
+  "total": 3,
+  "query": "React hooks useState",
+  "trace_id": "uuid-único",
+  "timestamp": 123456789
+}
+```
 
 ## Estrutura do Projeto
 
