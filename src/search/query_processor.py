@@ -310,8 +310,8 @@ Responda APENAS com um JSON no formato:
                     {"role": "system", "content": "Você é um especialista em reescrita de queries para busca técnica. Responda sempre com JSON válido."},
                     {"role": "user", "content": prompt}
                 ],
-                temperature=0.3,
-                max_tokens=500
+                # temperature=1,  # GPT-5 só suporta valor padrão
+                max_completion_tokens=500
             )
             
             content = response.choices[0].message.content.strip()

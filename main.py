@@ -63,8 +63,9 @@ async def lifespan(app: FastAPI):
         if not api_key:
             logger.warning("⚠️ OPENAI_API_KEY não encontrada, usando modo demo")
             api_key = "demo-key"
-        
-        search_engine = SearchEngine(api_key=api_key)
+
+        index_path = os.getenv("INDEX_PATH", "./data/index")
+        search_engine = SearchEngine(api_key=api_key, index_dir=index_path)
         
         logger.info("✅ Sistema RAG inicializado com sucesso")
         
@@ -257,26 +258,55 @@ async def _search_logic(
         import uuid
         trace_id = str(uuid.uuid4())
         
-        # Executar busca
+        # Executar busca real usando SearchEngine
         results = []
         try:
-            # Simulação de busca (implementar integração real)
+            from src.search.search_engine import SearchRequest
+            
+            # Criar requisição de busca
+            search_request = SearchRequest(
+                query=query,
+                filters={
+                    'category': category,
+                    'source_type': source_type
+                } if category or source_type else None,
+                top_k=limit,
+                search_type="hybrid",
+                include_rationale=True,
+                use_cache=True,
+                rerank=True
+            )
+            
+            # Executar busca real
+            search_response = await search_engine.search(search_request)
+            
+            # Converter formato da resposta
             results = [
                 {
-                    "chunk": f"Resultado {i+1} para '{query}'",
-                    "fonte": {
-                        "title": f"Documento {i+1}",
-                        "url": f"https://example.com/doc{i+1}"
-                    },
-                    "licenca": "MIT",
-                    "score": 0.9 - (i * 0.1),
-                    "rationale": f"Relevante para {query}"
+                    "chunk": result.get("chunk", result.get("content", "")),
+                    "fonte": result.get("fonte", result.get("source", "")),
+                    "licenca": result.get("licenca", result.get("license", "MIT")),
+                    "score": result.get("score", 0.0),
+                    "rationale": result.get("rationale", "Resultado relevante")
                 }
-                for i in range(min(limit, 5))
+                for result in search_response.results
             ]
+            
         except Exception as e:
-            logger.error(f"Erro na busca: {e}")
-            results = []
+            logger.error(f"Erro na busca real: {e}")
+            # Fallback para dados mock apenas em caso de erro
+            results = [
+                {
+                    "chunk": f"[ERRO] Busca falhou para '{query}'. Verifique logs.",
+                    "fonte": {
+                        "title": "Sistema de Busca",
+                        "url": "#error"
+                    },
+                    "licenca": "N/A",
+                    "score": 0.0,
+                    "rationale": f"Erro no sistema: {str(e)}"
+                }
+            ]
         
         return {
             "items": results,

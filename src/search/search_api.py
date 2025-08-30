@@ -191,6 +191,8 @@ async def search(
     """Endpoint principal de busca"""
     start_time = time.time()
     
+    print(f"[DEBUG API ENTRY] Endpoint /search chamado com query: {request.query}")
+    
     try:
         logger.info(f"Busca recebida: '{request.query}' (tipo: {request.search_type})")
         
@@ -199,34 +201,50 @@ async def search(
         if request.filtros:
             filters_dict = request.filtros.dict(exclude_none=True)
         
-        # Executa busca
-        search_result = await asyncio.to_thread(
-            search_engine.search,
+        # Cria SearchRequest para o engine
+        from src.search.search_engine import SearchRequest as EngineSearchRequest
+        
+        engine_request = EngineSearchRequest(
             query=request.query,
             filters=filters_dict,
             top_k=request.top_k,
             search_type=request.search_type,
-            include_rationale=request.include_rationale
+            include_rationale=request.include_rationale,
+            use_cache=True,
+            rerank=True
         )
         
+        # Executa busca
+        search_result = await search_engine.search(engine_request)
+        
         search_time = (time.time() - start_time) * 1000  # Converte para ms
+        
+        # Debug: verificar o tipo e conteúdo da resposta do SearchEngine
+        logger.warning(f"[DEBUG API] Tipo de search_result: {type(search_result)}")
+        logger.warning(f"[DEBUG API] Total de resultados: {len(search_result.results)}")
+        
+        for i, result in enumerate(search_result.results[:3]):
+            logger.warning(f"[DEBUG API] Resultado {i} tipo: {type(result)}")
+            logger.warning(f"[DEBUG API] Resultado {i} keys: {list(result.keys()) if hasattr(result, 'keys') else 'N/A'}")
+            chunk_content = result.get("chunk", "")
+            logger.warning(f"[DEBUG API] Resultado {i}: chunk_length={len(chunk_content)}, chunk_preview='{chunk_content[:50] if chunk_content else 'VAZIO'}'")
         
         # Formata resposta
         response = SearchResponse(
             results=[
                 SearchResultItem(
                     chunk=result["chunk"],
-                    fonte=result["fonte"],
+                    fonte=result["fonte"] if isinstance(result["fonte"], dict) else {"title": str(result["fonte"]), "url": ""},
                     licenca=result["licenca"],
                     score=result["score"],
                     rationale=result.get("rationale"),
                     metadata=result.get("metadata", {})
                 )
-                for result in search_result["results"]
+                for result in search_result.results
             ],
-            query_info=search_result["query_info"],
-            search_stats=search_result["search_stats"],
-            total_results=len(search_result["results"]),
+            query_info=search_result.query_info,
+            search_stats=search_result.search_stats,
+            total_results=len(search_result.results),
             search_time_ms=search_time,
             cached=search_result.get("cached", False)
         )

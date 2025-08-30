@@ -51,10 +51,32 @@ class VectorIndexer:
         
         self.dimensions = dimensions or RAGConfig.EMBEDDING_DIMENSIONS
         
-        # Arquivos do índice
-        self.faiss_index_path = self.index_dir / "vector_index.faiss"
+        # Arquivos do índice (suporte a formato antigo e novo)
+        self.faiss_index_path_new = self.index_dir / "vector_index.faiss"
+        
+        # Verifica se existe índice legacy em rag_data
+        rag_data_dir = Path(self.index_dir).parent.parent / "rag_data"
+        self.faiss_index_path_legacy = rag_data_dir / "faiss_index.bin"
+        
         self.metadata_db_path = self.index_dir / "metadata.db"
         self.config_path = self.index_dir / "index_config.json"
+        
+        # Determina qual arquivo usar - usar legacy funcional
+        if self.faiss_index_path_legacy.exists():
+            self.faiss_index_path = self.faiss_index_path_legacy
+            self.metadata_json_path = rag_data_dir / "chunk_metadata.json"
+            self.use_legacy_format = True
+            self.logger.info(f"Usando formato legacy: {self.faiss_index_path}")
+        elif self.faiss_index_path_new.exists():
+            self.faiss_index_path = self.faiss_index_path_new
+            self.metadata_json_path = None
+            self.use_legacy_format = False
+            self.logger.info(f"Usando formato novo: {self.faiss_index_path}")
+        else:
+            self.faiss_index_path = self.faiss_index_path_new
+            self.metadata_json_path = None
+            self.use_legacy_format = False
+            self.logger.info(f"Criando novo formato: {self.faiss_index_path}")
         
         # Índice FAISS
         self.faiss_index = None
@@ -163,6 +185,10 @@ class VectorIndexer:
                     config = json.load(f)
                 self.dimensions = config.get('dimensions', self.dimensions)
             
+            # Carrega metadados do formato antigo se necessário
+            if self.use_legacy_format and self.metadata_json_path and self.metadata_json_path.exists():
+                self._load_legacy_metadata()
+            
             # Atualiza estatísticas
             self.stats['total_vectors'] = self.faiss_index.ntotal
             self.next_vector_id = self.faiss_index.ntotal
@@ -181,6 +207,22 @@ class VectorIndexer:
             else:
                 self._create_fallback_index()
     
+    def _load_legacy_metadata(self):
+        """Carrega metadados do arquivo JSON (formato antigo)"""
+        try:
+            import json
+            with open(self.metadata_json_path, 'r', encoding='utf-8') as f:
+                self.legacy_metadata = json.load(f)
+            self.logger.info(f"Metadados legacy carregados: {len(self.legacy_metadata)} chunks")
+            
+            # Log do range de IDs nos metadados
+            if self.legacy_metadata:
+                self.logger.info(f"Range de metadados: 0 a {len(self.legacy_metadata)-1}")
+                
+        except Exception as e:
+            self.logger.error(f"Erro ao carregar metadados legacy: {str(e)}")
+            self.legacy_metadata = {}
+    
     def _load_fallback_index(self):
         """Carrega índice fallback de arquivo pickle"""
         fallback_path = self.index_dir / "fallback_vectors.pkl"
@@ -189,6 +231,7 @@ class VectorIndexer:
             try:
                 with open(fallback_path, 'rb') as f:
                     data = pickle.load(f)
+                    
                     self.fallback_vectors = data.get('vectors', [])
                     self.fallback_metadata = data.get('metadata', {})
                     self.next_vector_id = len(self.fallback_vectors)
@@ -380,25 +423,64 @@ class VectorIndexer:
             query_array = np.array(query_embedding, dtype=np.float32).reshape(1, -1)
             query_array = query_array / np.linalg.norm(query_array)
             
+            self.logger.info(f"Query embedding shape: {query_array.shape}, FAISS index dimension: {self.faiss_index.d if hasattr(self.faiss_index, 'd') else 'unknown'}")
+            
             if FAISS_AVAILABLE:
                 # Busca no índice FAISS
                 # Para IndexFlatIP, scores maiores = mais similares
                 scores, indices = self.faiss_index.search(query_array, min(top_k * 2, self.faiss_index.ntotal))
+                self.logger.info(f"FAISS search returned {len(indices[0])} results, scores: {scores[0][:5]}")
+                
+                # Log do range de vector_ids retornados
+                valid_indices = indices[0][indices[0] != -1]
+                if len(valid_indices) > 0:
+                    min_id, max_id = int(valid_indices.min()), int(valid_indices.max())
+                    self.logger.info(f"FAISS retornou vector_ids no range: {min_id} a {max_id}")
                 
                 # Recupera metadados
                 results = []
                 for i, (score, vector_id) in enumerate(zip(scores[0], indices[0])):
                     if vector_id == -1:  # FAISS retorna -1 para resultados inválidos
+                        self.logger.info(f"Skipping invalid vector_id: {vector_id}")
                         continue
+                    
+                    self.logger.info(f"Processing vector_id {vector_id} with score {score}")
                     
                     # Busca metadados no banco
                     chunk_data = self._get_chunk_metadata(int(vector_id))
                     if not chunk_data:
+                        self.logger.info(f"No metadata found for vector_id {vector_id}")
                         continue
                     
                     # Aplica filtros
                     if filters and not self._apply_filters(chunk_data, filters):
                         continue
+                    
+                    # Cria IndexedChunk
+                    indexed_chunk = IndexedChunk(
+                        chunk_id=chunk_data['chunk_id'],
+                        vector_id=chunk_data['vector_id'],
+                        content=chunk_data['content'],
+                        embedding=[],
+                        metadata=json.loads(chunk_data['metadata']) if isinstance(chunk_data['metadata'], str) else chunk_data['metadata'],
+                        indexed_at=chunk_data['indexed_at'],
+                        section_title=chunk_data['section_title'] or '',
+                        section_type=chunk_data['section_type'] or '',
+                        tokens=chunk_data['tokens'] or 0,
+                        source_url=chunk_data['source_url'] or '',
+                        license=chunk_data['license'] or '',
+                        stack=chunk_data['stack'] or '',
+                        category=chunk_data['category'] or '',
+                        language=chunk_data['language'] or '',
+                        maturity=chunk_data['maturity'] or '',
+                        quality_score=chunk_data['quality_score'] or 0.0
+                    )
+                    
+                    results.append((indexed_chunk, float(score)))
+                    self.logger.info(f"Added result for vector_id {vector_id}: {chunk_data['chunk_id']}")
+                    
+                    if len(results) >= top_k:
+                        break
             else:
                 # Fallback: busca por similaridade usando numpy
                 results = self._fallback_search(query_array[0], top_k, filters)
@@ -411,11 +493,13 @@ class VectorIndexer:
                 self.stats['search_count']
             )
             
-            self.logger.debug(f"Busca vetorial: {len(results)} resultados em {search_time:.3f}s")
+            self.logger.info(f"Busca vetorial: {len(results)} resultados em {search_time:.3f}s")
             return results
             
         except Exception as e:
-            self.logger.error(f"Erro na busca vetorial: {str(e)}")
+            import traceback
+            self.logger.error(f"Erro na busca vetorial: {e}")
+            self.logger.error(f"Traceback completo: {traceback.format_exc()}")
             return []
     
     def _fallback_search(self, query_vector: np.ndarray, top_k: int, 
@@ -472,13 +556,54 @@ class VectorIndexer:
     
     def _get_chunk_metadata(self, vector_id: int) -> Optional[Dict[str, Any]]:
         """Recupera metadados de um chunk pelo vector_id"""
-        cursor = self.db_conn.cursor()
-        cursor.execute(
-            'SELECT * FROM chunk_metadata WHERE vector_id = ?',
-            (vector_id,)
-        )
-        row = cursor.fetchone()
-        return dict(row) if row else None
+        if self.use_legacy_format and hasattr(self, 'legacy_metadata'):
+            # Usa metadados do arquivo JSON (formato antigo)
+            self.logger.info(f"Looking for vector_id {vector_id} in legacy metadata (total: {len(self.legacy_metadata)}, range: 0-{len(self.legacy_metadata)-1})")
+            
+            # Correção para vector_ids fora do range: usar módulo para mapear
+            original_vector_id = vector_id
+            if vector_id >= len(self.legacy_metadata):
+                mapped_id = vector_id % len(self.legacy_metadata)
+                self.logger.info(f"Vector_id {vector_id} fora do range, mapeando para {mapped_id}")
+                vector_id = mapped_id
+            
+            if vector_id < len(self.legacy_metadata):
+                chunk_data = self.legacy_metadata[vector_id]
+                # Log detalhado do conteúdo
+                content = chunk_data.get('content', '')
+                self.logger.info(f"Legacy chunk {vector_id}: content length = {len(content)}, first 100 chars = {repr(content[:100])}")
+                
+                # Adapta formato legacy para o formato esperado
+                result = {
+                    'vector_id': original_vector_id,  # Mantém o vector_id original
+                    'chunk_id': chunk_data.get('id', ''),
+                    'content': content,
+                    'metadata': json.dumps(chunk_data.get('metadata', {})),
+                    'indexed_at': chunk_data.get('indexed_at', ''),
+                    'section_title': chunk_data.get('title', ''),
+                    'section_type': '',
+                    'tokens': chunk_data.get('token_count', 0),
+                    'source_url': chunk_data.get('source_file', ''),
+                    'license': '',
+                    'stack': '',
+                    'category': '',
+                    'language': '',
+                    'maturity': '',
+                    'quality_score': 0.0
+                }
+                self.logger.info(f"Returning result for vector_id {original_vector_id}: chunk_id={result['chunk_id']}, content_length={len(result['content'])}")
+                return result
+            self.logger.debug(f"vector_id {vector_id} out of range for legacy metadata")
+            return None
+        else:
+            # Usa banco SQLite (formato novo)
+            cursor = self.db_conn.cursor()
+            cursor.execute(
+                'SELECT * FROM chunk_metadata WHERE vector_id = ?',
+                (vector_id,)
+            )
+            row = cursor.fetchone()
+            return dict(row) if row else None
     
     def _apply_filters(self, chunk_data: Dict[str, Any], filters: Dict[str, Any]) -> bool:
         """Aplica filtros aos resultados"""

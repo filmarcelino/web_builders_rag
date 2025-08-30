@@ -364,7 +364,14 @@ class SearchEngine:
         """Formata resultados para resposta da API"""
         formatted = []
         
-        for result in search_results:
+        for i, result in enumerate(search_results):
+            # Log detalhado do conteúdo
+            self.logger.info(f"Formatando resultado {i}: chunk_id={result.chunk_id}, content_length={len(result.content) if result.content else 0}")
+            if result.content:
+                self.logger.info(f"Resultado {i}: primeiros 100 chars = '{result.content[:100]}'")
+            else:
+                self.logger.info(f"Resultado {i}: CONTEÚDO VAZIO!")
+            
             # Extrai informações da fonte
             metadata = result.metadata
             
@@ -390,6 +397,9 @@ class SearchEngine:
                 },
                 'highlights': result.highlights[:3] if result.highlights else []
             }
+            
+            # Log do resultado formatado
+            self.logger.info(f"Resultado {i} formatado: chunk_length={len(formatted_result['chunk']) if formatted_result['chunk'] else 0}")
             
             formatted.append(formatted_result)
         

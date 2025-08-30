@@ -23,8 +23,8 @@ class RAGConfig:
     SEARCH_TIMEOUT_SECONDS = 2
     
     # Configurações de Embeddings
-    EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-large")
-    EMBEDDING_DIMENSIONS = 3072
+    EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+    EMBEDDING_DIMENSIONS = 1536
     EMBEDDING_BATCH_SIZE = 100
     
     # Configurações de Reranking
