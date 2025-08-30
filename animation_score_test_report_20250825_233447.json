@@ -1,0 +1,179 @@
+{
+  "test_info": {
+    "timestamp": "2025-08-25T23:34:47.031098",
+    "test_type": "Animation Score Improvement Test",
+    "objective": "Validar se o sistema consegue triplicar o score para consultas de animação"
+  },
+  "results": {
+    "animation_queries": [
+      {
+        "query": "Como criar animações CSS com keyframes?",
+        "is_animation_expected": true,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 4.4625537395477295,
+        "timestamp": "2025-08-25T23:34:28.049063"
+      },
+      {
+        "query": "Exemplos de transitions suaves em CSS",
+        "is_animation_expected": true,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 2.4111080169677734,
+        "timestamp": "2025-08-25T23:34:30.460210"
+      },
+      {
+        "query": "Como fazer animações de transform rotate?",
+        "is_animation_expected": true,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 2.945537805557251,
+        "timestamp": "2025-08-25T23:34:33.405875"
+      },
+      {
+        "query": "Animação de fade in e fade out CSS",
+        "is_animation_expected": true,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 2.351492404937744,
+        "timestamp": "2025-08-25T23:34:35.757435"
+      },
+      {
+        "query": "Como criar hover effects com animação?",
+        "is_animation_expected": true,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.3572402000427246,
+        "timestamp": "2025-08-25T23:34:37.114795"
+      }
+    ],
+    "non_animation_queries": [
+      {
+        "query": "Como criar um layout responsivo?",
+        "is_animation_expected": false,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 2.624513626098633,
+        "timestamp": "2025-08-25T23:34:39.739399"
+      },
+      {
+        "query": "Melhores práticas de CSS Grid",
+        "is_animation_expected": false,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.956040859222412,
+        "timestamp": "2025-08-25T23:34:41.695471"
+      },
+      {
+        "query": "Como usar Flexbox para centralizar elementos?",
+        "is_animation_expected": false,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.890239953994751,
+        "timestamp": "2025-08-25T23:34:43.585756"
+      },
+      {
+        "query": "Cores e tipografia em CSS",
+        "is_animation_expected": false,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 2.3532583713531494,
+        "timestamp": "2025-08-25T23:34:45.939073"
+      },
+      {
+        "query": "Como fazer um menu dropdown?",
+        "is_animation_expected": false,
+        "total_results": 0,
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.091752529144287,
+        "timestamp": "2025-08-25T23:34:47.030963"
+      }
+    ],
+    "score_improvements": {
+      "avg_animation_score": 0.0,
+      "avg_non_animation_score": 0.0,
+      "improvement_ratio": 0,
+      "improvement_percentage": 0,
+      "target_achieved": false
+    },
+    "summary": {
+      "total_animation_queries": 5,
+      "total_non_animation_queries": 5,
+      "animation_boost_applied_count": 0,
+      "rag_enhancement_applied_count": 0,
+      "animation_boost_rate": 0.0,
+      "rag_enhancement_rate": 0.0
+    }
+  },
+  "analysis": {
+    "score_analysis": {
+      "target_achieved": false,
+      "improvement_ratio": 0,
+      "improvement_percentage": 0,
+      "interpretation": "❌ CRÍTICO. Nenhuma melhoria significativa detectada."
+    },
+    "system_performance": {
+      "animation_detection_rate": 0.0,
+      "prompt_enhancement_rate": 0.0,
+      "system_effectiveness": "❌ SISTEMA PRECISA DE AJUSTES"
+    },
+    "recommendations": [
+      "Aumentar o fator de boost para chunks de animação",
+      "Melhorar detecção de palavras-chave de animação",
+      "Refinar algoritmo de detecção de consultas de animação",
+      "Expandir lista de termos relacionados a animação",
+      "Aprimorar prompt especializado para animações",
+      "Adicionar mais contexto específico de animação"
+    ]
+  }
+}

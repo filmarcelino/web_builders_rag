@@ -1,0 +1,173 @@
+{
+  "test_info": {
+    "timestamp": "2025-08-25T23:33:57.979225",
+    "test_type": "Animation Score Improvement Test",
+    "objective": "Validar se o sistema consegue triplicar o score para consultas de animação"
+  },
+  "results": {
+    "animation_queries": [
+      {
+        "query": "Como criar animações CSS com keyframes?",
+        "is_animation_expected": true,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 6.4373016357421875e-06,
+        "timestamp": "2025-08-25T23:33:57.978212"
+      },
+      {
+        "query": "Exemplos de transitions suaves em CSS",
+        "is_animation_expected": true,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 7.3909759521484375e-06,
+        "timestamp": "2025-08-25T23:33:57.978291"
+      },
+      {
+        "query": "Como fazer animações de transform rotate?",
+        "is_animation_expected": true,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 5.4836273193359375e-06,
+        "timestamp": "2025-08-25T23:33:57.978430"
+      },
+      {
+        "query": "Animação de fade in e fade out CSS",
+        "is_animation_expected": true,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 5.245208740234375e-06,
+        "timestamp": "2025-08-25T23:33:57.978508"
+      },
+      {
+        "query": "Como criar hover effects com animação?",
+        "is_animation_expected": true,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 6.9141387939453125e-06,
+        "timestamp": "2025-08-25T23:33:57.978629"
+      }
+    ],
+    "non_animation_queries": [
+      {
+        "query": "Como criar um layout responsivo?",
+        "is_animation_expected": false,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.9073486328125e-06,
+        "timestamp": "2025-08-25T23:33:57.978831"
+      },
+      {
+        "query": "Melhores práticas de CSS Grid",
+        "is_animation_expected": false,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.1920928955078125e-06,
+        "timestamp": "2025-08-25T23:33:57.978944"
+      },
+      {
+        "query": "Como usar Flexbox para centralizar elementos?",
+        "is_animation_expected": false,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.430511474609375e-06,
+        "timestamp": "2025-08-25T23:33:57.979030"
+      },
+      {
+        "query": "Cores e tipografia em CSS",
+        "is_animation_expected": false,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 1.1920928955078125e-06,
+        "timestamp": "2025-08-25T23:33:57.979066"
+      },
+      {
+        "query": "Como fazer um menu dropdown?",
+        "is_animation_expected": false,
+        "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+        "avg_score": 0.0,
+        "max_score": 0.0,
+        "scores": [],
+        "animation_boost_applied": false,
+        "rag_confidence": 0.0,
+        "rag_enhanced_prompt": false,
+        "processing_time": 9.5367431640625e-07,
+        "timestamp": "2025-08-25T23:33:57.979186"
+      }
+    ],
+    "score_improvements": {},
+    "summary": {
+      "total_animation_queries": 5,
+      "total_non_animation_queries": 5,
+      "animation_boost_applied_count": 0,
+      "rag_enhancement_applied_count": 0,
+      "animation_boost_rate": 0.0,
+      "rag_enhancement_rate": 0.0
+    }
+  },
+  "analysis": {
+    "score_analysis": {
+      "target_achieved": false,
+      "improvement_ratio": 0,
+      "improvement_percentage": 0,
+      "interpretation": "❌ CRÍTICO. Nenhuma melhoria significativa detectada."
+    },
+    "system_performance": {
+      "animation_detection_rate": 0.0,
+      "prompt_enhancement_rate": 0.0,
+      "system_effectiveness": "❌ SISTEMA PRECISA DE AJUSTES"
+    },
+    "recommendations": [
+      "Aumentar o fator de boost para chunks de animação",
+      "Melhorar detecção de palavras-chave de animação",
+      "Refinar algoritmo de detecção de consultas de animação",
+      "Expandir lista de termos relacionados a animação",
+      "Aprimorar prompt especializado para animações",
+      "Adicionar mais contexto específico de animação"
+    ]
+  }
+}

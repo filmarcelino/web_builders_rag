@@ -9,6 +9,10 @@ from config.config import RAGConfig
 from src.indexing.index_manager import IndexManager, SearchResult as IndexSearchResult
 from .query_processor import QueryProcessor, ProcessedQuery
 from .search_cache import SearchCache
+from .access_control import AccessController, AccessControlResult
+from src.reranking.animation_reranker import AnimationReranker
+from src.prompts.animation_prompt_enhancer import AnimationPromptEnhancer
+from src.response.rag_response_generator import RAGResponseGenerator, RAGResponse
 
 @dataclass
 class SearchRequest:
@@ -42,6 +46,10 @@ class SearchEngine:
         self.index_manager = IndexManager(api_key, index_dir)
         self.query_processor = QueryProcessor(api_key)
         self.search_cache = SearchCache()
+        self.access_controller = AccessController()
+        self.animation_reranker = AnimationReranker()
+        self.animation_prompt_enhancer = AnimationPromptEnhancer()
+        self.rag_response_generator = RAGResponseGenerator()
         
         # Configurações
         self.api_key = api_key
@@ -115,6 +123,29 @@ class SearchEngine:
             # 3. Formata resultados
             formatted_results = self._format_results(search_results, processed_query)
             
+            # 3.1. Aplica controle de acesso
+            access_result = self.access_controller.check_access(
+                processed_query.original_query,
+                formatted_results,
+                request.context
+            )
+            
+            # Filtra resultados baseado no controle de acesso
+            formatted_results = access_result.filtered_chunks
+            
+            # Log de controle de acesso
+            if access_result.restricted_count > 0:
+                access_message = self.access_controller.get_access_message(access_result)
+                self.logger.info(f"Controle de acesso aplicado: {access_message}")
+            
+            # 3.5. Aplica re-ranking especializado para animações
+            if request.rerank and self.animation_reranker.is_animation_query(processed_query.original_query):
+                self.logger.info("Aplicando re-ranking especializado para animações")
+                formatted_results = self.animation_reranker.rerank_for_animations(
+                    processed_query.original_query, 
+                    formatted_results
+                )
+            
             # 4. Calcula estatísticas
             processing_time = time.time() - start_time
             search_stats = self._calculate_search_stats(
@@ -122,6 +153,24 @@ class SearchEngine:
                 search_results, 
                 processing_time
             )
+            
+            # Adiciona estatísticas de re-ranking de animação
+            if request.rerank and self.animation_reranker.is_animation_query(processed_query.original_query):
+                search_stats['animation_reranking'] = {
+                    'applied': True,
+                    'results_reranked': len(formatted_results)
+                }
+            else:
+                search_stats['animation_reranking'] = {'applied': False}
+            
+            # Adiciona estatísticas de controle de acesso
+            search_stats['access_control'] = {
+                'access_granted': access_result.access_granted,
+                'access_level': access_result.access_level,
+                'restricted_count': access_result.restricted_count,
+                'authorization_found': access_result.authorization_found,
+                'message': access_result.message
+            }
             
             # 5. Monta resposta
             response = SearchResponse(
@@ -173,6 +222,65 @@ class SearchEngine:
                 total_results=0,
                 processing_time=processing_time,
                 cache_hit=False
+            )
+    
+    def generate_rag_response(self, query: str, max_results: int = 10) -> RAGResponse:
+        """Gera resposta completa do RAG para uma consulta"""
+        try:
+            # 1. Realizar busca
+            search_request = SearchRequest(
+                query=query,
+                top_k=max_results,
+                filters={}
+            )
+            
+            search_response = self.search(search_request)
+            
+            # 2. Converter resultados para chunks
+            relevant_chunks = []
+            for result in search_response.results:
+                chunk = {
+                    'content': result['chunk'],
+                    'source': result['fonte']['title'],
+                    'source_url': result['fonte']['url'],
+                    'similarity_score': result['score'],
+                    'metadata': result['metadata']
+                }
+                
+                # Adicionar informações de boost de animação se aplicável
+                if 'animation_boost' in result:
+                    chunk['animation_boost'] = result['animation_boost']
+                if 'animation_elements' in result:
+                    chunk['animation_elements'] = result['animation_elements']
+                
+                relevant_chunks.append(chunk)
+            
+            # 3. Gerar resposta final
+            query_info = {
+                'original_query': query,
+                'search_time': search_response.processing_time,
+                'total_chunks_found': search_response.total_results,
+                'chunks_used': len(relevant_chunks)
+            }
+            
+            return self.rag_response_generator.generate_response(
+                query=query,
+                relevant_chunks=relevant_chunks,
+                query_info=query_info
+            )
+            
+        except Exception as e:
+            self.logger.error(f"Erro na geração de resposta RAG: {str(e)}")
+            # Retornar resposta de erro
+            return RAGResponse(
+                answer=f"Desculpe, ocorreu um erro ao processar sua consulta: {str(e)}",
+                sources=[],
+                confidence_score=0.0,
+                processing_time=0.0,
+                query_info={'original_query': query, 'error': str(e)},
+                enhanced_prompt_used=False,
+                animation_boost_applied=False,
+                generated_at=datetime.now().isoformat()
             )
     
     def _validate_request(self, request: SearchRequest):
@@ -241,8 +349,19 @@ class SearchEngine:
         if processed_query.category_context and 'category' not in enhanced:
             enhanced['category_preference'] = processed_query.category_context[0]
         
+        # Filtros específicos para consultas de animação
+        if self.animation_reranker.is_animation_query(processed_query.original_query):
+            # Prioriza chunks com animation_score alto
+            enhanced['animation_score_min'] = 0.1  # Score mínimo para animações
+            enhanced['prefer_animation_content'] = True
+            
+            # Para consultas de animação, reduz requisito de qualidade geral
+            # mas exige relevância específica de animação
+            if 'quality_score_min' not in enhanced:
+                enhanced['quality_score_min'] = 0.3  # Mais permissivo para animações
+        
         # Filtro de qualidade baseado na intenção
-        if processed_query.intent in ['implementation', 'example']:
+        elif processed_query.intent in ['implementation', 'example']:
             enhanced['quality_score_min'] = 0.7  # Exige alta qualidade para implementações
         
         return enhanced

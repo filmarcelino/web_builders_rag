@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-08-30T17:36:05.440466",
+  "summary": {
+    "total_tests": 5,
+    "passed_tests": 0,
+    "failed_tests": 5,
+    "success_rate": 0.0
+  },
+  "test_results": [
+    {
+      "test_number": 1,
+      "test_name": "Consulta sem palavra-chave - deve ser bloqueada",
+      "query": "Como criar um agente AI usando LangGraph?",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "test_passed": false
+    },
+    {
+      "test_number": 2,
+      "test_name": "Consulta com palavra-chave - deve ter acesso",
+      "query": "vinapermitecriar Como criar um agente AI usando LangGraph?",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "test_passed": false
+    },
+    {
+      "test_number": 3,
+      "test_name": "Consulta sobre animação - não deve ser afetada",
+      "query": "Como criar animações CSS com keyframes?",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "test_passed": false
+    },
+    {
+      "test_number": 4,
+      "test_name": "Consulta sobre frameworks sem palavra-chave",
+      "query": "Quais são os melhores frameworks para agentes AI?",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "test_passed": false
+    },
+    {
+      "test_number": 5,
+      "test_name": "Consulta sobre frameworks com palavra-chave",
+      "query": "vinapermitecriar Quais são os melhores frameworks para agentes AI?",
+      "error": "SearchRequest.__init__() got an unexpected keyword argument 'max_results'",
+      "test_passed": false
+    }
+  ]
+}

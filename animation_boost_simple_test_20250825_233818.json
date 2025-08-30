@@ -1,0 +1,175 @@
+{
+  "test_info": {
+    "timestamp": "2025-08-25T23:38:18.242252",
+    "test_type": "Animation Boost Simple Test",
+    "objective": "Validar componentes de detecção e boost de animação"
+  },
+  "results": {
+    "detection_tests": [
+      {
+        "query": "Como criar animações CSS com keyframes?",
+        "expected_animation": true,
+        "detected_animation": true,
+        "correct_detection": true
+      },
+      {
+        "query": "Exemplos de transitions suaves em CSS",
+        "expected_animation": true,
+        "detected_animation": true,
+        "correct_detection": true
+      },
+      {
+        "query": "Como fazer animações de transform rotate?",
+        "expected_animation": true,
+        "detected_animation": true,
+        "correct_detection": true
+      },
+      {
+        "query": "Animação de fade in e fade out CSS",
+        "expected_animation": true,
+        "detected_animation": true,
+        "correct_detection": true
+      },
+      {
+        "query": "Como criar hover effects com animação?",
+        "expected_animation": true,
+        "detected_animation": true,
+        "correct_detection": true
+      },
+      {
+        "query": "Como criar um layout responsivo?",
+        "expected_animation": false,
+        "detected_animation": false,
+        "correct_detection": true
+      },
+      {
+        "query": "Melhores práticas de CSS Grid",
+        "expected_animation": false,
+        "detected_animation": false,
+        "correct_detection": true
+      },
+      {
+        "query": "Como usar Flexbox para centralizar elementos?",
+        "expected_animation": false,
+        "detected_animation": false,
+        "correct_detection": true
+      },
+      {
+        "query": "Cores e tipografia em CSS",
+        "expected_animation": false,
+        "detected_animation": false,
+        "correct_detection": true
+      },
+      {
+        "query": "Como fazer um menu dropdown?",
+        "expected_animation": false,
+        "detected_animation": false,
+        "correct_detection": true
+      }
+    ],
+    "boost_tests": [
+      {
+        "query": "Como criar animações CSS com keyframes?",
+        "query_type": "animation",
+        "original_avg_score": 2.5324999999999998,
+        "boosted_avg_score": 2.5324999999999998,
+        "animation_chunks_boosted": 3,
+        "total_chunks": 5,
+        "boost_applied": true,
+        "score_improvement_ratio": 1.0
+      },
+      {
+        "query": "Exemplos de transitions suaves em CSS",
+        "query_type": "animation",
+        "original_avg_score": 14.424625,
+        "boosted_avg_score": 14.424625,
+        "animation_chunks_boosted": 3,
+        "total_chunks": 5,
+        "boost_applied": true,
+        "score_improvement_ratio": 1.0
+      },
+      {
+        "query": "Como criar um layout responsivo?",
+        "query_type": "non_animation",
+        "original_avg_score": 104.00605625,
+        "boosted_avg_score": 104.00605625,
+        "animation_chunks_boosted": 3,
+        "total_chunks": 5,
+        "boost_applied": true,
+        "score_improvement_ratio": 1.0
+      },
+      {
+        "query": "Melhores práticas de CSS Grid",
+        "query_type": "non_animation",
+        "original_avg_score": 815.5499040625,
+        "boosted_avg_score": 815.5499040625,
+        "animation_chunks_boosted": 3,
+        "total_chunks": 5,
+        "boost_applied": true,
+        "score_improvement_ratio": 1.0
+      }
+    ],
+    "prompt_enhancement_tests": [
+      {
+        "query": "Como criar animações CSS com keyframes?",
+        "query_type": "animation",
+        "is_animation_query": true,
+        "system_prompt_enhanced": true,
+        "user_prompt_enhanced": true,
+        "enhancement_applied": true
+      },
+      {
+        "query": "Exemplos de transitions suaves em CSS",
+        "query_type": "animation",
+        "is_animation_query": true,
+        "system_prompt_enhanced": true,
+        "user_prompt_enhanced": true,
+        "enhancement_applied": true
+      },
+      {
+        "query": "Como criar um layout responsivo?",
+        "query_type": "non_animation",
+        "is_animation_query": false,
+        "system_prompt_enhanced": false,
+        "user_prompt_enhanced": false,
+        "enhancement_applied": false
+      },
+      {
+        "query": "Melhores práticas de CSS Grid",
+        "query_type": "non_animation",
+        "is_animation_query": false,
+        "system_prompt_enhanced": false,
+        "user_prompt_enhanced": false,
+        "enhancement_applied": false
+      }
+    ],
+    "summary": {
+      "detection_accuracy": 1.0,
+      "detection_correct": 10,
+      "detection_total": 10,
+      "boost_application_rate": 1.0,
+      "avg_animation_boost_ratio": 1.0,
+      "avg_non_animation_boost_ratio": 1.0,
+      "boost_effectiveness": 1.0,
+      "enhancement_application_rate": 0.5,
+      "target_achieved": false
+    }
+  },
+  "analysis": {
+    "detection_performance": {
+      "accuracy": 1.0,
+      "interpretation": "🎉 EXCELENTE! Detecção muito precisa."
+    },
+    "boost_performance": {
+      "effectiveness": 1.0,
+      "animation_boost": 1.0,
+      "target_achieved": false,
+      "interpretation": "❌ CRÍTICO. Boost não está funcionando adequadamente."
+    },
+    "enhancement_performance": {
+      "application_rate": 0.5,
+      "interpretation": "⚠️ MODERADO. Aprimoramento parcial."
+    },
+    "overall_assessment": "⚠️ SISTEMA PARCIALMENTE FUNCIONAL - boost/enhancement precisam de ajustes."
+  }
+}

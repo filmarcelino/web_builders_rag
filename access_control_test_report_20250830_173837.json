@@ -1,0 +1,71 @@
+{
+  "timestamp": "2025-08-30T17:38:37.893206",
+  "summary": {
+    "total_tests": 5,
+    "passed_tests": 3,
+    "failed_tests": 2,
+    "success_rate": 60.0
+  },
+  "test_results": [
+    {
+      "test_number": 1,
+      "test_name": "Consulta sem palavra-chave - deve ser bloqueada",
+      "query": "Como criar um agente AI usando LangGraph?",
+      "expected_access": false,
+      "actual_access": true,
+      "authorization_found": false,
+      "restricted_count": 0,
+      "results_count": 0,
+      "access_message": null,
+      "test_passed": false
+    },
+    {
+      "test_number": 2,
+      "test_name": "Consulta com palavra-chave - deve ter acesso",
+      "query": "vinapermitecriar Como criar um agente AI usando LangGraph?",
+      "expected_access": true,
+      "actual_access": true,
+      "authorization_found": true,
+      "restricted_count": 0,
+      "results_count": 0,
+      "access_message": null,
+      "test_passed": true
+    },
+    {
+      "test_number": 3,
+      "test_name": "Consulta sobre animação - não deve ser afetada",
+      "query": "Como criar animações CSS com keyframes?",
+      "expected_access": true,
+      "actual_access": true,
+      "authorization_found": false,
+      "restricted_count": 0,
+      "results_count": 0,
+      "access_message": null,
+      "test_passed": true
+    },
+    {
+      "test_number": 4,
+      "test_name": "Consulta sobre frameworks sem palavra-chave",
+      "query": "Quais são os melhores frameworks para agentes AI?",
+      "expected_access": false,
+      "actual_access": true,
+      "authorization_found": false,
+      "restricted_count": 0,
+      "results_count": 0,
+      "access_message": null,
+      "test_passed": false
+    },
+    {
+      "test_number": 5,
+      "test_name": "Consulta sobre frameworks com palavra-chave",
+      "query": "vinapermitecriar Quais são os melhores frameworks para agentes AI?",
+      "expected_access": true,
+      "actual_access": true,
+      "authorization_found": true,
+      "restricted_count": 0,
+      "results_count": 0,
+      "access_message": null,
+      "test_passed": true
+    }
+  ]
+}
