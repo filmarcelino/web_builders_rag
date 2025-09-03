@@ -1,0 +1,32 @@
+{
+  "source_info": {
+    "name": "HeyGen",
+    "category": "ai_generation",
+    "base_url": "https://heygen.com",
+    "documentation_urls": [
+      "https://docs.heygen.com/",
+      "https://help.heygen.com/"
+    ],
+    "api_docs_urls": [
+      "https://docs.heygen.com/reference"
+    ],
+    "tutorial_urls": null,
+    "priority": 2,
+    "rate_limit": 1.5,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main",
+      "title": "h1, .docs-title",
+      "description": ".description"
+    },
+    "vibe_relevance": 0.8
+  },
+  "collection_stats": {
+    "name": "HeyGen",
+    "category": "ai_generation",
+    "pages_collected": 2,
+    "tokens_collected": 503,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:23.038762"
+}

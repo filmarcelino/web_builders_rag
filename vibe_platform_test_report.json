@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-09-03T03:33:29.763265",
+  "duration": 29.21588969230652,
+  "total_tests": 14,
+  "successful_tests": 8,
+  "success_rate": 57.14285714285714,
+  "test_results": [
+    {
+      "test": "Content Collector",
+      "success": true,
+      "details": "Sistema inicializado",
+      "timestamp": "2025-09-03T03:33:00.636104"
+    },
+    {
+      "test": "Backend Integrator",
+      "success": true,
+      "details": "Backends configurados",
+      "timestamp": "2025-09-03T03:33:00.636625"
+    },
+    {
+      "test": "Visual Editor",
+      "success": true,
+      "details": "Editor visual pronto",
+      "timestamp": "2025-09-03T03:33:00.636922"
+    },
+    {
+      "test": "AI Generation Hub",
+      "success": true,
+      "details": "IA generativa configurada",
+      "timestamp": "2025-09-03T03:33:00.637289"
+    },
+    {
+      "test": "Context-Aware AI",
+      "success": true,
+      "details": "IA contextual ativa",
+      "timestamp": "2025-09-03T03:33:00.637840"
+    },
+    {
+      "test": "Perfect Preview",
+      "success": true,
+      "details": "Preview system rodando",
+      "timestamp": "2025-09-03T03:33:00.658781"
+    },
+    {
+      "test": "Vibe Platform",
+      "success": true,
+      "details": "Plataforma unificada ativa",
+      "timestamp": "2025-09-03T03:33:21.742544"
+    },
+    {
+      "test": "Workflow Completo",
+      "success": false,
+      "details": "'VibeCreationPlatform' object has no attribute 'create_project'",
+      "timestamp": "2025-09-03T03:33:21.742764"
+    },
+    {
+      "test": "AI - DALL-E 3",
+      "success": false,
+      "details": "unsupported operand type(s) for +=: 'dict' and 'int'",
+      "timestamp": "2025-09-03T03:33:21.744640"
+    },
+    {
+      "test": "AI - Leonardo AI",
+      "success": false,
+      "details": "unsupported operand type(s) for +=: 'dict' and 'int'",
+      "timestamp": "2025-09-03T03:33:21.745523"
+    },
+    {
+      "test": "AI - Kling AI",
+      "success": false,
+      "details": "unsupported operand type(s) for +=: 'dict' and 'int'",
+      "timestamp": "2025-09-03T03:33:21.746239"
+    },
+    {
+      "test": "AI - Veo 3",
+      "success": false,
+      "details": "unsupported operand type(s) for +=: 'dict' and 'int'",
+      "timestamp": "2025-09-03T03:33:29.760952"
+    },
+    {
+      "test": "AI - HeyGen",
+      "success": false,
+      "details": "unsupported operand type(s) for +=: 'dict' and 'int'",
+      "timestamp": "2025-09-03T03:33:29.761711"
+    },
+    {
+      "test": "Colaboração",
+      "success": true,
+      "details": "3 usuários simultâneos",
+      "timestamp": "2025-09-03T03:33:29.762443"
+    }
+  ]
+}

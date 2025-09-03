@@ -1,0 +1,33 @@
+{
+  "source_info": {
+    "name": "Figma",
+    "category": "design_tools",
+    "base_url": "https://figma.com",
+    "documentation_urls": [
+      "https://help.figma.com/",
+      "https://www.figma.com/developers/"
+    ],
+    "api_docs_urls": [
+      "https://www.figma.com/developers/api",
+      "https://www.figma.com/plugin-docs/"
+    ],
+    "tutorial_urls": null,
+    "priority": 1,
+    "rate_limit": 1.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".help-content, main, article",
+      "title": "h1, .help-title",
+      "description": ".help-description, .summary"
+    },
+    "vibe_relevance": 0.95
+  },
+  "collection_stats": {
+    "name": "Figma",
+    "category": "design_tools",
+    "pages_collected": 4,
+    "tokens_collected": 2167,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:07.314341"
+}

@@ -1,0 +1,39 @@
+{
+  "source_info": {
+    "name": "Webflow",
+    "category": "nocode",
+    "base_url": "https://webflow.com",
+    "documentation_urls": [
+      "https://university.webflow.com/",
+      "https://docs.webflow.com/",
+      "https://webflow.com/interactions-animations",
+      "https://webflow.com/ecommerce",
+      "https://webflow.com/cms"
+    ],
+    "api_docs_urls": [
+      "https://developers.webflow.com/",
+      "https://developers.webflow.com/reference"
+    ],
+    "tutorial_urls": [
+      "https://university.webflow.com/courses",
+      "https://webflow.com/blog/category/tutorials"
+    ],
+    "priority": 1,
+    "rate_limit": 2.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": "main, .main-content, .content, article",
+      "title": "h1, .page-title, .article-title",
+      "description": ".description, .summary, .excerpt"
+    },
+    "vibe_relevance": 0.95
+  },
+  "collection_stats": {
+    "name": "Webflow",
+    "category": "nocode",
+    "pages_collected": 7,
+    "tokens_collected": 10149,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:19.864843"
+}

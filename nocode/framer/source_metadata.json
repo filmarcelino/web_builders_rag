@@ -1,0 +1,34 @@
+{
+  "source_info": {
+    "name": "Framer",
+    "category": "nocode",
+    "base_url": "https://framer.com",
+    "documentation_urls": [
+      "https://www.framer.com/docs/",
+      "https://www.framer.com/motion/",
+      "https://www.framer.com/docs/components/"
+    ],
+    "api_docs_urls": null,
+    "tutorial_urls": [
+      "https://www.framer.com/academy/",
+      "https://www.framer.com/blog/"
+    ],
+    "priority": 1,
+    "rate_limit": 1.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main, article",
+      "title": "h1, .docs-title",
+      "description": ".docs-description, .summary"
+    },
+    "vibe_relevance": 0.98
+  },
+  "collection_stats": {
+    "name": "Framer",
+    "category": "nocode",
+    "pages_collected": 5,
+    "tokens_collected": 4062,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:07.650427"
+}

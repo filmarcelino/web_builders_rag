@@ -1,0 +1,122 @@
+{
+  "usage_metrics": {
+    "total_generations": 6,
+    "successful_generations": 1,
+    "failed_generations": 5,
+    "total_cost": 0.0,
+    "average_processing_time": 0.602618408203125,
+    "provider_usage": {
+      "dalle3": 2,
+      "leonardo": 1,
+      "kling": 1,
+      "heygen": 1,
+      "midjourney": 1
+    },
+    "popular_styles": {},
+    "user_satisfaction": 0.0
+  },
+  "generation_history": [
+    {
+      "id": "a4648b54-db99-4036-9bc6-a106cb9b8f53",
+      "provider": "dalle3",
+      "type": "image",
+      "prompt": "Professional, high-quality image representing: Modern, innovative, trustworthy AI startup with cutting-edge technology. Photorealistic, modern, engaging.",
+      "style": "photorealistic",
+      "parameters": {},
+      "user_id": null,
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:23.360009",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "OPENAI_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    },
+    {
+      "id": "96610027-99cb-46c3-8c45-2d7d9003a58d",
+      "provider": "leonardo",
+      "type": "image",
+      "prompt": "Artistic interpretation, concept art style: Modern, innovative, trustworthy AI startup with cutting-edge technology. Creative, inspiring, professional.",
+      "style": "concept_art",
+      "parameters": {},
+      "user_id": null,
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:23.360729",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "LEONARDO_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    },
+    {
+      "id": "23361919-46b3-4458-b7c5-51c5e7d7b4c4",
+      "provider": "kling",
+      "type": "video",
+      "prompt": "Dynamic promotional video showcasing: Modern, innovative, trustworthy AI startup with cutting-edge technology. Engaging, modern, professional quality.",
+      "style": "promotional",
+      "parameters": {},
+      "user_id": null,
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:23.362275",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "KLING_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    },
+    {
+      "id": "50026006-dca0-4228-b03b-785c62b270fc",
+      "provider": "heygen",
+      "type": "avatar",
+      "prompt": "Professional presenter avatar explaining: Modern, innovative, trustworthy AI startup with cutting-edge technology. Friendly, confident, engaging.",
+      "style": "professional",
+      "parameters": {
+        "voice_style": "friendly",
+        "language": "en"
+      },
+      "user_id": null,
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:23.362932",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "HEYGEN_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    },
+    {
+      "id": "65b9b60c-b3b9-4371-ad4a-afb136c387f4",
+      "provider": "midjourney",
+      "type": "image",
+      "prompt": "Artistic masterpiece interpretation: Modern, innovative, trustworthy AI startup with cutting-edge technology. Creative, unique, inspiring.",
+      "style": "artistic",
+      "parameters": {},
+      "user_id": null,
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:23.364745",
+      "status": "completed",
+      "result_url": "https://example.com/midjourney-artwork.png",
+      "error_message": null,
+      "processing_time": 3.013092041015625,
+      "cost": null
+    },
+    {
+      "id": "f34e9f2d-0d6f-471d-893a-53ca834da0a1",
+      "provider": "dalle3",
+      "type": "image",
+      "prompt": "Professional hero image for AI startup. Context: Project type: landing_page; Brand style: modern; Target audience: tech_professionals; Color palette: #007bff, #28a745, #ffc107; Project vibe: Modern, innovative, trustworthy AI startup with cutting-edge technology. Style: professional, modern, modern.",
+      "style": "photorealistic",
+      "parameters": {},
+      "user_id": "test-user-123",
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:26.381392",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "OPENAI_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    }
+  ],
+  "cache_size": 1,
+  "active_requests": 0,
+  "timestamp": "2025-09-03T03:39:26.381525"
+}

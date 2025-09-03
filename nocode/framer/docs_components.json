@@ -1,0 +1,12 @@
+{
+  "url": "https://www.framer.com/docs/components/",
+  "title": "Framer for Developers",
+  "description": "",
+  "text": "Framer for Developers\nFramer for Developers\nOur developer features empowers you to extend Framer’s capabilities with standard React and Javascript. Get started with our docs and guides below.\nPlugins\nBuild small apps that can interact with the Framer Editor and CMS.\nFetch\nBuilding API endpoints that designers can use on their Framer sites without code.\nCode Components\nCustom React Components with visual controls to render anything on your site.\nCode Overrides\nHigher Order Components to modify Layer and Component properties.",
+  "source_name": "Framer",
+  "source_category": "nocode",
+  "vibe_relevance": 0.98,
+  "content_length": 529,
+  "token_count": 99,
+  "collection_timestamp": "2025-09-03T03:39:05.663121"
+}

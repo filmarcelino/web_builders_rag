@@ -1,0 +1,244 @@
+{
+  "collection_stats": {
+    "sources_processed": 10,
+    "pages_collected": 33,
+    "total_tokens": 30235,
+    "errors": [],
+    "start_time": "2025-09-03T03:39:03.480358",
+    "end_time": "2025-09-03T03:39:23.347033"
+  },
+  "sources_info": [
+    {
+      "name": "Webflow",
+      "category": "nocode",
+      "base_url": "https://webflow.com",
+      "documentation_urls": [
+        "https://university.webflow.com/",
+        "https://docs.webflow.com/",
+        "https://webflow.com/interactions-animations",
+        "https://webflow.com/ecommerce",
+        "https://webflow.com/cms"
+      ],
+      "api_docs_urls": [
+        "https://developers.webflow.com/",
+        "https://developers.webflow.com/reference"
+      ],
+      "tutorial_urls": [
+        "https://university.webflow.com/courses",
+        "https://webflow.com/blog/category/tutorials"
+      ],
+      "priority": 1,
+      "rate_limit": 2.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": "main, .main-content, .content, article",
+        "title": "h1, .page-title, .article-title",
+        "description": ".description, .summary, .excerpt"
+      },
+      "vibe_relevance": 0.95
+    },
+    {
+      "name": "Bubble",
+      "category": "nocode",
+      "base_url": "https://bubble.io",
+      "documentation_urls": [
+        "https://manual.bubble.io/",
+        "https://bubble.io/academy",
+        "https://bubble.io/plugins"
+      ],
+      "api_docs_urls": [
+        "https://manual.bubble.io/core-resources/api",
+        "https://manual.bubble.io/core-resources/bubble-made-plugins"
+      ],
+      "tutorial_urls": null,
+      "priority": 1,
+      "rate_limit": 1.5,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".manual-content, .academy-content, main",
+        "title": "h1, .manual-title",
+        "description": ".manual-description, .summary"
+      },
+      "vibe_relevance": 0.9
+    },
+    {
+      "name": "Framer",
+      "category": "nocode",
+      "base_url": "https://framer.com",
+      "documentation_urls": [
+        "https://www.framer.com/docs/",
+        "https://www.framer.com/motion/",
+        "https://www.framer.com/docs/components/"
+      ],
+      "api_docs_urls": null,
+      "tutorial_urls": [
+        "https://www.framer.com/academy/",
+        "https://www.framer.com/blog/"
+      ],
+      "priority": 1,
+      "rate_limit": 1.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main, article",
+        "title": "h1, .docs-title",
+        "description": ".docs-description, .summary"
+      },
+      "vibe_relevance": 0.98
+    },
+    {
+      "name": "Leonardo AI",
+      "category": "ai_generation",
+      "base_url": "https://leonardo.ai",
+      "documentation_urls": [
+        "https://docs.leonardo.ai/",
+        "https://leonardo.ai/blog/"
+      ],
+      "api_docs_urls": [
+        "https://docs.leonardo.ai/reference"
+      ],
+      "tutorial_urls": null,
+      "priority": 1,
+      "rate_limit": 2.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main, article",
+        "title": "h1, .docs-title",
+        "description": ".description, .summary"
+      },
+      "vibe_relevance": 0.92
+    },
+    {
+      "name": "OpenAI DALL-E",
+      "category": "ai_generation",
+      "base_url": "https://openai.com",
+      "documentation_urls": [
+        "https://platform.openai.com/docs/guides/images",
+        "https://openai.com/dall-e-3"
+      ],
+      "api_docs_urls": [
+        "https://platform.openai.com/docs/api-reference/images"
+      ],
+      "tutorial_urls": null,
+      "priority": 1,
+      "rate_limit": 1.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main, article",
+        "title": "h1, .page-title",
+        "description": ".description, .summary"
+      },
+      "vibe_relevance": 0.88
+    },
+    {
+      "name": "Kling AI",
+      "category": "ai_generation",
+      "base_url": "https://klingai.com",
+      "documentation_urls": [
+        "https://klingai.com/docs/",
+        "https://klingai.com/blog/"
+      ],
+      "api_docs_urls": null,
+      "tutorial_urls": null,
+      "priority": 2,
+      "rate_limit": 2.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": "main, .content, article",
+        "title": "h1, .title",
+        "description": ".description, .summary"
+      },
+      "vibe_relevance": 0.85
+    },
+    {
+      "name": "HeyGen",
+      "category": "ai_generation",
+      "base_url": "https://heygen.com",
+      "documentation_urls": [
+        "https://docs.heygen.com/",
+        "https://help.heygen.com/"
+      ],
+      "api_docs_urls": [
+        "https://docs.heygen.com/reference"
+      ],
+      "tutorial_urls": null,
+      "priority": 2,
+      "rate_limit": 1.5,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main",
+        "title": "h1, .docs-title",
+        "description": ".description"
+      },
+      "vibe_relevance": 0.8
+    },
+    {
+      "name": "Figma",
+      "category": "design_tools",
+      "base_url": "https://figma.com",
+      "documentation_urls": [
+        "https://help.figma.com/",
+        "https://www.figma.com/developers/"
+      ],
+      "api_docs_urls": [
+        "https://www.figma.com/developers/api",
+        "https://www.figma.com/plugin-docs/"
+      ],
+      "tutorial_urls": null,
+      "priority": 1,
+      "rate_limit": 1.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".help-content, main, article",
+        "title": "h1, .help-title",
+        "description": ".help-description, .summary"
+      },
+      "vibe_relevance": 0.95
+    },
+    {
+      "name": "Vercel",
+      "category": "deployment",
+      "base_url": "https://vercel.com",
+      "documentation_urls": [
+        "https://vercel.com/docs",
+        "https://vercel.com/guides"
+      ],
+      "api_docs_urls": [
+        "https://vercel.com/docs/rest-api"
+      ],
+      "tutorial_urls": null,
+      "priority": 1,
+      "rate_limit": 1.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main",
+        "title": "h1, .docs-title",
+        "description": ".docs-description"
+      },
+      "vibe_relevance": 0.85
+    },
+    {
+      "name": "Netlify",
+      "category": "deployment",
+      "base_url": "https://netlify.com",
+      "documentation_urls": [
+        "https://docs.netlify.com/",
+        "https://www.netlify.com/blog/"
+      ],
+      "api_docs_urls": [
+        "https://docs.netlify.com/api/get-started/"
+      ],
+      "tutorial_urls": null,
+      "priority": 2,
+      "rate_limit": 1.0,
+      "headers": null,
+      "content_selectors": {
+        "main_content": ".docs-content, main",
+        "title": "h1, .docs-title",
+        "description": ".docs-description"
+      },
+      "vibe_relevance": 0.8
+    }
+  ],
+  "collection_timestamp": "2025-09-03T03:39:23.347083",
+  "platform_version": "1.0.0"
+}

@@ -1,0 +1,34 @@
+{
+  "source_info": {
+    "name": "Bubble",
+    "category": "nocode",
+    "base_url": "https://bubble.io",
+    "documentation_urls": [
+      "https://manual.bubble.io/",
+      "https://bubble.io/academy",
+      "https://bubble.io/plugins"
+    ],
+    "api_docs_urls": [
+      "https://manual.bubble.io/core-resources/api",
+      "https://manual.bubble.io/core-resources/bubble-made-plugins"
+    ],
+    "tutorial_urls": null,
+    "priority": 1,
+    "rate_limit": 1.5,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".manual-content, .academy-content, main",
+      "title": "h1, .manual-title",
+      "description": ".manual-description, .summary"
+    },
+    "vibe_relevance": 0.9
+  },
+  "collection_stats": {
+    "name": "Bubble",
+    "category": "nocode",
+    "pages_collected": 5,
+    "tokens_collected": 1849,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:09.705059"
+}

@@ -1,0 +1,32 @@
+{
+  "source_info": {
+    "name": "Leonardo AI",
+    "category": "ai_generation",
+    "base_url": "https://leonardo.ai",
+    "documentation_urls": [
+      "https://docs.leonardo.ai/",
+      "https://leonardo.ai/blog/"
+    ],
+    "api_docs_urls": [
+      "https://docs.leonardo.ai/reference"
+    ],
+    "tutorial_urls": null,
+    "priority": 1,
+    "rate_limit": 2.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main, article",
+      "title": "h1, .docs-title",
+      "description": ".description, .summary"
+    },
+    "vibe_relevance": 0.92
+  },
+  "collection_stats": {
+    "name": "Leonardo AI",
+    "category": "ai_generation",
+    "pages_collected": 2,
+    "tokens_collected": 58,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:08.020463"
+}

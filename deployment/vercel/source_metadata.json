@@ -1,0 +1,32 @@
+{
+  "source_info": {
+    "name": "Vercel",
+    "category": "deployment",
+    "base_url": "https://vercel.com",
+    "documentation_urls": [
+      "https://vercel.com/docs",
+      "https://vercel.com/guides"
+    ],
+    "api_docs_urls": [
+      "https://vercel.com/docs/rest-api"
+    ],
+    "tutorial_urls": null,
+    "priority": 1,
+    "rate_limit": 1.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main",
+      "title": "h1, .docs-title",
+      "description": ".docs-description"
+    },
+    "vibe_relevance": 0.85
+  },
+  "collection_stats": {
+    "name": "Vercel",
+    "category": "deployment",
+    "pages_collected": 3,
+    "tokens_collected": 2767,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:05.726412"
+}

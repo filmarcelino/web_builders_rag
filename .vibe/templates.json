@@ -1,0 +1,36 @@
+{
+  "modern_landing": {
+    "name": "Modern Landing Page",
+    "description": "Template moderno para landing page",
+    "vibe_description": "Clean, modern, professional landing page with hero section, features, and call-to-action",
+    "components": [
+      "hero",
+      "features",
+      "testimonials",
+      "cta"
+    ],
+    "color_palette": [
+      "#007bff",
+      "#28a745",
+      "#ffffff",
+      "#f8f9fa"
+    ]
+  },
+  "ecommerce_store": {
+    "name": "E-commerce Store",
+    "description": "Loja online completa",
+    "vibe_description": "Modern e-commerce store with product showcase, shopping cart, and checkout",
+    "components": [
+      "header",
+      "product_grid",
+      "cart",
+      "checkout"
+    ],
+    "color_palette": [
+      "#e91e63",
+      "#9c27b0",
+      "#ffffff",
+      "#f5f5f5"
+    ]
+  }
+}

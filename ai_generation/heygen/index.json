@@ -1,0 +1,12 @@
+{
+  "url": "https://docs.heygen.com/",
+  "title": "HeyGen API Documentation",
+  "description": "",
+  "text": "HeyGen API Documentation\nTranslate Videos\nwith Video Translate API\nTranslating videos programmatically, opening up possibilities for\nreaching global audiences with content in their native languages.\nAvatar Videos\nwith HeyGen API\nBy selecting an avatar and a voice, you can create engaging videos\nfor various purposes.\nInteractive Avatars\nwith Streaming API\nCreate dynamic and interactive experiences using Interactive\nAvatars in the Streaming API.\nPhoto Avatar Videos\nwith Photo Avatars API\nGenerate live-looking photo avatar videos with the Photo Avatars\nAPI.\nCustomized Videos\nwith Template API\nEffortlessly generate customized videos from templates. If you\nneed to generate hyper-personalized video at scale, templates are\nthe perfect choice.\nSend Personalized Videos\nwith Integrations\nGenerate personalized videos from templates using Template API and\nsend them to your audience using third-party integrations and\nCRMs.\nNotify Your Endpoints\nwith HeyGen's Webhook Events\nWebhook events are how the HeyGen notifies your endpoints when a\nvariety of interactions or events happen.\nSee\nThird-Party Integrations\nSee\nAPI Reference",
+  "source_name": "HeyGen",
+  "source_category": "ai_generation",
+  "vibe_relevance": 0.8,
+  "content_length": 1128,
+  "token_count": 228,
+  "collection_timestamp": "2025-09-03T03:39:20.047689"
+}

@@ -1,0 +1,288 @@
+[
+  {
+    "title": "Lovable – Visual Edit (feature)",
+    "url": "https://docs.lovable.dev/features/visual-edit",
+    "type": "doc",
+    "tags": ["lovable", "visual-edit", "ux", "dom-mapping", "ast"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Base conceitual do visual edit (seleção no DOM -> patch no código)."
+  },
+  {
+    "title": "Lovable – Getting Started",
+    "url": "https://docs.lovable.dev/getting-started",
+    "type": "doc",
+    "tags": ["lovable", "onboarding", "builder-flow"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Fluxo geral do produto, útil pra respostas orientadas a UX."
+  },
+  {
+    "title": "Lovable – Blog técnico (Visual Edits, arquitetura)",
+    "url": "https://blog.lovable.dev/",
+    "type": "blog",
+    "tags": ["lovable", "architecture", "trade-offs", "debugging"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Posts com decisões de engenharia: ingestão seletiva (posts sobre Visual Edit)."
+  },
+
+  {
+    "title": "Replit Agent – Overview",
+    "url": "https://docs.replit.com/ai/agent",
+    "type": "doc",
+    "tags": ["replit", "agent", "builder", "planning", "apply-changes"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Capacidades do agente (plan/build), integrações no workspace Replit."
+  },
+  {
+    "title": "Replit – How to build an AI Agent",
+    "url": "https://docs.replit.com/ai/how-to-build-an-ai-agent",
+    "type": "doc",
+    "tags": ["replit", "how-to", "agent-architecture"],
+    "license": "site-terms",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Guia prático para pipeline de agente no ecossistema Replit."
+  },
+
+  {
+    "title": "Bolt.new (StackBlitz) – Help Center",
+    "url": "https://developer.stackblitz.com/platform/bolt/",
+    "type": "doc",
+    "tags": ["bolt", "stackblitz", "visual-builder", "webcontainer"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Conceitos e FAQs do Bolt (AI builder sobre WebContainers)."
+  },
+
+  {
+    "title": "StackBlitz – WebContainer API",
+    "url": "https://developer.stackblitz.com/platform/api/webcontainer-api",
+    "type": "doc",
+    "tags": ["webcontainers", "node-in-browser", "runtime", "preview"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Executar Node/CLI no navegador (base do preview determinístico)."
+  },
+  {
+    "title": "WebContainers – Docs (repo clonável)",
+    "url": "https://github.com/stackblitz/webcontainer-docs",
+    "type": "repo",
+    "tags": ["webcontainers", "runtime", "docs"],
+    "license": "MIT-like (docs site); veja LICENSE no repo",
+    "priority": "high",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "Conteúdo técnico versionado; ideal para ingestão limpa."
+  },
+
+  {
+    "title": "CodeSandbox – Sandpack (repo)",
+    "url": "https://github.com/codesandbox/sandpack",
+    "type": "repo",
+    "tags": ["sandpack", "editor-components", "preview", "react"],
+    "license": "Apache-2.0",
+    "priority": "high",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "Componentes React p/ editor + preview isolado (alternativa a WebContainers)."
+  },
+  {
+    "title": "Sandpack – Documentação",
+    "url": "https://sandpack.codesandbox.io/docs",
+    "type": "doc",
+    "tags": ["sandpack", "docs", "usage", "advanced"],
+    "license": "site-terms/Apache-2.0 (repo)",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Guia de instalação, API e usos avançados."
+  },
+
+  {
+    "title": "Monaco Editor – Docs oficiais",
+    "url": "https://microsoft.github.io/monaco-editor/docs.html",
+    "type": "doc",
+    "tags": ["monaco", "editor", "api", "code-actions"],
+    "license": "site-terms (docs)",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "API para diffs, CodeActions, linguagens e integrações."
+  },
+  {
+    "title": "Monaco Editor – Repositório",
+    "url": "https://github.com/microsoft/monaco-editor",
+    "type": "repo",
+    "tags": ["monaco", "editor", "browser", "typescript"],
+    "license": "MIT",
+    "priority": "high",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "Exemplos e issues com soluções práticas para features do editor."
+  },
+
+  {
+    "title": "pgvector – Repositório oficial",
+    "url": "https://github.com/pgvector/pgvector",
+    "type": "repo",
+    "tags": ["postgres", "pgvector", "embeddings", "ivf", "hnsw"],
+    "license": "MIT",
+    "priority": "high",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "Instalação, índices (IVFFLAT/HNSW), exemplos. Ideal pro seu RAG no Postgres."
+  },
+  {
+    "title": "Supabase – Guia pgvector",
+    "url": "https://supabase.com/docs/guides/ai/pgvector",
+    "type": "doc",
+    "tags": ["supabase", "pgvector", "ai", "rag"],
+    "license": "site-terms",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Boas práticas de uso do pgvector em ambiente gerenciado."
+  },
+
+  {
+    "title": "LangGraph – Documentação",
+    "url": "https://python.langchain.com/docs/langgraph/",
+    "type": "doc",
+    "tags": ["langgraph", "agents", "state", "graphs"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Orquestração de agentes com estado durável (planner/builder/tester loops)."
+  },
+  {
+    "title": "LangSmith – Observabilidade",
+    "url": "https://docs.smith.langchain.com/",
+    "type": "doc",
+    "tags": ["observability", "tracing", "evals", "runs"],
+    "license": "site-terms",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Tracing/feedback de qualidade, crucial para debugar o builder."
+  },
+  {
+    "title": "OpenAI – Structured Outputs",
+    "url": "https://platform.openai.com/docs/guides/structured-outputs",
+    "type": "doc",
+    "tags": ["structured-outputs", "function-calling", "json-schema", "tools"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Chave para agentes confiáveis: schemas de tool-calls/patch plans."
+  },
+
+  {
+    "title": "Docker – Melhores práticas de segurança",
+    "url": "https://docs.docker.com/security/",
+    "type": "doc",
+    "tags": ["docker", "security", "sandbox", "isolation"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Endurecimento de containers para rodar builds/tests do usuário."
+  },
+  {
+    "title": "OWASP – Docker Security Cheat Sheet",
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html",
+    "type": "doc",
+    "tags": ["owasp", "docker", "security", "hardening"],
+    "license": "Creative Commons BY-SA 4.0",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Checklist prático de hardening (cap-drop, seccomp, AppArmor, read-only fs)."
+  },
+  {
+    "title": "Firecracker – Docs oficiais",
+    "url": "https://github.com/firecracker-microvm/firecracker",
+    "type": "repo",
+    "tags": ["firecracker", "microvm", "isolation", "runner"],
+    "license": "Apache-2.0",
+    "priority": "medium",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "MicroVM para isolamento forte (runner de builds multi-tenant)."
+  },
+
+  {
+    "title": "GitHub REST API – Contents, Repos, Pull Requests",
+    "url": "https://docs.github.com/en/rest",
+    "type": "api",
+    "tags": ["github", "api", "repos", "commits", "pr"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Automatizar criação de repositórios, commits e PRs do builder."
+  },
+  {
+    "title": "Vercel – Deployments API",
+    "url": "https://vercel.com/docs/rest-api#tag/Deployments",
+    "type": "api",
+    "tags": ["vercel", "deploy", "api", "preview"],
+    "license": "site-terms",
+    "priority": "high",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Criar deploys e recuperar logs/estado automaticamente."
+  },
+  {
+    "title": "Stripe – Billing (Subscriptions, Checkout)",
+    "url": "https://stripe.com/docs/billing",
+    "type": "doc",
+    "tags": ["stripe", "billing", "subscriptions", "webhooks"],
+    "license": "site-terms",
+    "priority": "medium",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Planos, metadados e webhooks (tabela payments no seu Postgres)."
+  },
+
+  {
+    "title": "MDN – Web Animations & CSS Transitions (para Visual Edit)",
+    "url": "https://developer.mozilla.org/",
+    "type": "doc",
+    "tags": ["mdn", "css", "web-animations", "dom"],
+    "license": "CC BY-SA 4.0",
+    "priority": "low",
+    "fetch": "http",
+    "format_hint": "html",
+    "notes": "Referência canônica de DOM/CSS para mapear alterações visuais -> código."
+  },
+
+  {
+    "title": "modern-monaco (workspace helpers)",
+    "url": "https://github.com/oliver-moran/modern-monaco",
+    "type": "repo",
+    "tags": ["monaco", "fs", "provider", "history"],
+    "license": "MIT",
+    "priority": "low",
+    "fetch": "git",
+    "format_hint": "md",
+    "notes": "Extensões úteis (FS provider, histórico) para UX de editor mais completa."
+  }
+]

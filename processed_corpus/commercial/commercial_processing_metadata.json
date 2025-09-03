@@ -1,0 +1,20 @@
+{
+  "total_chunks": 57,
+  "processing_date": "2025-09-03T01:42:29.813069",
+  "chunk_size": 800,
+  "chunk_overlap": 150,
+  "sources": [
+    "godot",
+    "webflow",
+    "supabase_test",
+    "supabase",
+    "firebase_docs",
+    "godot_docs"
+  ],
+  "categories": [
+    "web_builder",
+    "game_engine",
+    "backend_service"
+  ],
+  "total_tokens": 38639
+}

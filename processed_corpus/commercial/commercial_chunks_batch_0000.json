@@ -1,0 +1,308 @@
+[
+  {
+    "id": "comm_daf829387515",
+    "source_file": "https://docs.godotengine.org/",
+    "source_type": "commercial_documentation",
+    "title": "Godot Docs – 4.4 branch — Godot Engine (stable) documentation in English",
+    "content": "Godot Engine 4.4 documentation in English\n\t\n\n\nGodot Docs – 4.4 branch\n\n\n\n\n\n Edit on GitHub\n\n\n\n\n\t\tLearn how to contribute!\n\t\n\n\n\n\n\n\n\n\n\nGodot Docs – 4.4 branch\n\nNote\nGodot's documentation is available in various languages and versions.\nExpand the \"Read the Docs\" panel at the bottom of the sidebar to see\nthe list.\n\nWelcome to the official documentation of Godot Engine,\nthe free and open source community-driven 2D and 3D game engine! If you are new\nto this documentation, we recommend that you read the\nintroduction page to get an overview of what this\ndocumentation has to offer.\nThe table of contents in the sidebar should let you easily access the documentation\nfor your topic of interest. You can also use the search function in the top-left corner.\n\nGet involved\nGodot Engine is an open source project developed by a community of volunteers.\nThe documentation team can always use your feedback and help to improve the\ntutorials and class reference. If you don't understand something, or cannot find\nwhat you are looking for in the docs, help us make the documentation better\nby letting us know!\nSubmit an issue or pull request on the GitHub repository,\nhelp us translate the documentation\ninto your language, or talk to us on the #documentation channel on the\nGodot Contributors Chat!\n\n\n\nOffline documentation\nTo browse the documentation offline, you can download an HTML copy (updated every Monday): stable, latest, 3.6. Extract the ZIP archive then open\nthe top-level index.html in a web browser.\nFor mobile devices or e-readers, you can also download an ePub copy (updated every Monday): stable, latest, 3.6. Extract the ZIP archive then open\nthe GodotEngine.epub file in an e-book reader application.",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:55.464318",
+      "commercial_tool": true
+    },
+    "token_count": 382,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_33b97c1fc755",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "Godot Engine 4.4 documentation in English\n\t\n\n\nAll classes\n\n\n\n\n\n\n\n\n\n\nAll classes\n\n\nGlobals\n\n\n@GDScript\n@GlobalScope\n\n\n\n\nNodes\n\n\nNode\nAcceptDialog\nAnimatableBody2D\nAnimatableBody3D\nAnimatedSprite2D\nAnimatedSprite3D\nAnimationMixer\nAnimationPlayer\nAnimationTree\nArea2D\nArea3D\nAspectRatioContainer\nAudioListener2D\nAudioListener3D\nAudioStreamPlayer\nAudioStreamPlayer2D\nAudioStreamPlayer3D\nBackBufferCopy\nBaseButton\nBone2D\nBoneAttachment3D\nBoxContainer\nButton\nCamera2D\nCamera3D\nCanvasGroup\nCanvasItem\nCanvasLayer\nCanvasModulate\nCenterContainer\nCharacterBody2D\nCharacterBody3D\nCheckBox\nCheckButton\nCodeEdit\nCollisionObject2D\nCollisionObject3D\nCollisionPolygon2D\nCollisionPolygon3D\nCollisionShape2D\nCollisionShape3D\nColorPicker\nColorPickerButton\nColorRect\nConeTwistJoint3D\nConfirmationDialog\nContainer\nControl\nCPUParticles2D\nCPUParticles3D\nCSGBox3D\nCSGCombiner3D\nCSGCylinder3D\nCSGMesh3D\nCSGPolygon3D\nCSGPrimitive3D\nCSGShape3D\nCSGSphere3D\nCSGTorus3D\nDampedSpringJoint2D\nDecal\nDirectionalLight2D\nDirectionalLight3D\nEditorCommandPalette\nEditorFileDialog\nEditorFileSystem\nEditorInspector\nEditorPlugin\nEditorProperty\nEditorResourcePicker\nEditorResourcePreview\nEditorScriptPicker\nEditorSpinSlider\nEditorToaster\nFileDialog\nFileSystemDock\nFlowContainer\nFogVolume\nGeneric6DOFJoint3D\nGeometryInstance3D\nGPUParticles2D\nGPUParticles3D\nGPUParticlesAttractor3D\nGPUParticlesAttractorBox3D\nGPUParticlesAttractorSphere3D\nGPUParticlesAttractorVectorField3D\nGPUParticlesCollision3D\nGPUParticlesCollisionBox3D\nGPUParticlesCollisionHeightField3D\nGPUParticlesCollisionSDF3D\nGPUParticlesCollisionSphere3D\nGraphEdit\nGraphElement\nGraphFrame\nGraphNode\nGridContainer\nGridMap\nGridMapEditorPlugin\nGrooveJoint2D\nHBoxContainer\nHFlowContainer\nHingeJoint3D\nHScrollBar\nHSeparator\nHSlider\nHSplitContainer\nHTTPRequest\nImporterMeshInstance3D\nInstancePlaceholder\nItemList\nJoint2D\nJoint3D\nLabel\nLabel3D\nLight2D\nLight3D\nLightmapGI\nLightmapProbe\nLightOccluder2D\nLine2D\nLineEdit\nLinkButton\nLookAtModifier3D\nMarginContainer\nMarker2D\nMarker3D\nMenuBar\nMenuButton\nMeshInstance2D\nMeshInstance3D\nMissingNode\nMultiMeshInstance2D\nMultiMeshInstance3D\nMultiplayerSpawner\nMultiplayerSynchronizer\nNavigationAgent2D\nNavigationAgent3D\nNavigationLink2D\nNavigationLink3D\nNavigationObstacle2D\nNavigationObstacle3D\nNavigationRegion2D\nNavigationRegion3D\nNinePatchRect\nNode2D\nNode3D\nOccluderInstance3D\nOmniLight3D\nOpenXRBindingModifierEditor\nOpenXRCompositionLayer\nOpenXRCompositionLayerCylinder\nOpenXRCompositionLayerEquirect\nOpenXRCompositionLayerQuad\nOpenXRHand\nOpenXRInteractionProfileEditor\nOpenXRInteractionProfileEditorBase\nOpenXRVisibilityMask\nOptionButton\nPanel\nPanelContainer\nParallax2D\nParallaxBackground\nParallaxLayer\nPath2D\nPath3D\nPathFollow2D\n",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 0,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_33b398d07900",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "Agent3D\nNavigationLink2D\nNavigationLink3D\nNavigationObstacle2D\nNavigationObstacle3D\nNavigationRegion2D\nNavigationRegion3D\nNinePatchRect\nNode2D\nNode3D\nOccluderInstance3D\nOmniLight3D\nOpenXRBindingModifierEditor\nOpenXRCompositionLayer\nOpenXRCompositionLayerCylinder\nOpenXRCompositionLayerEquirect\nOpenXRCompositionLayerQuad\nOpenXRHand\nOpenXRInteractionProfileEditor\nOpenXRInteractionProfileEditorBase\nOpenXRVisibilityMask\nOptionButton\nPanel\nPanelContainer\nParallax2D\nParallaxBackground\nParallaxLayer\nPath2D\nPath3D\nPathFollow2D\nPathFollow3D\nPhysicalBone2D\nPhysicalBone3D\nPhysicalBoneSimulator3D\nPhysicsBody2D\nPhysicsBody3D\nPinJoint2D\nPinJoint3D\nPointLight2D\nPolygon2D\nPopup\nPopupMenu\nPopupPanel\nProgressBar\nRange\nRayCast2D\nRayCast3D\nReferenceRect\nReflectionProbe\nRemoteTransform2D\nRemoteTransform3D\nResourcePreloader\nRetargetModifier3D\nRichTextLabel\nRigidBody2D\nRigidBody3D\nRootMotionView\nScriptCreateDialog\nScriptEditor\nScriptEditorBase\nScrollBar\nScrollContainer\nSeparator\nShaderGlobalsOverride\nShapeCast2D\nShapeCast3D\nSkeleton2D\nSkeleton3D\nSkeletonIK3D\nSkeletonModifier3D\nSlider\nSliderJoint3D\nSoftBody3D\nSpinBox\nSplitContainer\nSpotLight3D\nSpringArm3D\nSpringBoneCollision3D\nSpringBoneCollisionCapsule3D\nSpringBoneCollisionPlane3D\nSpringBoneCollisionSphere3D\nSpringBoneSimulator3D\nSprite2D\nSprite3D\nSpriteBase3D\nStaticBody2D\nStaticBody3D\nStatusIndicator\nSubViewport\nSubViewportContainer\nTabBar\nTabContainer\nTextEdit\nTextureButton\nTextureProgressBar\nTextureRect\nTileMap\nTileMapLayer\nTimer\nTouchScreenButton\nTree\nVBoxContainer\nVehicleBody3D\nVehicleWheel3D\nVFlowContainer\nVideoStreamPlayer\nViewport\nVisibleOnScreenEnabler2D\nVisibleOnScreenEnabler3D\nVisibleOnScreenNotifier2D\nVisibleOnScreenNotifier3D\nVisualInstance3D\nVoxelGI\nVScrollBar\nVSeparator\nVSlider\nVSplitContainer\nWindow\nWorldEnvironment\nXRAnchor3D\nXRBodyModifier3D\nXRCamera3D\nXRController3D\nXRFaceModifier3D\nXRHandModifier3D\nXRNode3D\nXROrigin3D\n\n\n\n\nResources\n\n\nResource\nAnimatedTexture\nAnimation\nAnimationLibrary\nAnimationNode\nAnimationNodeAdd2\nAnimationNodeAdd3\nAnimationNodeAnimation\nAnimationNodeBlend2\nAnimationNodeBlend3\nAnimationNodeBlendSpace1D\nAnimationNodeBlendSpace2D\nAnimationNodeBlendTree\nAnimationNodeExtension\nAnimationNodeOneShot\nAnimationNodeOutput\nAnimationNodeStateMachine\nAnimationNodeStateMachinePlayback\nAnimationNodeStateMachineTransition\nAnimationNodeSub2\nAnimationNodeSync\nAnimationNodeTimeScale\nAnimationNodeTimeSeek\nAnimationNodeTransition\nAnimationRootNode\nArrayMesh\nArrayOccluder3D\nAtlasTexture\nAudioBusLayout\nAudioEffect\nAudioEffectAmplify\nAudioEffectBandLimitFilter\nAudioEffectBandPassFilter\nAudioEffectCapture\nAudioEffectChorus\nAudioEffectCompressor\nAudioEffectDelay\nAudioEffectDistortion\nAudioEffectEQ\nAudioEffectEQ10\nAudioEffectEQ21\nAudioEffectEQ6\nAudioEffectFilter\nAudioEffectHardLimiter\nAudioEffectHighPassFilter\nAudioEffectHighShelfFilter\nAudioEffectLimiter\nAudioEffectLowPassFilter\nAudioEffect",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 1,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_6cfa9356a1ae",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "\nAnimationNodeStateMachineTransition\nAnimationNodeSub2\nAnimationNodeSync\nAnimationNodeTimeScale\nAnimationNodeTimeSeek\nAnimationNodeTransition\nAnimationRootNode\nArrayMesh\nArrayOccluder3D\nAtlasTexture\nAudioBusLayout\nAudioEffect\nAudioEffectAmplify\nAudioEffectBandLimitFilter\nAudioEffectBandPassFilter\nAudioEffectCapture\nAudioEffectChorus\nAudioEffectCompressor\nAudioEffectDelay\nAudioEffectDistortion\nAudioEffectEQ\nAudioEffectEQ10\nAudioEffectEQ21\nAudioEffectEQ6\nAudioEffectFilter\nAudioEffectHardLimiter\nAudioEffectHighPassFilter\nAudioEffectHighShelfFilter\nAudioEffectLimiter\nAudioEffectLowPassFilter\nAudioEffectLowShelfFilter\nAudioEffectNotchFilter\nAudioEffectPanner\nAudioEffectPhaser\nAudioEffectPitchShift\nAudioEffectRecord\nAudioEffectReverb\nAudioEffectSpectrumAnalyzer\nAudioEffectStereoEnhance\nAudioStream\nAudioStreamGenerator\nAudioStreamInteractive\nAudioStreamMicrophone\nAudioStreamMP3\nAudioStreamOggVorbis\nAudioStreamPlaylist\nAudioStreamPolyphonic\nAudioStreamRandomizer\nAudioStreamSynchronized\nAudioStreamWAV\nBaseMaterial3D\nBitMap\nBoneMap\nBoxMesh\nBoxOccluder3D\nBoxShape3D\nButtonGroup\nCameraAttributes\nCameraAttributesPhysical\nCameraAttributesPractical\nCameraTexture\nCanvasItemMaterial\nCanvasTexture\nCapsuleMesh\nCapsuleShape2D\nCapsuleShape3D\nCircleShape2D\nCodeHighlighter\nColorPalette\nCompositor\nCompositorEffect\nCompressedCubemap\nCompressedCubemapArray\nCompressedTexture2D\nCompressedTexture2DArray\nCompressedTexture3D\nCompressedTextureLayered\nConcavePolygonShape2D\nConcavePolygonShape3D\nConvexPolygonShape2D\nConvexPolygonShape3D\nCryptoKey\nCSharpScript\nCubemap\nCubemapArray\nCurve\nCurve2D\nCurve3D\nCurveTexture\nCurveXYZTexture\nCylinderMesh\nCylinderShape3D\nEditorNode3DGizmoPlugin\nEditorSettings\nEditorSyntaxHighlighter\nEnvironment\nExternalTexture\nFastNoiseLite\nFBXDocument\nFBXState\nFogMaterial\nFont\nFontFile\nFontVariation\nGDExtension\nGDScript\nGDScriptSyntaxHighlighter\nGLTFAccessor\nGLTFAnimation\nGLTFBufferView\nGLTFCamera\nGLTFDocument\nGLTFDocumentExtension\nGLTFDocumentExtensionConvertImporterMesh\nGLTFLight\nGLTFMesh\nGLTFNode\nGLTFPhysicsBody\nGLTFPhysicsShape\nGLTFSkeleton\nGLTFSkin\nGLTFSpecGloss\nGLTFState\nGLTFTexture\nGLTFTextureSampler\nGradient\nGradientTexture1D\nGradientTexture2D\nHeightMapShape3D\nImage\nImageTexture\nImageTexture3D\nImageTextureLayered\nImmediateMesh\nImporterMesh\nInputEvent\nInputEventAction\nInputEventFromWindow\nInputEventGesture\nInputEventJoypadButton\nInputEventJoypadMotion\nInputEventKey\nInputEventMagnifyGesture\nInputEventMIDI\nInputEventMouse\nInputEventMouseButton\nInputEventMouseMotion\nInputEventPanGesture\nInputEventScreenDrag\nInputEventScreenTouch\nInputEventShortcut\nInputEventWithModifiers\nJSON\nLabelSettings\nLightmapGIData\nMaterial\nMesh\nMeshLibrary\nMeshTexture\nMissingResource\nMultiMesh\nNavigationMesh\nNavigationMeshSourceGeometryData2D\nNavigationMeshSourceGeometryData3D\nNavigationPolygon\nNoise\nNoiseTexture2D\nNoiseTexture3D\nOccluder3D\nOccluderPolygon2D\nOggPacketSequence\nOpenXRAction\n",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 2,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_3da7e032ea22",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "Gesture\nInputEventJoypadButton\nInputEventJoypadMotion\nInputEventKey\nInputEventMagnifyGesture\nInputEventMIDI\nInputEventMouse\nInputEventMouseButton\nInputEventMouseMotion\nInputEventPanGesture\nInputEventScreenDrag\nInputEventScreenTouch\nInputEventShortcut\nInputEventWithModifiers\nJSON\nLabelSettings\nLightmapGIData\nMaterial\nMesh\nMeshLibrary\nMeshTexture\nMissingResource\nMultiMesh\nNavigationMesh\nNavigationMeshSourceGeometryData2D\nNavigationMeshSourceGeometryData3D\nNavigationPolygon\nNoise\nNoiseTexture2D\nNoiseTexture3D\nOccluder3D\nOccluderPolygon2D\nOggPacketSequence\nOpenXRAction\nOpenXRActionBindingModifier\nOpenXRActionMap\nOpenXRActionSet\nOpenXRAnalogThresholdModifier\nOpenXRBindingModifier\nOpenXRDpadBindingModifier\nOpenXRHapticBase\nOpenXRHapticVibration\nOpenXRInteractionProfile\nOpenXRIPBinding\nOpenXRIPBindingModifier\nOptimizedTranslation\nORMMaterial3D\nPackedDataContainer\nPackedScene\nPanoramaSkyMaterial\nParticleProcessMaterial\nPhysicalSkyMaterial\nPhysicsMaterial\nPlaceholderCubemap\nPlaceholderCubemapArray\nPlaceholderMaterial\nPlaceholderMesh\nPlaceholderTexture2D\nPlaceholderTexture2DArray\nPlaceholderTexture3D\nPlaceholderTextureLayered\nPlaneMesh\nPointMesh\nPolygonOccluder3D\nPolygonPathFinder\nPortableCompressedTexture2D\nPrimitiveMesh\nPrismMesh\nProceduralSkyMaterial\nQuadMesh\nQuadOccluder3D\nRDShaderFile\nRDShaderSPIRV\nRectangleShape2D\nRibbonTrailMesh\nRichTextEffect\nSceneReplicationConfig\nScript\nScriptExtension\nSegmentShape2D\nSeparationRayShape2D\nSeparationRayShape3D\nShader\nShaderInclude\nShaderMaterial\nShape2D\nShape3D\nShortcut\nSkeletonModification2D\nSkeletonModification2DCCDIK\nSkeletonModification2DFABRIK\nSkeletonModification2DJiggle\nSkeletonModification2DLookAt\nSkeletonModification2DPhysicalBones\nSkeletonModification2DStackHolder\nSkeletonModification2DTwoBoneIK\nSkeletonModificationStack2D\nSkeletonProfile\nSkeletonProfileHumanoid\nSkin\nSky\nSphereMesh\nSphereOccluder3D\nSphereShape3D\nSpriteFrames\nStandardMaterial3D\nStyleBox\nStyleBoxEmpty\nStyleBoxFlat\nStyleBoxLine\nStyleBoxTexture\nSyntaxHighlighter\nSystemFont\nTextMesh\nTexture\nTexture2D\nTexture2DArray\nTexture2DArrayRD\nTexture2DRD\nTexture3D\nTexture3DRD\nTextureCubemapArrayRD\nTextureCubemapRD\nTextureLayered\nTextureLayeredRD\nTheme\nTileMapPattern\nTileSet\nTileSetAtlasSource\nTileSetScenesCollectionSource\nTileSetSource\nTorusMesh\nTranslation\nTubeTrailMesh\nVideoStream\nVideoStreamPlayback\nVideoStreamTheora\nViewportTexture\nVisualShader\nVisualShaderNode\nVisualShaderNodeBillboard\nVisualShaderNodeBooleanConstant\nVisualShaderNodeBooleanParameter\nVisualShaderNodeClamp\nVisualShaderNodeColorConstant\nVisualShaderNodeColorFunc\nVisualShaderNodeColorOp\nVisualShaderNodeColorParameter\nVisualShaderNodeComment\nVisualShaderNodeCompare\nVisualShaderNodeConstant\nVisualShaderNodeCubemap\nVisualShaderNodeCubemapParameter\nVisualShaderNodeCurveTexture\nVisualShaderNodeCurveXYZTexture\nVisualShaderNodeCustom\nVisualShaderNodeDerivativeFunc\nVisualShaderNodeDeterminant\nVisualShaderNodeDistanceFade\nVisualShaderNodeDotProduct\nVisualShaderNodeExpression\nVisualShaderNodeFaceForward\nVisualShaderNodeFloatConstant\nVisualShaderNodeFloatFunc\nVisualShaderNodeFloatOp\nVisualShaderNodeFloatParameter\n",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 3,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_2bfc82ab1b75",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "VisualShaderNodeBooleanConstant\nVisualShaderNodeBooleanParameter\nVisualShaderNodeClamp\nVisualShaderNodeColorConstant\nVisualShaderNodeColorFunc\nVisualShaderNodeColorOp\nVisualShaderNodeColorParameter\nVisualShaderNodeComment\nVisualShaderNodeCompare\nVisualShaderNodeConstant\nVisualShaderNodeCubemap\nVisualShaderNodeCubemapParameter\nVisualShaderNodeCurveTexture\nVisualShaderNodeCurveXYZTexture\nVisualShaderNodeCustom\nVisualShaderNodeDerivativeFunc\nVisualShaderNodeDeterminant\nVisualShaderNodeDistanceFade\nVisualShaderNodeDotProduct\nVisualShaderNodeExpression\nVisualShaderNodeFaceForward\nVisualShaderNodeFloatConstant\nVisualShaderNodeFloatFunc\nVisualShaderNodeFloatOp\nVisualShaderNodeFloatParameter\nVisualShaderNodeFrame\nVisualShaderNodeFresnel\nVisualShaderNodeGlobalExpression\nVisualShaderNodeGroupBase\nVisualShaderNodeIf\nVisualShaderNodeInput\nVisualShaderNodeIntConstant\nVisualShaderNodeIntFunc\nVisualShaderNodeIntOp\nVisualShaderNodeIntParameter\nVisualShaderNodeIs\nVisualShaderNodeLinearSceneDepth\nVisualShaderNodeMix\nVisualShaderNodeMultiplyAdd\nVisualShaderNodeOuterProduct\nVisualShaderNodeOutput\nVisualShaderNodeParameter\nVisualShaderNodeParameterRef\nVisualShaderNodeParticleAccelerator\nVisualShaderNodeParticleBoxEmitter\nVisualShaderNodeParticleConeVelocity\nVisualShaderNodeParticleEmit\nVisualShaderNodeParticleEmitter\nVisualShaderNodeParticleMeshEmitter\nVisualShaderNodeParticleMultiplyByAxisAngle\nVisualShaderNodeParticleOutput\nVisualShaderNodeParticleRandomness\nVisualShaderNodeParticleRingEmitter\nVisualShaderNodeParticleSphereEmitter\nVisualShaderNodeProximityFade\nVisualShaderNodeRandomRange\nVisualShaderNodeRemap\nVisualShaderNodeReroute\nVisualShaderNodeResizableBase\nVisualShaderNodeRotationByAxis\nVisualShaderNodeSample3D\nVisualShaderNodeScreenNormalWorldSpace\nVisualShaderNodeScreenUVToSDF\nVisualShaderNodeSDFRaymarch\nVisualShaderNodeSDFToScreenUV\nVisualShaderNodeSmoothStep\nVisualShaderNodeStep\nVisualShaderNodeSwitch\nVisualShaderNodeTexture\nVisualShaderNodeTexture2DArray\nVisualShaderNodeTexture2DArrayParameter\nVisualShaderNodeTexture2DParameter\nVisualShaderNodeTexture3D\nVisualShaderNodeTexture3DParameter\nVisualShaderNodeTextureParameter\nVisualShaderNodeTextureParameterTriplanar\nVisualShaderNodeTextureSDF\nVisualShaderNodeTextureSDFNormal\nVisualShaderNodeTransformCompose\nVisualShaderNodeTransformConstant\nVisualShaderNodeTransformDecompose\nVisualShaderNodeTransformFunc\nVisualShaderNodeTransformOp\nVisualShaderNodeTransformParameter\nVisualShaderNodeTransformVecMult\nVisualShaderNodeUIntConstant\nVisualShaderNodeUIntFunc\nVisualShaderNodeUIntOp\nVisualShaderNodeUIntParameter\nVisualShaderNodeUVFunc\nVisualShaderNodeUVPolarCoord\nVisualShaderNodeVarying\nVisualShaderNodeVaryingGetter\nVisualShaderNodeVaryingSetter\nVisualShaderNodeVec2Constant\nVisualShaderNodeVec2Parameter\nVisualShaderNodeVec3Constant\nVisualShaderNodeVec3Parameter\nVisualShaderNodeVec4Constant\nVisualShaderNodeVec4Parameter\nVisualShaderNodeVectorBase\nVisualShaderNodeVectorCompose\nVisualShaderNodeVectorDecompose\nVisualShaderNodeVectorDistance\nVisualShaderNodeVectorFunc\nVisualShaderNodeVectorLen\nVisualShaderNodeVectorOp\nVisualShaderNodeVectorRefract\nVisualShaderNodeWorldPositionFromDepth\nVoxelGIData\nWorld2D\nWorld3D\nWorldBoundaryShape2D\nWorldBoundaryShape3D\nX509Certificate\n\n\n\n\nOther objects\n\n\nObject\nAESContext\nAStar2D\nAStar3D\nAStarGrid2D\nAudioEffectInstance\nAudioEffectSpectrumAnalyzerInstance\nAudioSample\nAudioSamplePlayback\nAudioServer\nAudioStreamGeneratorPlayback\nAudioStreamPlayback\nAudioStreamPlaybackInteractive",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 4,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_004e46468198",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "\nVisualShaderNodeVectorBase\nVisualShaderNodeVectorCompose\nVisualShaderNodeVectorDecompose\nVisualShaderNodeVectorDistance\nVisualShaderNodeVectorFunc\nVisualShaderNodeVectorLen\nVisualShaderNodeVectorOp\nVisualShaderNodeVectorRefract\nVisualShaderNodeWorldPositionFromDepth\nVoxelGIData\nWorld2D\nWorld3D\nWorldBoundaryShape2D\nWorldBoundaryShape3D\nX509Certificate\n\n\n\n\nOther objects\n\n\nObject\nAESContext\nAStar2D\nAStar3D\nAStarGrid2D\nAudioEffectInstance\nAudioEffectSpectrumAnalyzerInstance\nAudioSample\nAudioSamplePlayback\nAudioServer\nAudioStreamGeneratorPlayback\nAudioStreamPlayback\nAudioStreamPlaybackInteractive\nAudioStreamPlaybackOggVorbis\nAudioStreamPlaybackPlaylist\nAudioStreamPlaybackPolyphonic\nAudioStreamPlaybackResampled\nAudioStreamPlaybackSynchronized\nCallbackTweener\nCameraFeed\nCameraServer\nCharFXTransform\nClassDB\nConfigFile\nCrypto\nDirAccess\nDisplayServer\nDTLSServer\nEditorContextMenuPlugin\nEditorDebuggerPlugin\nEditorDebuggerSession\nEditorExportPlatform\nEditorExportPlatformAndroid\nEditorExportPlatformExtension\nEditorExportPlatformIOS\nEditorExportPlatformLinuxBSD\nEditorExportPlatformMacOS\nEditorExportPlatformPC\nEditorExportPlatformWeb\nEditorExportPlatformWindows\nEditorExportPlugin\nEditorExportPreset\nEditorFeatureProfile\nEditorFileSystemDirectory\nEditorFileSystemImportFormatSupportQuery\nEditorImportPlugin\nEditorInspectorPlugin\nEditorInterface\nEditorNode3DGizmo\nEditorPaths\nEditorResourceConversionPlugin\nEditorResourcePreviewGenerator\nEditorResourceTooltipPlugin\nEditorSceneFormatImporter\nEditorSceneFormatImporterBlend\nEditorSceneFormatImporterFBX2GLTF\nEditorSceneFormatImporterGLTF\nEditorSceneFormatImporterUFBX\nEditorScenePostImport\nEditorScenePostImportPlugin\nEditorScript\nEditorSelection\nEditorTranslationParserPlugin\nEditorUndoRedoManager\nEditorVCSInterface\nEncodedObjectAsID\nENetConnection\nENetMultiplayerPeer\nENetPacketPeer\nEngine\nEngineDebugger\nEngineProfiler\nExpression\nFileAccess\nFramebufferCacheRD\nGDExtensionManager\nGeometry2D\nGeometry3D\nGLTFObjectModelProperty\nHashingContext\nHMACContext\nHTTPClient\nImageFormatLoader\nImageFormatLoaderExtension\nInput\nInputMap\nIntervalTweener\nIP\nJavaClass\nJavaClassWrapper\nJavaObject\nJavaScriptBridge\nJavaScriptObject\nJNISingleton\nJSONRPC\nKinematicCollision2D\nKinematicCollision3D\nLightmapper\nLightmapperRD\nMainLoop\nMarshalls\nMeshConvexDecompositionSettings\nMeshDataTool\nMethodTweener\nMobileVRInterface\nMovieWriter\nMultiplayerAPI\nMultiplayerAPIExtension\nMultiplayerPeer\nMultiplayerPeerExtension\nMutex\nNativeMenu\nNavigationMeshGenerator\nNavigationPathQueryParameters2D\nNavigationPathQueryParameters3D\nNavigationPathQueryResult2D\nNavigationPathQueryResult3D\nNavigationServer2D\nNavigationServer3D\nNode\nNode3DGizmo\nOfflineMultiplayerPeer\nOggPacketSequencePlayback\nOpenXRAPIExtension\nOpenXRExtensionWrapperExtension\nOpenXRInteractionProfileMetadata\nOpenXRInterface\nOS\nPackedDataContainerRef\nPacketPeer\nPacketPeerDTLS\nPacketPeerExtension\nPacketPeerStream\nPacketPeerUDP\nPCKPacker\nPerformance\nPhysicsDirectBodyState2D\nPhysicsDirectBodyState2DExtension\nPhysicsDirectBodyState3D\nPhysicsDirectBodyState3DExtension\nPhysicsDirectSpaceState2D\nPhysicsDirectSpaceState2DExtension\nPhysicsDirectSpaceState3D\nPhysicsDirectSpaceState3DExtension\nPhysicsPointQueryParameters2D\nPhysicsPointQueryParameters3D\nPhysicsRayQueryParameters2D\nPhysicsRayQueryParameters3D\nPhysicsServer2D\n",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 5,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_7c0a352ea0f3",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "RAPIExtension\nOpenXRExtensionWrapperExtension\nOpenXRInteractionProfileMetadata\nOpenXRInterface\nOS\nPackedDataContainerRef\nPacketPeer\nPacketPeerDTLS\nPacketPeerExtension\nPacketPeerStream\nPacketPeerUDP\nPCKPacker\nPerformance\nPhysicsDirectBodyState2D\nPhysicsDirectBodyState2DExtension\nPhysicsDirectBodyState3D\nPhysicsDirectBodyState3DExtension\nPhysicsDirectSpaceState2D\nPhysicsDirectSpaceState2DExtension\nPhysicsDirectSpaceState3D\nPhysicsDirectSpaceState3DExtension\nPhysicsPointQueryParameters2D\nPhysicsPointQueryParameters3D\nPhysicsRayQueryParameters2D\nPhysicsRayQueryParameters3D\nPhysicsServer2D\nPhysicsServer2DExtension\nPhysicsServer2DManager\nPhysicsServer3D\nPhysicsServer3DExtension\nPhysicsServer3DManager\nPhysicsServer3DRenderingServerHandler\nPhysicsShapeQueryParameters2D\nPhysicsShapeQueryParameters3D\nPhysicsTestMotionParameters2D\nPhysicsTestMotionParameters3D\nPhysicsTestMotionResult2D\nPhysicsTestMotionResult3D\nProjectSettings\nPropertyTweener\nRandomNumberGenerator\nRDAttachmentFormat\nRDFramebufferPass\nRDPipelineColorBlendState\nRDPipelineColorBlendStateAttachment\nRDPipelineDepthStencilState\nRDPipelineMultisampleState\nRDPipelineRasterizationState\nRDPipelineSpecializationConstant\nRDSamplerState\nRDShaderSource\nRDTextureFormat\nRDTextureView\nRDUniform\nRDVertexAttribute\nRefCounted\nRegEx\nRegExMatch\nRenderData\nRenderDataExtension\nRenderDataRD\nRenderingDevice\nRenderingServer\nRenderSceneBuffers\nRenderSceneBuffersConfiguration\nRenderSceneBuffersExtension\nRenderSceneBuffersRD\nRenderSceneData\nRenderSceneDataExtension\nRenderSceneDataRD\nResource\nResourceFormatLoader\nResourceFormatSaver\nResourceImporter\nResourceImporterBitMap\nResourceImporterBMFont\nResourceImporterCSVTranslation\nResourceImporterDynamicFont\nResourceImporterImage\nResourceImporterImageFont\nResourceImporterLayeredTexture\nResourceImporterMP3\nResourceImporterOBJ\nResourceImporterOggVorbis\nResourceImporterScene\nResourceImporterShaderFile\nResourceImporterTexture\nResourceImporterTextureAtlas\nResourceImporterWAV\nResourceLoader\nResourceSaver\nResourceUID\nSceneMultiplayer\nSceneState\nSceneTree\nSceneTreeTimer\nScriptLanguage\nScriptLanguageExtension\nSemaphore\nShaderIncludeDB\nSkinReference\nStreamPeer\nStreamPeerBuffer\nStreamPeerExtension\nStreamPeerGZIP\nStreamPeerTCP\nStreamPeerTLS\nSubtweenTweener\nSurfaceTool\nTCPServer\nTextLine\nTextParagraph\nTextServer\nTextServerAdvanced\nTextServerDummy\nTextServerExtension\nTextServerFallback\nTextServerManager\nThemeDB\nThread\nTileData\nTime\nTLSOptions\nTranslationDomain\nTranslationServer\nTreeItem\nTriangleMesh\nTween\nTweener\nUDPServer\nUndoRedo\nUniformSetCacheRD\nUPNP\nUPNPDevice\nWeakRef\nWebRTCDataChannel\nWebRTCDataChannelExtension\nWebRTCMultiplayerPeer\nWebRTCPeerConnection\nWebRTCPeerConnectionExtension\nWebSocketMultiplayerPeer\nWebSocketPeer\nWebXRInterface\nWorkerThreadPool\nXMLParser\nXRBodyTracker\nXRControllerTracker\nXRFaceTracker\nXRHandTracker\nXRInterface\nXRInterfaceExtension\nXRPose\nXRPositionalTracker\nXRServer\nXRTracker\nXRVRS\nZIPPacker\nZIPReader\n\n\n\n\nEditor-only\n\n\nEditorCommandPalette\nEditorContextMenuPlugin\nEditorDebuggerPlugin\nEditorDebuggerSession\nEditorExportPlatform\nEditorExportPlatformAndroid\nEditorExportPlatformExtension\nEditorExportPlatformIOS\nEditorExportPlatformLinuxBSD\nEditorExportPlatformMacOS\nEditorExportPlatformPC\nEditorExportPlatformWeb\nEditorExportPlatformWindows\nEditorExportPlugin\nEditorExportPreset",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 6,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_cde151c7ab1b",
+    "source_file": "https://docs.godotengine.org/en/stable/classes/",
+    "source_type": "commercial_documentation",
+    "title": "All classes — Godot Engine (stable) documentation in English",
+    "content": "\nWebRTCPeerConnectionExtension\nWebSocketMultiplayerPeer\nWebSocketPeer\nWebXRInterface\nWorkerThreadPool\nXMLParser\nXRBodyTracker\nXRControllerTracker\nXRFaceTracker\nXRHandTracker\nXRInterface\nXRInterfaceExtension\nXRPose\nXRPositionalTracker\nXRServer\nXRTracker\nXRVRS\nZIPPacker\nZIPReader\n\n\n\n\nEditor-only\n\n\nEditorCommandPalette\nEditorContextMenuPlugin\nEditorDebuggerPlugin\nEditorDebuggerSession\nEditorExportPlatform\nEditorExportPlatformAndroid\nEditorExportPlatformExtension\nEditorExportPlatformIOS\nEditorExportPlatformLinuxBSD\nEditorExportPlatformMacOS\nEditorExportPlatformPC\nEditorExportPlatformWeb\nEditorExportPlatformWindows\nEditorExportPlugin\nEditorExportPreset\nEditorFeatureProfile\nEditorFileDialog\nEditorFileSystem\nEditorFileSystemDirectory\nEditorFileSystemImportFormatSupportQuery\nEditorImportPlugin\nEditorInspector\nEditorInspectorPlugin\nEditorInterface\nEditorNode3DGizmo\nEditorNode3DGizmoPlugin\nEditorPaths\nEditorPlugin\nEditorProperty\nEditorResourceConversionPlugin\nEditorResourcePicker\nEditorResourcePreview\nEditorResourcePreviewGenerator\nEditorResourceTooltipPlugin\nEditorSceneFormatImporter\nEditorSceneFormatImporterBlend\nEditorSceneFormatImporterFBX2GLTF\nEditorSceneFormatImporterGLTF\nEditorSceneFormatImporterUFBX\nEditorScenePostImport\nEditorScenePostImportPlugin\nEditorScript\nEditorScriptPicker\nEditorSelection\nEditorSettings\nEditorSpinSlider\nEditorSyntaxHighlighter\nEditorToaster\nEditorTranslationParserPlugin\nEditorUndoRedoManager\nEditorVCSInterface\nFileSystemDock\nScriptCreateDialog\nScriptEditor\nScriptEditorBase\n\n\n\n\nVariant types\n\n\nVariant\nAABB\nArray\nBasis\nbool\nCallable\nColor\nDictionary\nfloat\nint\nNodePath\nObject\nPackedByteArray\nPackedColorArray\nPackedFloat32Array\nPackedFloat64Array\nPackedInt32Array\nPackedInt64Array\nPackedStringArray\nPackedVector2Array\nPackedVector3Array\nPackedVector4Array\nPlane\nProjection\nQuaternion\nRect2\nRect2i\nRID\nSignal\nString\nStringName\nTransform2D\nTransform3D\nVector2\nVector2i\nVector3\nVector3i\nVector4\nVector4i",
+    "metadata": {
+      "source_name": "godot",
+      "category": "game_engine",
+      "url": "https://docs.godotengine.org/en/stable/classes/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:56.196485",
+      "commercial_tool": true
+    },
+    "token_count": 474,
+    "chunk_index": 7,
+    "total_chunks": 8
+  },
+  {
+    "id": "comm_a5393ea17c8f",
+    "source_file": "https://supabase.com/docs",
+    "source_type": "commercial_documentation",
+    "title": "Supabase Docs",
+    "content": "Supabase DocumentationLearn how to get up and running with Supabase through tutorials, APIs and platform resources.Getting StartedSet up and connect a database in just a few minutes.Start with Supabase AI promptsProductsDatabaseSupabase provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.AuthAdd and manage email and password, passwordless, OAuth, and mobile logins to your project through a suite of identity providers and APIs.StorageStore, organize, transform, and serve large files—fully integrated with your Postgres database with Row Level Security access policies.RealtimeListen to database changes, store and sync user states across clients, broadcast data to clients subscribed to a channel, and more.Edge FunctionsGlobally distributed, server-side functions to execute your code closest to your users for the lowest latency.Postgres ModulesAI & VectorsCronQueuesClient LibrariesJavascriptFlutterPythonC#SwiftKotlinMigrate to SupabaseBring your existing data, auth and storage to Supabase following our migration guides.Explore more resources about /guides/resourcesExplore more resourcesAmazon RDSAuth0Firebase AuthFirebase StorageFirestore DataHerokuMSSQLMySQLNeonPostgresRenderVercel PostgresAdditional resourcesManagement APIManage your Supabase projects and organizations.Supabase CLIUse the CLI to develop, manage and deploy your projects.Platform GuidesLearn more about the tools and services powering Supabase.IntegrationsExplore a variety of integrations from Supabase partners.Self-HostingGet started with self-hosting Supabase.More on Self-Hosting about /guides/self-hostingMore on Self-HostingAuthRealtimeStorageAnalytics",
+    "metadata": {
+      "source_name": "supabase",
+      "category": "backend_service",
+      "url": "https://supabase.com/docs",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:57.504679",
+      "commercial_tool": true
+    },
+    "token_count": 342,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_a6681b15bcd9",
+    "source_file": "https://supabase.com/docs/reference",
+    "source_type": "commercial_documentation",
+    "title": "Supabase Docs",
+    "content": "API ReferencesThe Supabase client libraries help you interact with Supabase products, such as the Postgres Database, Auth, and Realtime. They are available in several popular programming languages.Supabase also has a Management API to help with managing your Supabase Platform, and a CLI for local development and CI workflows.Client LibrariesJavaScriptFlutterC#SwiftKotlinPythonManagement API and CLIManagement APICLI",
+    "metadata": {
+      "source_name": "supabase",
+      "category": "backend_service",
+      "url": "https://supabase.com/docs/reference",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:58.108457",
+      "commercial_tool": true
+    },
+    "token_count": 83,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_e065493c1ef8",
+    "source_file": "https://supabase.com/docs/guides",
+    "source_type": "commercial_documentation",
+    "title": "Supabase Docs",
+    "content": "Supabase DocumentationLearn how to get up and running with Supabase through tutorials, APIs and platform resources.Getting StartedSet up and connect a database in just a few minutes.Start with Supabase AI promptsProductsDatabaseSupabase provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.AuthAdd and manage email and password, passwordless, OAuth, and mobile logins to your project through a suite of identity providers and APIs.StorageStore, organize, transform, and serve large files—fully integrated with your Postgres database with Row Level Security access policies.RealtimeListen to database changes, store and sync user states across clients, broadcast data to clients subscribed to a channel, and more.Edge FunctionsGlobally distributed, server-side functions to execute your code closest to your users for the lowest latency.Postgres ModulesAI & VectorsCronQueuesClient LibrariesJavascriptFlutterPythonC#SwiftKotlinMigrate to SupabaseBring your existing data, auth and storage to Supabase following our migration guides.Explore more resources about /guides/resourcesExplore more resourcesAmazon RDSAuth0Firebase AuthFirebase StorageFirestore DataHerokuMSSQLMySQLNeonPostgresRenderVercel PostgresAdditional resourcesManagement APIManage your Supabase projects and organizations.Supabase CLIUse the CLI to develop, manage and deploy your projects.Platform GuidesLearn more about the tools and services powering Supabase.IntegrationsExplore a variety of integrations from Supabase partners.Self-HostingGet started with self-hosting Supabase.More on Self-Hosting about /guides/self-hostingMore on Self-HostingAuthRealtimeStorageAnalytics",
+    "metadata": {
+      "source_name": "supabase",
+      "category": "backend_service",
+      "url": "https://supabase.com/docs/guides",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:59.170972",
+      "commercial_tool": true
+    },
+    "token_count": 342,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_1d78d73c6900",
+    "source_file": "https://university.webflow.com/",
+    "source_type": "commercial_documentation",
+    "title": "Learn web design with free video courses and tutorials | Webflow University",
+    "content": "University\n\nHome\n\n\nSearchâE\n\n\n\nDashboardTry Webflow â it's freeLearn\n\n\n\n\n\nCourses\n\n\n\nDocs\n\n\nVideos\n\n\nInteractive Learning\n\n\nGlossary\n\n\nCertificationsEngage\n\nSupport\n\n\n\n\n\n\nCommunity\n\n\n\n\nEvents\n\n\nForumAccessibilitySwitch to Light modeSwitch to Dark mode\n\n\nHigh contrast\n\nTrusted by teams atLearn how to build pro websites â visually.Try Webflow â it's freeâSearch Webflow UniversityFeatured learningDesign basicsThis learning path is designed for website builders â anyone responsible for designing, structuring, and optimizing web content.Learning Path0m\n\nDesign basicsThis learning path is designed for website builders â anyone responsible for designing, structuring, and optimizing web content.Learning Path0m\n\nGetting started with WebflowGet familiar with Webflowâs website experience platform.Beginner1h 16m\n\nDesign systems in WebflowLearn how to create a design system in Webflow for consistent and scalable site building.Beginner - Intermediate19m\n\nOptimize, quality-check, & publishLearn how to review, optimize, and confidently publish your site using Webflowâs built-in tools and best practices.Beginner - Intermediate37m\n\nView all courses Â âFeatured videosCustom CSS properties7:04Layout & designIntro to design systems in Webflow8:40Layout & designWorking with classes10:21Layout & designIntro to styling6:38Layout & designIntro to the Webflow CMS5:12CMS & dynamic contentWelcome to Webflow3:36Getting startedAccessibility in Webflow5:17AccessibilityWorkspace seats & roles5:36Accounts & WorkspacesView all videos Â âLearning has never been so funThe Layout GameAn interactive resource that can educate and entertain you on the basics of layouts in Webflow â like our new Style panel, layouts, and more.The Grid GameMaster the fundamentals of CSS grid through 4 interactive challenges (and learn about some of historyâs most influential designers along the way!).The Eyeballing GamePut your design eye to the test! Compete for accuracy and race your friends in 8 unique design challenges where youâll match font widths, opacities, easing curves, and more.The Flexbox GameFlex your flexbox skills in 28 progressively tougher, interactive levels. No coding required!The Box Model GameLearn about the box model â the framework of the web! 8 interactive levels and an introduction to styling elements in Webflow.",
+    "metadata": {
+      "source_name": "webflow",
+      "category": "web_builder",
+      "url": "https://university.webflow.com/",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:48.635140",
+      "commercial_tool": true
+    },
+    "token_count": 519,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_e8108d2ab005",
+    "source_file": "https://developers.webflow.com/docs",
+    "source_type": "commercial_documentation",
+    "title": "Getting started with Webflow Apps | Webflow Developer Documentation",
+    "content": "Webflow Apps give developers the power to extend Webflow’s capabilities, making it easier for Visual Designers and Marketing teams to streamline workflows and achieve better results.\nApp capabilities\nData ClientsHarness your site’s data\nSync CMS content, form submissions, and translations between Webflow and your favorite tools. Push blog posts to social media, send form responses to your CRM, and keep content in sync across platforms using Webflow’s Data APIs.Designer ExtensionsSupercharge the design workflow\nBuild extensions that automate complex design tasks in Webflow. Help users focus on creativity by streamlining repetitive work - from importing and transforming design assets to applying sophisticated styles and managing content updates across pages.Hybrid AppsCreate seamless experiences\nCombine the power of Data Clients and Designer Extensions to create comprehensive solutions. Build apps that seamlessly integrate content management through APIs while providing direct design controls in the Webflow Designer - giving users a unified experience to manage their entire workflow.\nStart building\nReady to unleash the full potential of Webflow? Follow these steps to create and launch an app that enhances Webflow’s capabilities and wows users. Let’s get started!\n1Choose a development workspaceStart building apps in any workspace where you have Admin access - no special workspace is required to get started. When you’re ready to unlock premium features and APIs, apply for a Developer Workspace that gives you free access to build more advanced functionality for Webflow’s power users and teams.\nClaim your workspace2Create your first appStart building an app that integrates seamlessly with Webflow, enabling custom solutions that elevate user experiences. Register an App in Webflow to get started.Register an app3Tap into Webflow’s CMS DataAccess the power of Webflow’s CMS directly within your app. Dive into dynamic data, pull content on demand, and build experiences that adapt in real-time.Explore CMS data4Transform the canvas with your appStep into the Designer and start creating apps that interact directly with the Canvas. From manipulating styles to custom functionality, unleash the full potential of Webflow’s design environment.Dive into Designer Extensions5Share your appPublishing your app lets you share your creation with others. Launch publicly in the Webflow Marketplace to reach thousands of users and unlock monetization opportunities, or publish privately to create custom solutions for your organization and select clients. Whether public or private, your published app can transform how users work in Webflow.Publish your app",
+    "metadata": {
+      "source_name": "webflow",
+      "category": "web_builder",
+      "url": "https://developers.webflow.com/docs",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:52.208378",
+      "commercial_tool": true
+    },
+    "token_count": 476,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_7d7057ced384",
+    "source_file": "https://developers.webflow.com/reference",
+    "source_type": "commercial_documentation",
+    "title": "Introduction | Webflow Developer Documentation",
+    "content": "Welcome to Webflow, the world’s leading visual development platform for building powerful websites without writing code. This documentation is designed for developers looking to create advanced tools and applications for Webflow users by using an extensive set of RESTful APIs.\nStart building\nMake your first API callUse the interactive API reference to make an API request directly from the docs.\nCall the APIGet a site tokenSecure an API token to integrate a single Webflow site with your internal systems.\nGet a site tokenBuild your first appCreate an App to create integrations across multiple Webflow sites.\nCreate an AppCreate a webhookGet real-time updates when events occur on your site.\nCreate a webhook\n\nLooking to build with Webflow’s advanced features?Apply for an App Developer Workspace to explore premium tools and APIs—without the cost. Get the access you need to create powerful Apps for Webflow’s most sophisticated users and teams.\nApply for a Developer Workspace\nWhat can you do with the Data API?\nWebflow’s Data APIs empower developers to seamlessly interact with and manage the resources of a Webflow site. With endpoints that go beyond data retrieval, you can also create, update, and delete (CRUD) resources, offering a large degree of control over site management.\nHere are a few of the many things you can do with the API:\nWork with form dataConnect native Webflow forms to external data sources.Manage the Webflow CMSCreate and manage Webflow collections and items.Add custom code to sites and pagesAdd and maintain custom JavaScript scripts on a Site or Page.Localize site contentAdjust page content for mutliple languages and locales.Upload assetsAdd assets to the Webflow assets manager, or pull a list of all existing assets by ID or by Site.\n\nNeed to work directly in the Designer?If you’re looking to build apps that create and enhance designs within Webflow, the Designer APIs are the right tools for the job. These APIs enable you to add and modify elements, styles, assets, and more on your design canvas.\nExplore the Designer APIs",
+    "metadata": {
+      "source_name": "webflow",
+      "category": "web_builder",
+      "url": "https://developers.webflow.com/reference",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:53.229315",
+      "commercial_tool": true
+    },
+    "token_count": 410,
+    "chunk_index": 0,
+    "total_chunks": 1
+  },
+  {
+    "id": "comm_67913bcc1fa2",
+    "source_file": "https://university.webflow.com/courses",
+    "source_type": "commercial_documentation",
+    "title": "Free web design courses, tutorials & masterclass | Webflow University",
+    "content": "University\n\nHome\n\n\nSearchâE\n\n\n\nDashboardTry Webflow â it's freeLearn\n\n\n\n\n\nCourses\n\n\n\nDocs\n\n\nVideos\n\n\nInteractive Learning\n\n\nGlossary\n\n\nCertificationsEngage\n\nSupport\n\n\n\n\n\n\nCommunity\n\n\n\n\nEvents\n\n\nForumAccessibilitySwitch to Light modeSwitch to Dark mode\n\n\nHigh contrast\n\nTrusted by teams atCourses\n\n\n\n\n\n\n\n\n\n\n\n\n\nMake your site responsiveLearn how to preview, adjust, and refine your layout so it looks great on every screen size.Beginner - Intermediate22m\n\nUltimate web design courseFrom the fundamentals to advanced topics â learn how to build sites in Webflow and become the designer you always wanted to be.Beginner - Intermediate5h 50m\n\nGetting started with Webflow EnterpriseGet familiar with Webflowâs website experience platform and Enterprise features.Beginner1h 33m\n\nGetting started with WebflowGet familiar with Webflowâs website experience platform.Beginner1h 16m\n\nOptimize, quality-check, & publishLearn how to review, optimize, and confidently publish your site using Webflowâs built-in tools and best practices.Beginner - Intermediate37m\n\nLay out & style your siteLearn how to lay out and visually style pages to fit your look and brand.Beginner - Intermediate49m\n\nWelcome to OptimizeLearn how to use Webflow Optimize to improve your site's conversion rate using testing, personalization, and the power of AI.Beginner25m\n\nDesign systems in WebflowLearn how to create a design system in Webflow for consistent and scalable site building.Beginner - Intermediate19m\n\nWebflow 101Introducing Webflow 101, the ultimate course to learn the fundamentals of web design and development.Beginner - Intermediate2h 28m\n\nAccessibility on the webLearn about accessibility on the web and how to create inclusive and accessible sites without writing code.Beginner - Intermediate45m\n\nBuild & structure your siteLearn how to add different types of HTML elements to structure pages on your site.Beginner30m\n\nDesign & manage CMS content in WebflowLearn how to create, manage, and style dynamic content and collections on your site using Webflowâs CMS.Beginner - Intermediate29m\n\nFull site buildLearn how to design and develop a CMS-driven website built around the needs of your client and their audience â and execute a successful launch.Intermediate4h 23m\n\nFreelance web design boot campThe Freelancerâs Journey is a free, comprehensive course to help you build a successful, fulfilling freelance career in web design.Beginner6h 59m\n\n21-day design portfolio courseBuild and visually design a full portfolio website within the span of 21 days.Beginner - Advanced4h 51m\n\nFigma to WebflowLearn the entire design process from idea to final output as we take you through Figma, Cinema 4D and Octane, and Webflow.Beginner - Advanced6h 27m\n\nLocalize your site in WebflowLearn how to localize a site for different languages and regions. Translate text, customize and manage content, and optimize SEO settings, so your site reaches a wider audience.Beginner - Intermediate22m\n\nWelcome to WebflowDiscover what Webflow offers, how it works behind-the-scenes, and tips and tricks for starting your learning journey.Beginner14m\n\nClient's guide to the EditorThis is the Client's guide to the Webflow Editor. Share these lessons to get your clients up and running.Intermediate17m\n\nMoving your business onlineA free course on how to take your business online. Serve more clients and generate more revenue in this new environment. Beginner27m\n\nCSS layout & positioningDig into the world of HTML and CSS layouts â learn how they work together and get an overview of display properties like inline block and flexbox.Intermediate - Advanced1h 34m\n\nWeb animations with After Effects & LottieCreate animations in Adobe After Effects",
+    "metadata": {
+      "source_name": "webflow",
+      "category": "web_builder",
+      "url": "https://university.webflow.com/courses",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:54.475547",
+      "commercial_tool": true
+    },
+    "token_count": 800,
+    "chunk_index": 0,
+    "total_chunks": 2
+  },
+  {
+    "id": "comm_28345defb884",
+    "source_file": "https://university.webflow.com/courses",
+    "source_type": "commercial_documentation",
+    "title": "Free web design courses, tutorials & masterclass | Webflow University",
+    "content": "flowDiscover what Webflow offers, how it works behind-the-scenes, and tips and tricks for starting your learning journey.Beginner14m\n\nClient's guide to the EditorThis is the Client's guide to the Webflow Editor. Share these lessons to get your clients up and running.Intermediate17m\n\nMoving your business onlineA free course on how to take your business online. Serve more clients and generate more revenue in this new environment. Beginner27m\n\nCSS layout & positioningDig into the world of HTML and CSS layouts â learn how they work together and get an overview of display properties like inline block and flexbox.Intermediate - Advanced1h 34m\n\nWeb animations with After Effects & LottieCreate animations in Adobe After Effects â the industry standard for motion graphics. Embed and animate them in your Webflow site.Intermediate1h 18m\n\nInteractions & animations courseLearn how to animate multiple elements managed on a single timeline â bring your designs to life with rich, sequenced interactions and animations.Intermediate - Advanced1h 59m\n\nWebflow EcommerceLearn how to build and design your Webflow Ecommerce store. Customize every detail and launch a fully functional online store â without writing code.Beginner - Intermediate19m\n\nHmmâ¦we couldnât find any results. Reset the filters or try searching for something specific.Reset the filterFilterResetTopicsAccessibilityBusinessCMSCSSEcommerceEditorEnterpriseFigmaFreelancingGetting startedHTMLInteractionsLocalizationOptimizeSEOSite buildThank you! Your submission has been received!Oops! Something went wrong while submitting the form.Back to top",
+    "metadata": {
+      "source_name": "webflow",
+      "category": "web_builder",
+      "url": "https://university.webflow.com/courses",
+      "priority": "high",
+      "collected_at": "2025-09-03T01:07:54.475547",
+      "commercial_tool": true
+    },
+    "token_count": 334,
+    "chunk_index": 1,
+    "total_chunks": 2
+  }
+]

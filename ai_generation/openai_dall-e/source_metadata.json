@@ -1,0 +1,32 @@
+{
+  "source_info": {
+    "name": "OpenAI DALL-E",
+    "category": "ai_generation",
+    "base_url": "https://openai.com",
+    "documentation_urls": [
+      "https://platform.openai.com/docs/guides/images",
+      "https://openai.com/dall-e-3"
+    ],
+    "api_docs_urls": [
+      "https://platform.openai.com/docs/api-reference/images"
+    ],
+    "tutorial_urls": null,
+    "priority": 1,
+    "rate_limit": 1.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main, article",
+      "title": "h1, .page-title",
+      "description": ".description, .summary"
+    },
+    "vibe_relevance": 0.88
+  },
+  "collection_stats": {
+    "name": "OpenAI DALL-E",
+    "category": "ai_generation",
+    "pages_collected": 0,
+    "tokens_collected": 0,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:05.585320"
+}

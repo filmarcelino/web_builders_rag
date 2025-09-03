@@ -1,0 +1,37 @@
+{
+  "vibe_id": "b3e7cdd2-bf2d-4a67-b24d-49d521e32e85",
+  "description": "Modern, innovative, trustworthy AI startup with cutting-edge technology",
+  "project_id": "a5518eaf-7cda-4899-8bd3-3332253bd5ac",
+  "assets": {
+    "main_image": "GenerationRequest(id='b1552c6b-d2ec-45d8-b969-2dbb89cdd6de', provider='dalle3', type='image', prompt='Professional, high-quality image representing: Modern, innovative, trustworthy AI startup with cutting-edge technology. Photorealistic, modern, engaging.', style='photorealistic', parameters={}, user_id=None, project_id='a5518eaf-7cda-4899-8bd3-3332253bd5ac', created_at='2025-09-03T03:36:58.846269', status='failed', result_url=None, error_message='OPENAI_API_KEY não configurada', processing_time=None, cost=None)",
+    "concept_art": "GenerationRequest(id='ea68e014-852e-44fe-b559-71e7e11812fe', provider='leonardo', type='image', prompt='Artistic interpretation, concept art style: Modern, innovative, trustworthy AI startup with cutting-edge technology. Creative, inspiring, professional.', style='concept_art', parameters={}, user_id=None, project_id='a5518eaf-7cda-4899-8bd3-3332253bd5ac', created_at='2025-09-03T03:36:58.847223', status='failed', result_url=None, error_message='LEONARDO_API_KEY não configurada', processing_time=None, cost=None)",
+    "promo_video": "GenerationRequest(id='26945991-8726-46de-9735-dcf4bf1c01e3', provider='kling', type='video', prompt='Dynamic promotional video showcasing: Modern, innovative, trustworthy AI startup with cutting-edge technology. Engaging, modern, professional quality.', style='promotional', parameters={}, user_id=None, project_id='a5518eaf-7cda-4899-8bd3-3332253bd5ac', created_at='2025-09-03T03:36:58.848032', status='failed', result_url=None, error_message='KLING_API_KEY não configurada', processing_time=None, cost=None)",
+    "avatar_presenter": "GenerationRequest(id='7508e7e4-90b8-4206-be31-3e2466329313', provider='heygen', type='avatar', prompt='Professional presenter avatar explaining: Modern, innovative, trustworthy AI startup with cutting-edge technology. Friendly, confident, engaging.', style='professional', parameters={'voice_style': 'friendly', 'language': 'en'}, user_id=None, project_id='a5518eaf-7cda-4899-8bd3-3332253bd5ac', created_at='2025-09-03T03:36:58.849011', status='failed', result_url=None, error_message='HEYGEN_API_KEY não configurada', processing_time=None, cost=None)",
+    "artistic_variations": "GenerationRequest(id='982fb641-a556-4427-94f1-41f9baf81bf2', provider='midjourney', type='image', prompt='Artistic masterpiece interpretation: Modern, innovative, trustworthy AI startup with cutting-edge technology. Creative, unique, inspiring.', style='artistic', parameters={}, user_id=None, project_id='a5518eaf-7cda-4899-8bd3-3332253bd5ac', created_at='2025-09-03T03:36:58.850002', status='completed', result_url='https://example.com/midjourney-artwork.png', error_message=None, processing_time=3.0001585483551025, cost=None)"
+  },
+  "timeline": [
+    {
+      "step": "main_image",
+      "status": "failed"
+    },
+    {
+      "step": "concept_art",
+      "status": "failed"
+    },
+    {
+      "step": "promo_video",
+      "status": "failed"
+    },
+    {
+      "step": "avatar_presenter",
+      "status": "failed"
+    },
+    {
+      "step": "artistic_variations",
+      "status": "completed"
+    }
+  ],
+  "total_cost": 0.03,
+  "processing_time": 3.005234718322754,
+  "quality_score": 9.3
+}

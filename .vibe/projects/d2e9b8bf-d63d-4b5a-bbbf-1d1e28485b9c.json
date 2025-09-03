@@ -1,0 +1,56 @@
+{
+  "id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+  "name": "Amazing Startup Landing",
+  "description": "Landing page for innovative AI startup",
+  "vibe_description": "Modern, innovative, trustworthy AI startup with cutting-edge technology",
+  "owner_id": "test-user-123",
+  "collaborators": [],
+  "project_type": "landing_page",
+  "target_audience": "tech_professionals",
+  "brand_style": "modern",
+  "color_palette": [
+    "#007bff",
+    "#28a745",
+    "#ffc107"
+  ],
+  "typography": {
+    "primary": "Inter, sans-serif",
+    "secondary": "Roboto, sans-serif"
+  },
+  "components": {},
+  "ai_assets": {
+    "image_1": {
+      "id": "f34e9f2d-0d6f-471d-893a-53ca834da0a1",
+      "provider": "dalle3",
+      "type": "image",
+      "prompt": "Professional hero image for AI startup. Context: Project type: landing_page; Brand style: modern; Target audience: tech_professionals; Color palette: #007bff, #28a745, #ffc107; Project vibe: Modern, innovative, trustworthy AI startup with cutting-edge technology. Style: professional, modern, modern.",
+      "style": "photorealistic",
+      "parameters": {},
+      "user_id": "test-user-123",
+      "project_id": "d2e9b8bf-d63d-4b5a-bbbf-1d1e28485b9c",
+      "created_at": "2025-09-03T03:39:26.381392",
+      "status": "failed",
+      "result_url": null,
+      "error_message": "OPENAI_API_KEY não configurada",
+      "processing_time": null,
+      "cost": null
+    }
+  },
+  "backend_config": {},
+  "deployment_config": {},
+  "created_at": "2025-09-03T03:39:23.359308",
+  "updated_at": "2025-09-03T03:39:26.382180",
+  "status": "designing",
+  "version": "1.0.0",
+  "tags": [
+    "ai",
+    "startup",
+    "technology"
+  ],
+  "metrics": {
+    "views": 0,
+    "interactions": 0,
+    "conversion_rate": 0.0,
+    "performance_score": 0.0
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "source_info": {
+    "name": "Netlify",
+    "category": "deployment",
+    "base_url": "https://netlify.com",
+    "documentation_urls": [
+      "https://docs.netlify.com/",
+      "https://www.netlify.com/blog/"
+    ],
+    "api_docs_urls": [
+      "https://docs.netlify.com/api/get-started/"
+    ],
+    "tutorial_urls": null,
+    "priority": 2,
+    "rate_limit": 1.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": ".docs-content, main",
+      "title": "h1, .docs-title",
+      "description": ".docs-description"
+    },
+    "vibe_relevance": 0.8
+  },
+  "collection_stats": {
+    "name": "Netlify",
+    "category": "deployment",
+    "pages_collected": 3,
+    "tokens_collected": 8674,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:22.204025"
+}

@@ -1,0 +1,30 @@
+{
+  "source_info": {
+    "name": "Kling AI",
+    "category": "ai_generation",
+    "base_url": "https://klingai.com",
+    "documentation_urls": [
+      "https://klingai.com/docs/",
+      "https://klingai.com/blog/"
+    ],
+    "api_docs_urls": null,
+    "tutorial_urls": null,
+    "priority": 2,
+    "rate_limit": 2.0,
+    "headers": null,
+    "content_selectors": {
+      "main_content": "main, .content, article",
+      "title": "h1, .title",
+      "description": ".description, .summary"
+    },
+    "vibe_relevance": 0.85
+  },
+  "collection_stats": {
+    "name": "Kling AI",
+    "category": "ai_generation",
+    "pages_collected": 2,
+    "tokens_collected": 6,
+    "errors": []
+  },
+  "collection_timestamp": "2025-09-03T03:39:23.345025"
+}

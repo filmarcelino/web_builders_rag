@@ -1,0 +1,12 @@
+{
+  "url": "https://docs.heygen.com/reference",
+  "title": "Authentication",
+  "description": "",
+  "text": "Authentication\nTo access\nHeyGen's API\nand perform operations, you must authenticate and authorize your requests using the HTTP\nX-Api-Key\nheader.\nTo find your API Token, navigate to your account's\nSpace\nby clicking the top left corner of the\nHeyGen App\nhome screen. From the dropdown menu, select\nSpace Settings\n. Your API token will be displayed under the\nAPI tab\n. This token will be used to authenticate your API requests.\n📘\nHeyGen API Plans\nYour API usage limits will depend on the tier of\nHeyGen API plan\nyou are subscribed to. Ever\nHeyGen App\nuser now automatically receives Free Trial access to the HeyGen API, including\nVideo Generation\n, Video Translation, and Interactive Avatar endpoints, and there are three paid subscription tiers available for increased usage:\nPro\n,\nScale\n, and\nEnterprise\n.\nFor more information on pricing and usage, please refer to our\nlimits page\n.\n❗️\nKEEP TOKEN SECRET AND SAFE\nWhen it comes to your API Token, heed Gandalf's advice:\nKeep it Secret. Keep it Safe!\n. Anyone with access to your API Key can make API requests on your behalf. If you suspect that your token has been compromised, please send an email to\n[email protected]\nand it can be deactivated or reset.",
+  "source_name": "HeyGen",
+  "source_category": "ai_generation",
+  "vibe_relevance": 0.8,
+  "content_length": 1203,
+  "token_count": 275,
+  "collection_timestamp": "2025-09-03T03:39:23.037756"
+}
