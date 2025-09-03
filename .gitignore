@@ -20,74 +20,70 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-PIPFILE.lock
+PYTHONPATH
 
-# Virtual Environment
-.venv/
+# Ambientes virtuais
+.env
+.venv
+env/
 venv/
 ENV/
-env/
-.env
+env.bak/
+venv.bak/
 
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
 # Logs
 *.log
 logs/
 
-# Arquivos de dados grandes
-rag_data/
-corpus/
-corpus-complete.zip
-*.bin
-*.faiss
-*.db
-*.db-shm
-*.db-wal
+# APENAS CHAVES SENSÍVEIS (conforme solicitado)
+# Chaves de API - NUNCA commitar
+.env
+**/OPENAI_API_KEY*
+**/openai_key*
+**/*api_key*
+**/*secret*
 
-# Arquivos de backup
-*.backup*
-*.json.backup*
-
-# Data files
-data/
-*.csv
-*.xlsx
-*.parquet
-
-# Data
-data/
-vector_store/
-index/
-cache/
-
-# Temporary files
+# Arquivos temporários
 *.tmp
 *.temp
+.DS_Store
+Thumbs.db
+ehthumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-
-# pytest
+# Cache
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.nox/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# DADOS RAG ESSENCIAIS PERMITIDOS (excluindo arquivos muito grandes)
+# rag_data/ - PERMITIDO (exceto backups grandes)
+# data/ - PERMITIDO  
+# *.faiss - PERMITIDO (arquivos pequenos)
+# *.db - PERMITIDO
+# vector_store/ - PERMITIDO
+# index/ - PERMITIDO
+# corpus/ - PERMITIDO (exceto repositórios Git)
+
+# Excluir arquivos muito grandes para GitHub
+rag_data/backup/
+*.bin
+faiss_index.bin
+*_backup_*.bin
+*_backup_*.json
+corpus/git_repos/
+corpus/animations/repositories/
