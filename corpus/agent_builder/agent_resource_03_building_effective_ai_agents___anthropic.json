@@ -1,0 +1,18 @@
+{
+  "title": "Building Effective AI Agents - Anthropic",
+  "content": "# Building Effective AI Agents - Anthropic\n\n## Panorama Técnico de Frameworks\n\n### LangGraph\n- Framework para workflows complexos\n- Estado persistente\n- Controle de fluxo avançado\n\n### Amazon Bedrock AI Agent\n- Integração enterprise\n- Escalabilidade cloud\n- Segurança corporativa\n\n### Rivet\n- Interface visual\n- Prototipagem rápida\n- Debugging intuitivo\n\n### Vellum\n- Prompt engineering\n- A/B testing\n- Monitoramento\n\n## Princípios de Design\n\n1. **Modularidade**: Componentes reutilizáveis\n2. **Observabilidade**: Monitoramento completo\n3. **Escalabilidade**: Crescimento sustentável\n4. **Segurança**: Proteção de dados\n5. **Usabilidade**: Interface intuitiva",
+  "metadata": {
+    "source": "Anthropic",
+    "type": "technical_overview",
+    "category": "agent_building",
+    "difficulty": "intermediate",
+    "format": "article",
+    "topics": [
+      "frameworks",
+      "design principles",
+      "best practices"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "source_name": "godot_docs",
+    "category": "game_engine",
+    "url": "https://docs.godotengine.org/en/stable/getting_started/introduction/index.html",
+    "title": "Introduction — Godot Engine (stable) documentation in English",
+    "content": "Introduction\nThis series will introduce you to Godot and give you an overview of its\nfeatures.\nIn the following pages, you will get answers to questions such as \"Is Godot for\nme?\" or \"What can I do with Godot?\". We will then introduce the engine's most\nessential concepts, run you through the editor's interface, and give you tips to\nmake the most of your time learning it.\n\n\nIntroduction to Godot\nLearn to code with GDScript\nOverview of Godot's key concepts\nFirst look at Godot's interface\nLearning new features\nGodot's design philosophy",
+    "code_blocks": [],
+    "headings": [
+      "Introduction"
+    ],
+    "token_count": 126,
+    "collected_at": "2025-09-03T01:38:55.952757",
+    "priority": "high"
+  },
+  {
+    "source_name": "godot_docs",
+    "category": "game_engine",
+    "url": "https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html",
+    "title": "Your first 2D game — Godot Engine (stable) documentation in English",
+    "content": "Your first 2D game\nIn this step-by-step tutorial series, you will create your first complete 2D\ngame with Godot. By the end of the series, you will have a simple yet complete\ngame of your own, like the image below.\n\nYou will learn how the Godot editor works, how to structure a project, and build\na 2D game.\n\nNote\nThis project is an introduction to the Godot engine. It assumes that\nyou have some programming experience already. If you're new to\nprogramming entirely, you should start here: Scripting languages.\n\nThe game is called \"Dodge the Creeps!\". Your character must move and avoid the\nenemies for as long as possible.\nYou will learn to:\n\nCreate a complete 2D game with the Godot editor.\nStructure a simple game project.\nMove the player character and change its sprite.\nSpawn random enemies.\nCount the score.\n\nAnd more.\nYou'll find another series where you'll create a similar game but in 3D. We\nrecommend you to start with this one, though.\nWhy start with 2D?\nIf you are new to game development or unfamiliar with Godot, we recommend\nstarting with 2D games. This will allow you to become comfortable with both\nbefore tackling 3D games, which tend to be more complicated.\nYou can find a completed version of this project at this location:\n\nhttps://github.com/godotengine/godot-demo-projects/tree/master/2d/dodge_the_creeps\n\n\nPrerequisites\nThis step-by-step tutorial is intended for beginners who followed the complete\nStep by step.\nIf you're an experienced programmer, you can find the complete demo's source\ncode here: Dodge the Creeps source code.\nWe prepared some game assets you'll need to download so we can jump straight to\nthe code.\nYou can download them by clicking the link below.\ndodge_the_creeps_2d_assets.zip.\n\n\nContents\n\n\nSetting up the project\nCreating the player scene\nCoding the player\nCreating the enemy\nThe main game scene\nHeads up display\nFinishing up",
+    "code_blocks": [],
+    "headings": [
+      "Your first 2D game",
+      "Prerequisites",
+      "Contents"
+    ],
+    "token_count": 442,
+    "collected_at": "2025-09-03T01:38:56.796984",
+    "priority": "high"
+  }
+]

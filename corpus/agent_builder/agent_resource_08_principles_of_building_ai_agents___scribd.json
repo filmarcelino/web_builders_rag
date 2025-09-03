@@ -1,0 +1,19 @@
+{
+  "title": "Principles of Building AI Agents - Scribd",
+  "content": "# Principles of Building AI Agents\n\n## Blocos Fundamentais dos Agentes\n\n### 1. Modelos\n- **LLMs**: Processamento de linguagem natural\n- **Multimodal**: Texto, imagem, áudio\n- **Specialized**: Modelos específicos para domínios\n\n### 2. Prompts\n- **System Prompts**: Definição de comportamento\n- **Task Prompts**: Instruções específicas\n- **Few-shot Examples**: Exemplos de referência\n- **Chain-of-Thought**: Raciocínio estruturado\n\n### 3. Ferramentas\n- **APIs**: Integração com serviços externos\n- **Functions**: Código executável\n- **Databases**: Acesso a dados\n- **File Systems**: Manipulação de arquivos\n\n### 4. Memória\n- **Short-term**: Contexto da sessão\n- **Long-term**: Conhecimento persistente\n- **Episodic**: Histórico de interações\n- **Semantic**: Fatos e conceitos\n\n### 5. Arquitetura\n- **Single Agent**: Um agente autônomo\n- **Multi-Agent**: Múltiplos agentes colaborativos\n- **Hierarchical**: Estrutura de supervisão\n- **Pipeline**: Processamento sequencial\n\n## Padrões de Design\n\n### ReAct Pattern\n```\nObserve → Think → Act → Observe\n```\n\n### Planning Pattern\n```\nGoal → Plan → Execute → Monitor → Adjust\n```\n\n### Tool-Use Pattern\n```\nQuery → Tool Selection → Execution → Result Integration\n```\n\n## Considerações de Implementação\n\n### Performance\n- Latência de resposta\n- Throughput de requisições\n- Uso de recursos\n\n### Reliability\n- Tratamento de erros\n- Fallback strategies\n- Monitoring e alertas\n\n### Security\n- Validação de entrada\n- Sanitização de saída\n- Controle de acesso\n\n### Scalability\n- Load balancing\n- Auto-scaling\n- Resource optimization",
+  "metadata": {
+    "source": "Scribd",
+    "type": "principles_guide",
+    "category": "agent_building",
+    "difficulty": "intermediate",
+    "format": "pdf",
+    "topics": [
+      "fundamentals",
+      "architecture",
+      "design patterns",
+      "implementation"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder"
+  }
+}

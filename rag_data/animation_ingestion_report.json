@@ -1,0 +1,34 @@
+{
+  "ingestion_summary": {
+    "timestamp": "2025-08-25 23:06:53",
+    "status": "success",
+    "animation_data": {
+      "total_chunks": 3716,
+      "content_types": {
+        "documentation": 29,
+        "repository": 3654,
+        "course": 29,
+        "technique": 4
+      },
+      "avg_animation_score": 0.11818583730585884,
+      "high_quality_chunks": 104
+    },
+    "rag_system": {
+      "before_ingestion": 27610,
+      "after_ingestion": 31326,
+      "chunks_added": 3716,
+      "growth_percentage": 13.5
+    }
+  },
+  "quality_analysis": {
+    "animation_focused_chunks": 104,
+    "quality_percentage": 2.8,
+    "average_relevance_score": 0.118
+  },
+  "recommendations": [
+    "Testar consultas específicas sobre animações CSS",
+    "Verificar melhoria na qualidade das respostas",
+    "Monitorar performance do sistema com dados expandidos",
+    "Considerar ajustes nos prompts para melhor utilização do conteúdo de animação"
+  ]
+}

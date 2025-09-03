@@ -1,0 +1,22 @@
+{
+  "integration_info": {
+    "created_at": "2025-08-23T17:51:44.148960",
+    "components": {
+      "seed_manager": "Gerenciamento geral de fontes",
+      "animation_seed_pack": "Especialização em animações",
+      "rag_integration": "Busca inteligente e documentação"
+    },
+    "capabilities": {
+      "search": "Busca em múltiplas camadas (geral + especializada + RAG)",
+      "recommendations": "Recomendações contextuais baseadas em necessidades",
+      "documentation": "Guias especializados e exemplos práticos",
+      "metadata": "Informações técnicas detalhadas (bundle, performance, etc.)"
+    }
+  },
+  "statistics": {
+    "animation_sources": 12,
+    "categories": 5,
+    "rag_documents": 20,
+    "use_cases_covered": 4
+  }
+}

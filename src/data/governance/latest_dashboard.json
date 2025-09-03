@@ -1,0 +1,99 @@
+{
+  "generated_at": "2025-08-23T16:15:00.862224",
+  "metrics": {
+    "timestamp": "2025-08-23T16:15:00.862197",
+    "overall_coverage": 0.0,
+    "total_topics": 0,
+    "coverage_gaps": 0,
+    "trending_topics": [],
+    "total_sources": 0,
+    "active_sources": 0,
+    "obsolete_sources": 0,
+    "high_value_sources": 0,
+    "total_detections": 0,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "sources_with_issues": 0,
+    "governance_score": 0.25,
+    "health_score": 0.5,
+    "quality_score": 1.0
+  },
+  "coverage_summary": {
+    "overall_coverage": "0.0%",
+    "total_topics": 0,
+    "well_covered": 0,
+    "poorly_covered": 0,
+    "gaps_count": 0,
+    "trending_topics": [],
+    "top_recommendations": []
+  },
+  "source_summary": {
+    "total_sources": 0,
+    "active_sources": 0,
+    "obsolete_sources": 0,
+    "high_value_sources": 0,
+    "low_value_sources": 0,
+    "activity_rate": "0.0%",
+    "top_recommendations": []
+  },
+  "obsolescence_summary": {
+    "total_detections": 0,
+    "critical_issues": 0,
+    "high_issues": 0,
+    "medium_issues": 0,
+    "sources_affected": 0,
+    "top_issues": [],
+    "top_recommendations": []
+  },
+  "recommendations": [],
+  "alerts": [
+    {
+      "type": "warning",
+      "category": "coverage",
+      "message": "Cobertura baixa: 0.0%",
+      "threshold": 0.7,
+      "current_value": 0.0
+    },
+    {
+      "type": "warning",
+      "category": "governance",
+      "message": "Score de governança baixo: 25.0%",
+      "threshold": 0.6,
+      "current_value": 0.25
+    }
+  ],
+  "trends": {
+    "coverage": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "governance_score": [
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "health_score": [
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5,
+      0.5
+    ],
+    "critical_issues": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

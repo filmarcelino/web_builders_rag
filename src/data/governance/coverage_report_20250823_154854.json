@@ -1,0 +1,128 @@
+{
+  "generated_at": "2025-08-23T15:48:54.002621",
+  "overall_coverage": 0.13288888888888892,
+  "total_topics": 9,
+  "well_covered_topics": 0,
+  "poorly_covered_topics": 9,
+  "coverage_gaps": [
+    "next.js",
+    "css",
+    "tailwind",
+    "ui",
+    "playwright",
+    "performance",
+    "react",
+    "typescript",
+    "api"
+  ],
+  "recommendations": [
+    "Expandir cobertura de 'next.js' - tópico popular com poucas fontes",
+    "Expandir cobertura de 'css' - tópico popular com poucas fontes",
+    "Expandir cobertura de 'tailwind' - tópico popular com poucas fontes",
+    "Expandir cobertura de 'ui' - tópico popular com poucas fontes",
+    "Expandir cobertura de 'react' - tópico popular com poucas fontes"
+  ],
+  "trending_topics": [
+    "next.js",
+    "css",
+    "tailwind",
+    "ui",
+    "react",
+    "playwright",
+    "performance",
+    "typescript",
+    "api"
+  ],
+  "topic_coverage": {
+    "next.js": {
+      "topic": "next.js",
+      "coverage_score": 0.16560000000000002,
+      "source_count": 0,
+      "query_frequency": 2,
+      "last_updated": "2025-08-23T15:48:54.002493",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "css": {
+      "topic": "css",
+      "coverage_score": 0.16560000000000002,
+      "source_count": 0,
+      "query_frequency": 2,
+      "last_updated": "2025-08-23T15:48:54.002274",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "tailwind": {
+      "topic": "tailwind",
+      "coverage_score": 0.16560000000000002,
+      "source_count": 0,
+      "query_frequency": 2,
+      "last_updated": "2025-08-23T15:48:54.002273",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "ui": {
+      "topic": "ui",
+      "coverage_score": 0.16560000000000002,
+      "source_count": 0,
+      "query_frequency": 2,
+      "last_updated": "2025-08-23T15:48:54.002494",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "playwright": {
+      "topic": "playwright",
+      "coverage_score": 0.09200000000000001,
+      "source_count": 0,
+      "query_frequency": 1,
+      "last_updated": "2025-08-23T15:48:54.002161",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "performance": {
+      "topic": "performance",
+      "coverage_score": 0.09200000000000001,
+      "source_count": 0,
+      "query_frequency": 1,
+      "last_updated": "2025-08-23T15:48:54.002217",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "react": {
+      "topic": "react",
+      "coverage_score": 0.16560000000000002,
+      "source_count": 0,
+      "query_frequency": 2,
+      "last_updated": "2025-08-23T15:48:54.002426",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "typescript": {
+      "topic": "typescript",
+      "coverage_score": 0.09200000000000001,
+      "source_count": 0,
+      "query_frequency": 1,
+      "last_updated": "2025-08-23T15:48:54.002329",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    },
+    "api": {
+      "topic": "api",
+      "coverage_score": 0.09200000000000001,
+      "source_count": 0,
+      "query_frequency": 1,
+      "last_updated": "2025-08-23T15:48:54.002491",
+      "gaps": [],
+      "related_topics": [],
+      "confidence": 0.0
+    }
+  }
+}

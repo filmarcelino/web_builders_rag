@@ -1,0 +1,37 @@
+{
+  "collection_summary": {
+    "timestamp": "2025-08-25 22:39:46",
+    "total_docs": 5,
+    "total_repos": 6,
+    "total_courses": 3,
+    "total_techniques": 4
+  },
+  "collected_resources": {
+    "documentation": [
+      "mdn_animations",
+      "mdn_transitions",
+      "mdn_web_animations",
+      "motion_one",
+      "tailwind_animations"
+    ],
+    "repositories": [
+      "animate-css",
+      "anime-js",
+      "hover-css",
+      "lottie-web",
+      "spinkit",
+      "three-js"
+    ],
+    "courses": [
+      "css_tricks_animations",
+      "freecodecamp_animations",
+      "material_design_motion"
+    ],
+    "techniques": [
+      "css_animation_techniques",
+      "javascript_animation_patterns",
+      "motion_design_principles",
+      "performance_best_practices"
+    ]
+  }
+}

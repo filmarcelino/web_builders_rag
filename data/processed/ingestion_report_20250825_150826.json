@@ -1,0 +1,26 @@
+{
+  "ingestion_report": {
+    "timestamp": "2025-08-25T15:08:26.019033",
+    "summary": {
+      "total_sources": 7,
+      "successful_sources": 0,
+      "failed_sources": 0,
+      "success_rate": 0.0,
+      "total_sections": 0,
+      "total_tokens": 0,
+      "processing_time_seconds": 4.130297
+    },
+    "breakdown_by_category": {},
+    "breakdown_by_stack": {},
+    "breakdown_by_license": {},
+    "quality_distribution": {
+      "high (0.8-1.0)": 0,
+      "medium (0.6-0.8)": 0,
+      "low (0.4-0.6)": 0,
+      "very_low (0.0-0.4)": 0
+    },
+    "recommendations": [
+      "Categorias sem conteúdo: architecture, i18n, auth, testing, operational, ui_design, security, csv, web_stack, database, payments, upload"
+    ]
+  }
+}

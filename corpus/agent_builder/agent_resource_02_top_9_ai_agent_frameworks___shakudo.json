@@ -1,0 +1,20 @@
+{
+  "title": "Top 9 AI Agent Frameworks - Shakudo",
+  "content": "# Top 9 AI Agent Frameworks (2025)\n\n## 1. LangGraph\n\n**Melhor para**: Workflows complexos e stateful agents\n\n**Vantagens**:\n- Controle fino sobre fluxo de execução\n- Estado persistente entre execuções\n- Debugging avançado\n- Integração nativa com LangChain\n\n## 2. AutoGen\n\n**Melhor para**: Sistemas multi-agent conversacionais\n\n**Vantagens**:\n- Setup simples para multi-agent\n- Conversas naturais entre agentes\n- Suporte a diferentes tipos de agente\n- Integração com ferramentas externas\n\n## 3. CrewAI\n\n**Melhor para**: Equipes de agentes especializados\n\n## 4. Amazon Bedrock Agents\n\n**Melhor para**: Integração com AWS e enterprise\n\n## 5. Rivet\n\n**Melhor para**: Visual agent building\n\n- Interface visual drag-and-drop\n- Debugging em tempo real\n- Integração com múltiplos LLMs\n- Deployment simplificado\n\n## 6. Vellum\n\n**Melhor para**: Prompt engineering e testing\n\n- A/B testing de prompts\n- Versionamento de agentes\n- Monitoramento de performance\n- Integração com CI/CD\n\n## Comparação e Escolha\n\n### Recomendações por Caso de Uso:\n\n- **Prototipagem rápida**: Rivet, Vellum\n- **Sistemas complexos**: LangGraph, Haystack\n- **Multi-agent**: AutoGen, CrewAI\n- **Enterprise**: Bedrock, Semantic Kernel\n- **RAG-focused**: Haystack, LlamaIndex",
+  "metadata": {
+    "source": "Shakudo",
+    "type": "comparison",
+    "category": "agent_building",
+    "difficulty": "intermediate",
+    "format": "article",
+    "topics": [
+      "frameworks",
+      "comparison",
+      "tools",
+      "implementation"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder",
+    "updated": "2025-08"
+  }
+}

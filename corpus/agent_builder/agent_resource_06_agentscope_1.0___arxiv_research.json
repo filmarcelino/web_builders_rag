@@ -1,0 +1,20 @@
+{
+  "title": "AgentScope 1.0 - arXiv Research",
+  "content": "# AgentScope 1.0: Developer-Centric Multi-Agent Framework\n\n## Visão Geral\n\nAgentScope 1.0 é um framework recente (agosto 2025) voltado ao desenvolvimento centrado em desenvolvedor, com interfaces unificadas, sandbox, integração com visual studio e deploy escalável.\n\n## Características Principais\n\n### Interfaces Unificadas\n- API consistente para diferentes tipos de agente\n- Abstração de complexidade\n- Facilidade de uso\n\n### Sandbox Environment\n- Ambiente isolado para testes\n- Simulação de cenários\n- Debugging seguro\n\n### Visual Studio Integration\n- Extensão para VS Code\n- IntelliSense para agentes\n- Debugging visual\n\n### Deploy Escalável\n- Containerização automática\n- Orquestração Kubernetes\n- Monitoramento integrado\n\n## Arquitetura\n\n### Multi-Agent Coordination\n- Comunicação entre agentes\n- Sincronização de estados\n- Resolução de conflitos\n\n### Resource Management\n- Alocação dinâmica\n- Load balancing\n- Auto-scaling\n\n## Casos de Uso\n\n1. **Desenvolvimento Colaborativo**: Múltiplos desenvolvedores\n2. **Sistemas Complexos**: Arquiteturas distribuídas\n3. **Prototipagem Rápida**: Validação de conceitos\n4. **Produção Enterprise**: Sistemas críticos",
+  "metadata": {
+    "source": "arXiv",
+    "type": "research_paper",
+    "category": "agent_building",
+    "difficulty": "advanced",
+    "format": "pdf",
+    "topics": [
+      "multi-agent",
+      "developer tools",
+      "scalability",
+      "integration"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder",
+    "paper_id": "2025.agentscope.v1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source_name": "supabase_test",
+  "total_items": 4,
+  "total_tokens": 21083,
+  "collected_at": "2025-09-03T01:38:55.163067",
+  "urls_processed": [
+    "https://supabase.com/docs/guides/database",
+    "https://supabase.com/docs/guides/auth",
+    "https://supabase.com/docs/guides/getting-started",
+    "https://supabase.com/docs/reference/javascript/introduction"
+  ]
+}

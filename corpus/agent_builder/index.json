@@ -1,0 +1,148 @@
+{
+  "created_at": "2025-08-30T17:33:47.427422",
+  "total_resources": 10,
+  "access_control": {
+    "auth_keyword": "vinapermitecriar",
+    "restricted_category": "agent_building"
+  },
+  "resources": [
+    {
+      "id": 1,
+      "title": "A Practical Guide to Building Agents - OpenAI",
+      "source": "OpenAI",
+      "type": "guide",
+      "difficulty": "beginner",
+      "topics": [
+        "agent fundamentals",
+        "architecture",
+        "getting started"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 2,
+      "title": "Top 9 AI Agent Frameworks - Shakudo",
+      "source": "Shakudo",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "topics": [
+        "frameworks",
+        "comparison",
+        "tools",
+        "implementation"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 3,
+      "title": "Building Effective AI Agents - Anthropic",
+      "source": "Anthropic",
+      "type": "technical_overview",
+      "difficulty": "intermediate",
+      "topics": [
+        "frameworks",
+        "design principles",
+        "best practices"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 4,
+      "title": "ModelScope-Agent Framework - arXiv Research",
+      "source": "arXiv",
+      "type": "research_paper",
+      "difficulty": "advanced",
+      "topics": [
+        "framework",
+        "customization",
+        "training",
+        "deployment"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 5,
+      "title": "AutoAgent: Zero-Code Framework - arXiv Research",
+      "source": "arXiv",
+      "type": "research_paper",
+      "difficulty": "advanced",
+      "topics": [
+        "zero-code",
+        "automation",
+        "rag integration",
+        "natural language"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 6,
+      "title": "AgentScope 1.0 - arXiv Research",
+      "source": "arXiv",
+      "type": "research_paper",
+      "difficulty": "advanced",
+      "topics": [
+        "multi-agent",
+        "developer tools",
+        "scalability",
+        "integration"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 7,
+      "title": "AgentLite - Lightweight LLM Agent Library",
+      "source": "arXiv",
+      "type": "research_paper",
+      "difficulty": "intermediate",
+      "topics": [
+        "lightweight",
+        "react",
+        "multi-agent",
+        "experimentation"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 8,
+      "title": "Principles of Building AI Agents - Scribd",
+      "source": "Scribd",
+      "type": "principles_guide",
+      "difficulty": "intermediate",
+      "topics": [
+        "fundamentals",
+        "architecture",
+        "design patterns",
+        "implementation"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 9,
+      "title": "Building AI Agents: Tools, Frameworks & Best Practices - Tekrevol",
+      "source": "Tekrevol",
+      "type": "best_practices",
+      "difficulty": "intermediate",
+      "topics": [
+        "tools",
+        "frameworks",
+        "best practices",
+        "trends"
+      ],
+      "restricted": true
+    },
+    {
+      "id": 10,
+      "title": "Modern-AI-Agents - PacktPublishing GitHub Repository",
+      "source": "PacktPublishing GitHub",
+      "type": "code_repository",
+      "difficulty": "all_levels",
+      "topics": [
+        "examples",
+        "deployment",
+        "monitoring",
+        "best practices"
+      ],
+      "restricted": true
+    }
+  ]
+}

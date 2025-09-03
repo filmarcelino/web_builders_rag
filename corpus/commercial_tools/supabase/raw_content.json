@@ -1,0 +1,60 @@
+[
+  {
+    "source_name": "supabase",
+    "category": "backend_service",
+    "url": "https://supabase.com/docs",
+    "title": "Supabase Docs",
+    "content": "Supabase DocumentationLearn how to get up and running with Supabase through tutorials, APIs and platform resources.Getting StartedSet up and connect a database in just a few minutes.Start with Supabase AI promptsProductsDatabaseSupabase provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.AuthAdd and manage email and password, passwordless, OAuth, and mobile logins to your project through a suite of identity providers and APIs.StorageStore, organize, transform, and serve large files—fully integrated with your Postgres database with Row Level Security access policies.RealtimeListen to database changes, store and sync user states across clients, broadcast data to clients subscribed to a channel, and more.Edge FunctionsGlobally distributed, server-side functions to execute your code closest to your users for the lowest latency.Postgres ModulesAI & VectorsCronQueuesClient LibrariesJavascriptFlutterPythonC#SwiftKotlinMigrate to SupabaseBring your existing data, auth and storage to Supabase following our migration guides.Explore more resources about /guides/resourcesExplore more resourcesAmazon RDSAuth0Firebase AuthFirebase StorageFirestore DataHerokuMSSQLMySQLNeonPostgresRenderVercel PostgresAdditional resourcesManagement APIManage your Supabase projects and organizations.Supabase CLIUse the CLI to develop, manage and deploy your projects.Platform GuidesLearn more about the tools and services powering Supabase.IntegrationsExplore a variety of integrations from Supabase partners.Self-HostingGet started with self-hosting Supabase.More on Self-Hosting about /guides/self-hostingMore on Self-HostingAuthRealtimeStorageAnalytics",
+    "code_blocks": [],
+    "headings": [
+      "Supabase Documentation",
+      "Getting Started",
+      "Products",
+      "Postgres Modules",
+      "Client Libraries",
+      "Migrate to Supabase",
+      "Additional resources",
+      "Self-Hosting"
+    ],
+    "token_count": 342,
+    "collected_at": "2025-09-03T01:07:57.504679",
+    "priority": "high"
+  },
+  {
+    "source_name": "supabase",
+    "category": "backend_service",
+    "url": "https://supabase.com/docs/reference",
+    "title": "Supabase Docs",
+    "content": "API ReferencesThe Supabase client libraries help you interact with Supabase products, such as the Postgres Database, Auth, and Realtime. They are available in several popular programming languages.Supabase also has a Management API to help with managing your Supabase Platform, and a CLI for local development and CI workflows.Client LibrariesJavaScriptFlutterC#SwiftKotlinPythonManagement API and CLIManagement APICLI",
+    "code_blocks": [],
+    "headings": [
+      "API References",
+      "Client Libraries",
+      "Management API and CLI"
+    ],
+    "token_count": 83,
+    "collected_at": "2025-09-03T01:07:58.108457",
+    "priority": "high"
+  },
+  {
+    "source_name": "supabase",
+    "category": "backend_service",
+    "url": "https://supabase.com/docs/guides",
+    "title": "Supabase Docs",
+    "content": "Supabase DocumentationLearn how to get up and running with Supabase through tutorials, APIs and platform resources.Getting StartedSet up and connect a database in just a few minutes.Start with Supabase AI promptsProductsDatabaseSupabase provides a full Postgres database for every project with Realtime functionality, database backups, extensions, and more.AuthAdd and manage email and password, passwordless, OAuth, and mobile logins to your project through a suite of identity providers and APIs.StorageStore, organize, transform, and serve large files—fully integrated with your Postgres database with Row Level Security access policies.RealtimeListen to database changes, store and sync user states across clients, broadcast data to clients subscribed to a channel, and more.Edge FunctionsGlobally distributed, server-side functions to execute your code closest to your users for the lowest latency.Postgres ModulesAI & VectorsCronQueuesClient LibrariesJavascriptFlutterPythonC#SwiftKotlinMigrate to SupabaseBring your existing data, auth and storage to Supabase following our migration guides.Explore more resources about /guides/resourcesExplore more resourcesAmazon RDSAuth0Firebase AuthFirebase StorageFirestore DataHerokuMSSQLMySQLNeonPostgresRenderVercel PostgresAdditional resourcesManagement APIManage your Supabase projects and organizations.Supabase CLIUse the CLI to develop, manage and deploy your projects.Platform GuidesLearn more about the tools and services powering Supabase.IntegrationsExplore a variety of integrations from Supabase partners.Self-HostingGet started with self-hosting Supabase.More on Self-Hosting about /guides/self-hostingMore on Self-HostingAuthRealtimeStorageAnalytics",
+    "code_blocks": [],
+    "headings": [
+      "Supabase Documentation",
+      "Getting Started",
+      "Products",
+      "Postgres Modules",
+      "Client Libraries",
+      "Migrate to Supabase",
+      "Additional resources",
+      "Self-Hosting"
+    ],
+    "token_count": 342,
+    "collected_at": "2025-09-03T01:07:59.170972",
+    "priority": "high"
+  }
+]

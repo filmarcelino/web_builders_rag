@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        
+            <title>animation - freeCodeCamp.org</title>
+        
+        <meta name="HandheldFriendly" content="True">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Roboto+Mono:wght@400;700&display=swap">
+        
+
+        
+        
+        
+
+        
+        <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/news/assets/css/global-5a272ab5e0.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/screen-73acb3583e.css">
+        <link rel="stylesheet" type="text/css" href="/news/assets/css/search-bar-124f5f949c.css">
+
+        
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/algolia/algoliasearch-3-33-0/algoliasearch.min.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/algolia/autocomplete-0-36-0/autocomplete.min.js"></script>
+
+        
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/dayjs.min.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/localizedFormat.min.js"></script>
+        <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/relativeTime.min.js"></script>
+
+        
+        
+            <script defer="" src="https://cdn.freecodecamp.org/news-assets/dayjs/1.10.4/locale/en.min.js"></script>
+        
+
+        
+        <script>let client,index;document.addEventListener("DOMContentLoaded",()=>{client=algoliasearch("QMJYL5WYTI","89770b24481654192d7a5c402c6ad9a0"),index=client.initIndex("news")}),document.addEventListener("DOMContentLoaded",()=>{const e=window.screen.width,t=window.screen.height,n=e>=767&&t>=768?8:5,o=document.getElementById("search-form"),s=document.getElementById("search-input"),a=document.getElementById("dropdown-container");let i,d,c;s.addEventListener("input",e=>{i=e.target.value}),o.addEventListener("submit",e=>{e.preventDefault(),function(){if(d=document.getElementsByClassName("aa-cursor")[0],d&&i){const e=d.querySelector("a").href;window.location.assign(e)}else!d&&i&&c&&window.location.assign(`https://www.freecodecamp.org/news/search?query=${i}`)}()});const l=autocomplete("#search-input",{hint:!1,keyboardShortcuts:["s",191],openOnFocus:!0,appendTo:a,debug:!0},[{source:autocomplete.sources.hits(index,{hitsPerPage:n}),debounce:250,templates:{suggestion:e=>(c=!0,`\n            <a href="${e.url}">\n              <div class="algolia-result">\n                <span>${e._highlightResult.title.value}</span>\n              </div>\n            </a>\n          `),empty:()=>(c=!1,'\n            <div class="aa-suggestion footer-suggestion no-hits-footer">\n              <div class="algolia-result">\n                <span>\n                  No results found\n                </span>\n              </div>\n            </div>\n          '),footer:e=>{if(!e.isEmpty)return`\n              <div class="aa-suggestion footer-suggestion">\n                <a id="algolia-footer-selector" href="https://www.freecodecamp.org/news/search?query=${i}">\n                  <div class="algolia-result algolia-footer">\n                    See all results for ${i}\n                  </div>\n                </a>\n              </div>\n            `}}}]).on("autocomplete:selected",(e,t,n,o)=>{d=t?t.url:`https://www.freecodecamp.org/news/search?query=${i}`,"click"!==o.selectionMethod&&"tabKey"!==o.selectionMethod&&c&&window.location.assign(d)});document.addEventListener("click",e=>{e.target!==s&&l.autocomplete.close()})}),document.addEventListener("DOMContentLoaded",()=>{dayjs.extend(dayjs_plugin_localizedFormat),dayjs.extend(dayjs_plugin_relativeTime),dayjs.locale("en")});const isAuthenticated=document.cookie.split(";").some(e=>e.trim().startsWith("jwt_access_token=")),isDonor=document.cookie.split(";").some(e=>e.trim().startsWith("isDonor=true"));</script>
+
+        
+            <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous" async=""></script>
+        
+
+        
+        
+        
+
+        
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D6RKKP');</script>
+
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        
+        
+
+        <link rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon.ico" type="image/png">
+        
+        
+            <link rel="canonical" href="https://www.freecodecamp.org/news/tag/animation/">
+        
+        <meta name="referrer" content="no-referrer-when-downgrade">
+
+        
+            
+            <link rel="next" href=".">
+        
+
+        
+    
+    <meta property="og:site_name" content="freeCodeCamp.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="animation - freeCodeCamp.org">
+    <meta property="og:description" content="Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice.">
+    <meta property="og:url" content="https://www.freecodecamp.org/news/tag/animation/">
+    <meta property="og:image" content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png">
+    <meta property="article:publisher" content="https://www.facebook.com/freecodecamp">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="animation - freeCodeCamp.org">
+    <meta name="twitter:description" content="Browse thousands of programming tutorials written by experts. Learn Web Development, Data Science, DevOps, Security, and get developer career advice.">
+    <meta name="twitter:url" content="https://www.freecodecamp.org/news/tag/animation/">
+    <meta name="twitter:image" content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png">
+    <meta name="twitter:site" content="@freecodecamp">
+
+    <meta property="og:image:width" content="1920">
+    <meta property="og:image:height" content="1080">
+
+
+        
+    <script type="application/ld+json">{
+	"@context": "https://schema.org",
+	"@type": "Series",
+	"publisher": {
+		"@type": "Organization",
+		"name": "freeCodeCamp.org",
+		"url": "https://www.freecodecamp.org/news/",
+		"logo": {
+			"@type": "ImageObject",
+			"url": "https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg",
+			"width": 2100,
+			"height": 240
+		}
+	},
+	"url": "https://www.freecodecamp.org/news/tag/animation/",
+	"mainEntityOfPage": {
+		"@type": "WebPage",
+		"@id": "https://www.freecodecamp.org/news/"
+	},
+	"name": "animation"
+}</script>
+
+
+        <meta name="generator" content="Eleventy">
+        <link rel="alternate" type="application/rss+xml" title="freeCodeCamp.org" href="https://www.freecodecamp.org/news/rss/">
+
+        
+        
+
+        
+        
+    </head>
+
+    
+        <body class="home-template">
+    
+
+    
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D6RKKP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    
+
+        <div class="site-wrapper">
+            <nav class="site-nav nav-padding">
+    <div class="site-nav-left">
+        
+<form id="search-form" data-test-label="search-bar">
+    <div role="search" class="searchbox__wrapper">
+        <label class="fcc_sr_only" for="search-input">
+            Search
+        </label>
+        <input type="search" placeholder="
+    Search our news articles, tutorials, and books
+" id="search-input">
+        <button type="submit" class="ais-SearchBox-submit">
+            <svg class="ais-SearchBox-submitIcon" xmlns="https://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 40 40">
+    <path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path>
+</svg>
+
+            <span class="fcc_sr_only">Submit your search query</span>
+        </button>
+        <div id="dropdown-container"></div>
+    </div>
+</form>
+
+    </div>
+    <div class="site-nav-middle">
+        <a class="site-nav-logo" href="https://www.freecodecamp.org/news/" data-test-label="site-nav-logo"><img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp.org"></a>
+    </div>
+    <div class="site-nav-right">
+        <div class="nav-group">
+            <a class="nav-forum" id="nav-forum" rel="noopener noreferrer" href="https://forum.freecodecamp.org/" target="_blank" data-test-label="forum-button">Forum</a>
+            <a class="toggle-button-nav" id="nav-donate" rel="noopener noreferrer" href="https://www.freecodecamp.org/donate/" target="_blank" data-test-label="donate-button">Donate</a>
+        </div>
+    </div>
+</nav>
+
+
+            
+            <a class="banner" id="banner" data-test-label="banner" rel="noopener noreferrer" target="_blank">
+    <p id="banner-text"></p>
+</a>
+
+
+    
+    <script>document.addEventListener("DOMContentLoaded",()=>{const e=document.getElementById("banner"),t=document.getElementById("banner-text");if(isAuthenticated){t.innerHTML=isDonor?"Thank you for supporting freeCodeCamp through <span>your donations</span>.":"Support our charity and our mission. <span>Donate to freeCodeCamp.org</span>.",e.href=isDonor?"https://www.freecodecamp.org/news/how-to-donate-to-free-code-camp/":"https://www.freecodecamp.org/donate";const o=isDonor?"donor":"authenticated";e.setAttribute("text-variation",o)}else t.innerHTML="Learn to code — <span>free 3,000-hour curriculum</span>",e.href="https://www.freecodecamp.org/",e.setAttribute("text-variation","default")});</script>
+
+
+            <div id="error-message"></div>
+
+            
+    <div class="under-header-content">
+        <h1 dir="ltr" data-test-label="tag-name" class="site-title tags-title">#ANIMATION</h1>
+        <h2 class="site-description" data-test-label="tag-post-count">
+            
+                A collection of 39 posts
+            
+        </h2>
+
+        <div class="tags-row">
+            
+                <a class="tag" href="/news/tag/programming/">
+                    <h3 dir="ltr">#General Programming <small> | 2768</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/tech/">
+                    <h3 dir="ltr">#tech  <small> | 2735</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/javascript/">
+                    <h3 dir="ltr">#JavaScript <small> | 2487</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/web-development/">
+                    <h3 dir="ltr">#Web Development <small> | 2006</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/technology/">
+                    <h3 dir="ltr">#technology <small> | 1718</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/react/">
+                    <h3 dir="ltr">#React <small> | 968</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/python/">
+                    <h3 dir="ltr">#Python <small> | 935</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/youtube/">
+                    <h3 dir="ltr">#youtube <small> | 851</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/startup/">
+                    <h3 dir="ltr">#startup <small> | 714</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/software-development/">
+                    <h3 dir="ltr">#software development <small> | 668</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/design/">
+                    <h3 dir="ltr">#Design <small> | 576</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/productivity/">
+                    <h3 dir="ltr">#Productivity <small> | 539</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/life-lessons/">
+                    <h3 dir="ltr">#Life lessons <small> | 532</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/css/">
+                    <h3 dir="ltr">#CSS <small> | 488</small></h3>
+                </a>
+            
+                <a class="tag" href="/news/tag/self-improvement/">
+                    <h3 dir="ltr">#self-improvement  <small> | 484</small></h3>
+                </a>
+            
+        </div>
+    </div>
+    <main id="site-main" class="site-main outer">
+        <div class="inner">
+            <section class="post-feed">
+                
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-create-an-animated-hamburger-menu-in-react/" aria-label="How to Create an Animated Hamburger Menu in React">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/11/Frame-14.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/11/Frame-14.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/11/Frame-14.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Frame-14.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Frame-14.jpg" class="post-card-image" alt="How to Create an Animated Hamburger Menu in React" width="600" height="400" onerror="this.style.display='none'" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-create-an-animated-hamburger-menu-in-react/">
+                            How to Create an Animated Hamburger Menu in React
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2023-11-07T17:15:20.000Z">2 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/create-a-fully-animated-sidebar/" aria-label="How to Create a Fully Animated Sidebar in React.js using Framer Motion">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/10/Frame-11.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/10/Frame-11.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/10/Frame-11.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/10/Frame-11.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/10/Frame-11.jpg" class="post-card-image" alt="How to Create a Fully Animated Sidebar in React.js using Framer Motion" width="600" height="400" onerror="this.style.display='none'" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/create-a-fully-animated-sidebar/">
+                            How to Create a Fully Animated Sidebar in React.js using Framer Motion
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2023-10-16T23:49:46.000Z">2 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/css-transition-vs-css-animation-handbook/" aria-label="CSS Transition vs Animation Handbook – How to Animate Elements in CSS">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/09/How-to-Animate-Elements-in-CSS-Cover.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/09/How-to-Animate-Elements-in-CSS-Cover.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/09/How-to-Animate-Elements-in-CSS-Cover.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/How-to-Animate-Elements-in-CSS-Cover.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/How-to-Animate-Elements-in-CSS-Cover.png" class="post-card-image" alt="CSS Transition vs Animation Handbook – How to Animate Elements in CSS" width="600" height="400" onerror="this.style.display='none'" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/css-transition-vs-css-animation-handbook/">
+                            CSS Transition vs Animation Handbook – How to Animate Elements in CSS
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/oluwatobiss/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1723166572499/FyCz19TsZ.jpg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1723166572499/FyCz19TsZ.jpg" class="author-profile-image" alt="Oluwatobi Sofela" width="500" height="500" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/oluwatobiss/" data-test-label="profile-link">
+                
+                    Oluwatobi Sofela
+                
+            </a>
+            <time class="meta-item" datetime="2023-09-12T00:20:36.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-create-animated-bubbles-with-html5-canvas-and-javascript/" aria-label="How to Create Animated Bubbles with HTML5 Canvas and JavaScript">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/08/shrutikapoor.dev--11-.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/08/shrutikapoor.dev--11-.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/08/shrutikapoor.dev--11-.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/shrutikapoor.dev--11-.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/shrutikapoor.dev--11-.jpg" class="post-card-image" alt="How to Create Animated Bubbles with HTML5 Canvas and JavaScript" width="600" height="400" onerror="this.style.display='none'" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-create-animated-bubbles-with-html5-canvas-and-javascript/">
+                            How to Create Animated Bubbles with HTML5 Canvas and JavaScript
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/shrutikapoor/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1618370677559/nRa1169cl.jpeg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1618370677559/nRa1169cl.jpeg" class="author-profile-image" alt="Shruti Kapoor" width="2085" height="2402" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/shrutikapoor/" data-test-label="profile-link">
+                
+                    Shruti Kapoor
+                
+            </a>
+            <time class="meta-item" datetime="2023-09-05T14:08:02.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/build-an-image-carousel-with-react-and-framer-motion/" aria-label="How to Build an Image Carousel with React and Framer Motion">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/06/Screenshot-2023-06-26-at-10.45.34.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/06/Screenshot-2023-06-26-at-10.45.34.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/06/Screenshot-2023-06-26-at-10.45.34.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/Screenshot-2023-06-26-at-10.45.34.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/Screenshot-2023-06-26-at-10.45.34.png" class="post-card-image" alt="How to Build an Image Carousel with React and Framer Motion" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/build-an-image-carousel-with-react-and-framer-motion/">
+                            How to Build an Image Carousel with React and Framer Motion
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/Cejay101/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1663870876215/ee34TZAc8.jpeg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1663870876215/ee34TZAc8.jpeg" class="author-profile-image" alt="Clinton Joy" width="460" height="460" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/Cejay101/" data-test-label="profile-link">
+                
+                    Clinton Joy
+                
+            </a>
+            <time class="meta-item" datetime="2023-07-03T09:47:00.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/build-an-interactive-accordion-component-with-react-and-gsap/" aria-label="How to Build an Interactive Accordion Component with React and GSAP">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/04/Cover-image-1.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/04/Cover-image-1.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/04/Cover-image-1.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Cover-image-1.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Cover-image-1.png" class="post-card-image" alt="How to Build an Interactive Accordion Component with React and GSAP" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/build-an-interactive-accordion-component-with-react-and-gsap/">
+                            How to Build an Interactive Accordion Component with React and GSAP
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/Daiveed/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg" class="author-profile-image" alt="David Jaja" width="3024" height="3024" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/Daiveed/" data-test-label="profile-link">
+                
+                    David Jaja
+                
+            </a>
+            <time class="meta-item" datetime="2023-04-25T15:47:34.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/improve-user-experience-in-react-by-animating-routes-using-framer-motion/" aria-label="How to Improve User Experience  in React Apps – Animate Routes using Framer Motion">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/04/Article-Cover.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/04/Article-Cover.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/04/Article-Cover.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Article-Cover.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Article-Cover.png" class="post-card-image" alt="How to Improve User Experience  in React Apps – Animate Routes using Framer Motion" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/improve-user-experience-in-react-by-animating-routes-using-framer-motion/">
+                            How to Improve User Experience  in React Apps – Animate Routes using Framer Motion
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/Daiveed/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg" class="author-profile-image" alt="David Jaja" width="3024" height="3024" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/Daiveed/" data-test-label="profile-link">
+                
+                    David Jaja
+                
+            </a>
+            <time class="meta-item" datetime="2023-04-04T22:27:19.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/scroll-animations-with-javascript-intersection-observer-api/" aria-label="How to Add Scroll Animations to a Page with JavaScript&#39;s Intersection Observer API">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/03/observer-api.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/03/observer-api.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/03/observer-api.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/observer-api.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/observer-api.png" class="post-card-image" alt="How to Add Scroll Animations to a Page with JavaScript&#39;s Intersection Observer API" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/scroll-animations-with-javascript-intersection-observer-api/">
+                            How to Add Scroll Animations to a Page with JavaScript&#39;s Intersection Observer API
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2023-03-24T17:42:18.000Z">2 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/reveal-on-scroll-in-react-using-the-intersection-observer-api/" aria-label="How to Implement Reveal on Scroll in React using the Intersection Observer API">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2023/03/Group-107.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2023/03/Group-107.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2023/03/Group-107.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/Group-107.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/Group-107.png" class="post-card-image" alt="How to Implement Reveal on Scroll in React using the Intersection Observer API" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/reveal-on-scroll-in-react-using-the-intersection-observer-api/">
+                            How to Implement Reveal on Scroll in React using the Intersection Observer API
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/Daiveed/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1664195739579/BKejd1sOF.jpg" class="author-profile-image" alt="David Jaja" width="3024" height="3024" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/Daiveed/" data-test-label="profile-link">
+                
+                    David Jaja
+                
+            </a>
+            <time class="meta-item" datetime="2023-03-23T22:20:44.000Z" data-test-label="post-published-time">
+                2 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/animate-react-apps/" aria-label="How to Animate Your React Apps with 1 Line of Code">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/09/mugshotbot.com_customize_color-red-image-9129875b-mode-dark-pattern-topography-theme-two_up-url-https___freecodecamp.org.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/09/mugshotbot.com_customize_color-red-image-9129875b-mode-dark-pattern-topography-theme-two_up-url-https___freecodecamp.org.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/09/mugshotbot.com_customize_color-red-image-9129875b-mode-dark-pattern-topography-theme-two_up-url-https___freecodecamp.org.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/mugshotbot.com_customize_color-red-image-9129875b-mode-dark-pattern-topography-theme-two_up-url-https___freecodecamp.org.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/mugshotbot.com_customize_color-red-image-9129875b-mode-dark-pattern-topography-theme-two_up-url-https___freecodecamp.org.png" class="post-card-image" alt="How to Animate Your React Apps with 1 Line of Code" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/animate-react-apps/">
+                            How to Animate Your React Apps with 1 Line of Code
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/refactor/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1733458094275/9d0e6e6e-5c58-4456-b384-d441c8184828.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1733458094275/9d0e6e6e-5c58-4456-b384-d441c8184828.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp" class="author-profile-image" alt="Reed" width="312" height="344" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/refactor/" data-test-label="profile-link">
+                
+                    Reed
+                
+            </a>
+            <time class="meta-item" datetime="2022-09-15T19:56:57.000Z" data-test-label="post-published-time">
+                3 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-add-animation-to-your-site-with-rough-notation/" aria-label="How to Use the Rough Notation Library to Animate Your Website">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/08/png_20220803_195955_0000.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/08/png_20220803_195955_0000.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/08/png_20220803_195955_0000.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/png_20220803_195955_0000.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/png_20220803_195955_0000.png" class="post-card-image" alt="How to Use the Rough Notation Library to Animate Your Website" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-add-animation-to-your-site-with-rough-notation/">
+                            How to Use the Rough Notation Library to Animate Your Website
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2022-08-02T16:52:13.000Z">3 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-build-an-animated-landing-page-with-gsap-and-tailwindcss/" aria-label="How to Build an Animated Landing Page with GSAP and TailwindCSS">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/04/gsap-gears.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/04/gsap-gears.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/04/gsap-gears.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/gsap-gears.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/gsap-gears.jpg" class="post-card-image" alt="How to Build an Animated Landing Page with GSAP and TailwindCSS" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-an-animated-landing-page-with-gsap-and-tailwindcss/">
+                            How to Build an Animated Landing Page with GSAP and TailwindCSS
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2022-04-12T23:56:31.000Z">3 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/web-animation-performance-fundamentals/" aria-label="Web Animation Performance Fundamentals – How to Make Your Pages Look Smooth">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/02/Antics_2-D_Animation_infobox_screenshot-1.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/02/Antics_2-D_Animation_infobox_screenshot-1.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/02/Antics_2-D_Animation_infobox_screenshot-1.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/Antics_2-D_Animation_infobox_screenshot-1.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/Antics_2-D_Animation_infobox_screenshot-1.png" class="post-card-image" alt="Web Animation Performance Fundamentals – How to Make Your Pages Look Smooth" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/web-animation-performance-fundamentals/">
+                            Web Animation Performance Fundamentals – How to Make Your Pages Look Smooth
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2022-02-28T18:49:59.000Z">3 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-create-a-css-only-loader/" aria-label="How to Create a CSS-Only Loader Using One Element">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/01/header-loader.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/01/header-loader.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/01/header-loader.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/header-loader.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/header-loader.png" class="post-card-image" alt="How to Create a CSS-Only Loader Using One Element" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-create-a-css-only-loader/">
+                            How to Create a CSS-Only Loader Using One Element
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/temani-afif/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1724805963508/497544b0-2db9-4743-a38e-54260b578c64.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1724805963508/497544b0-2db9-4743-a38e-54260b578c64.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp" class="author-profile-image" alt="Temani Afif" width="400" height="400" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/temani-afif/" data-test-label="profile-link">
+                
+                    Temani Afif
+                
+            </a>
+            <time class="meta-item" datetime="2022-01-14T21:11:49.000Z" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/css-only-pie-chart/" aria-label="How to Create a Pie Chart Using Only CSS">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2022/01/header-2-3.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2022/01/header-2-3.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2022/01/header-2-3.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/header-2-3.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/header-2-3.png" class="post-card-image" alt="How to Create a Pie Chart Using Only CSS" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/css-only-pie-chart/">
+                            How to Create a Pie Chart Using Only CSS
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/temani-afif/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1724805963508/497544b0-2db9-4743-a38e-54260b578c64.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1724805963508/497544b0-2db9-4743-a38e-54260b578c64.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp" class="author-profile-image" alt="Temani Afif" width="400" height="400" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/temani-afif/" data-test-label="profile-link">
+                
+                    Temani Afif
+                
+            </a>
+            <time class="meta-item" datetime="2022-01-06T20:41:44.000Z" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/add-swipe-animations-to-a-card-view-in-android-app/" aria-label="How to Add Swipe Animations to a CardView in an Android App">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/11/Swiping-Animation-Android-Views.gif 300w, https://www.freecodecamp.org/news/content/images/size/w600/2021/11/Swiping-Animation-Android-Views.gif 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2021/11/Swiping-Animation-Android-Views.gif 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2021/11/Swiping-Animation-Android-Views.gif 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/11/Swiping-Animation-Android-Views.gif" class="post-card-image" alt="How to Add Swipe Animations to a CardView in an Android App" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/android-app-development/">
+                                #android app development
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/add-swipe-animations-to-a-card-view-in-android-app/">
+                            How to Add Swipe Animations to a CardView in an Android App
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2021-11-15T16:09:53.000Z">4 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-animate-react-apps/" aria-label="How to Animate Your React Apps with Lottie">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2021/03/how-to-animate-react-apps.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2021/03/how-to-animate-react-apps.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2021/03/how-to-animate-react-apps.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/how-to-animate-react-apps.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/how-to-animate-react-apps.png" class="post-card-image" alt="How to Animate Your React Apps with Lottie" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-animate-react-apps/">
+                            How to Animate Your React Apps with Lottie
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/refactor/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1733458094275/9d0e6e6e-5c58-4456-b384-d441c8184828.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1733458094275/9d0e6e6e-5c58-4456-b384-d441c8184828.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp" class="author-profile-image" alt="Reed" width="312" height="344" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/refactor/" data-test-label="profile-link">
+                
+                    Reed
+                
+            </a>
+            <time class="meta-item" datetime="2021-03-10T17:07:22.000Z" data-test-label="post-published-time">
+                4 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-deploy-a-live2d-web-app-using-heroku/" aria-label="How to Deploy a Live2D Web App Using Heroku">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/12/web-2.gif 300w, https://www.freecodecamp.org/news/content/images/size/w600/2020/12/web-2.gif 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2020/12/web-2.gif 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/web-2.gif 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/12/web-2.gif" class="post-card-image" alt="How to Deploy a Live2D Web App Using Heroku" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-deploy-a-live2d-web-app-using-heroku/">
+                            How to Deploy a Live2D Web App Using Heroku
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/lynnzheng/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1754351256708/f50a63a2-8edb-403b-85ea-7690f8cc0d2e.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1754351256708/f50a63a2-8edb-403b-85ea-7690f8cc0d2e.png?w=500&h=500&fit=crop&crop=entropy&auto=compress,format&format=webp" class="author-profile-image" alt="Lynn Zheng" width="425" height="425" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/lynnzheng/" data-test-label="profile-link">
+                
+                    Lynn Zheng
+                
+            </a>
+            <time class="meta-item" datetime="2020-12-28T17:48:17.000Z" data-test-label="post-published-time">
+                5 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/css-transition-examples/" aria-label="CSS Transition Examples – How to Use Hover Animation, Change Opacity, and More">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/10/Untitled--2--1.png 300w, https://www.freecodecamp.org/news/content/images/size/w600/2020/10/Untitled--2--1.png 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2020/10/Untitled--2--1.png 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/Untitled--2--1.png 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/10/Untitled--2--1.png" class="post-card-image" alt="CSS Transition Examples – How to Use Hover Animation, Change Opacity, and More" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/css-transition-examples/">
+                            CSS Transition Examples – How to Use Hover Animation, Change Opacity, and More
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2020-10-13T17:18:52.000Z">5 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/" aria-label="How to Create a Reusable Fade-in Animation Component in React With GSAP">
+            
+    <img srcset="https://cdn-media-2.freecodecamp.org/w1280/5f9c9983740569d1a4ca2029.jpg" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://cdn-media-2.freecodecamp.org/w1280/5f9c9983740569d1a4ca2029.jpg" class="post-card-image" alt="How to Create a Reusable Fade-in Animation Component in React With GSAP" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-create-a-reusable-fade-in-animation-component-in-react-with-gsap/">
+                            How to Create a Reusable Fade-in Animation Component in React With GSAP
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2020-07-27T22:16:00.000Z">5 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-add-interactive-animations-and-page-transitions-to-a-next-js-web-app-with-framer-motion/" aria-label="How to Add Interactive Animations and Page Transitions to a Next.js Web App with Framer Motion">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/07/framer-motion.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2020/07/framer-motion.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2020/07/framer-motion.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/framer-motion.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/framer-motion.jpg" class="post-card-image" alt="How to Add Interactive Animations and Page Transitions to a Next.js Web App with Framer Motion" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-add-interactive-animations-and-page-transitions-to-a-next-js-web-app-with-framer-motion/">
+                            How to Add Interactive Animations and Page Transitions to a Next.js Web App with Framer Motion
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/colbyfayock/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1601829804572/1eKdHWWIz.jpeg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1601829804572/1eKdHWWIz.jpeg" class="author-profile-image" alt="Colby Fayock" width="600" height="600" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/colbyfayock/" data-test-label="profile-link">
+                
+                    Colby Fayock
+                
+            </a>
+            <time class="meta-item" datetime="2020-07-14T00:35:19.000Z" data-test-label="post-published-time">
+                5 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-use-css-to-create-a-beautiful-loading-animation-for-your-app/" aria-label="How to Use Pure CSS to Create a Beautiful Loading Animation for your App">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/05/loading-animation.jpg 300w, https://www.freecodecamp.org/news/content/images/size/w600/2020/05/loading-animation.jpg 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2020/05/loading-animation.jpg 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/loading-animation.jpg 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/05/loading-animation.jpg" class="post-card-image" alt="How to Use Pure CSS to Create a Beautiful Loading Animation for your App" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-use-css-to-create-a-beautiful-loading-animation-for-your-app/">
+                            How to Use Pure CSS to Create a Beautiful Loading Animation for your App
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <ul class="author-list" data-test-label="author-list">
+                        
+                            
+    
+    
+    
+
+    <li class="author-list-item" data-test-label="author-list-item">
+        <a href="/news/author/colbyfayock/" class="static-avatar">
+            
+                
+    <img srcset="https://cdn.hashnode.com/res/hashnode/image/upload/v1601829804572/1eKdHWWIz.jpeg 30w" sizes="30px" src="https://cdn.hashnode.com/res/hashnode/image/upload/v1601829804572/1eKdHWWIz.jpeg" class="author-profile-image" alt="Colby Fayock" width="600" height="400" onerror="this.style.display='none'" data-test-label="profile-image">
+  
+            
+        </a>
+        <span class="meta-content">
+            <a class="meta-item" href="/news/author/colbyfayock/" data-test-label="profile-link">
+                
+                    Colby Fayock
+                
+            </a>
+            <time class="meta-item" datetime="2020-05-05T14:45:00.000Z" data-test-label="post-published-time">
+                5 years ago
+            </time>
+        </span>
+    </li>
+
+                        
+                    </ul>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-ca-animation-conquered-my-fear-of-animations/" aria-label="How CAAnimation Helped Me Conquer My Fear of Creating Animations">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2020/02/67b2a9ba5e85822f237caae92111e938.gif 300w, https://www.freecodecamp.org/news/content/images/size/w600/2020/02/67b2a9ba5e85822f237caae92111e938.gif 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2020/02/67b2a9ba5e85822f237caae92111e938.gif 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/67b2a9ba5e85822f237caae92111e938.gif 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/02/67b2a9ba5e85822f237caae92111e938.gif" class="post-card-image" alt="How CAAnimation Helped Me Conquer My Fear of Creating Animations" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-ca-animation-conquered-my-fear-of-animations/">
+                            How CAAnimation Helped Me Conquer My Fear of Creating Animations
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2020-03-15T21:26:22.000Z">5 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/animating-visibility-with-css-an-example-of-react-hooks/" aria-label="How to build a reusable animation component using React Hooks">
+            
+    <img srcset="https://www.freecodecamp.org/news/content/images/size/w300/2019/07/final-multiple-1.gif 300w, https://www.freecodecamp.org/news/content/images/size/w600/2019/07/final-multiple-1.gif 600w, https://www.freecodecamp.org/news/content/images/size/w1000/2019/07/final-multiple-1.gif 1000w, https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/final-multiple-1.gif 2000w" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://www.freecodecamp.org/news/content/images/size/w2000/2019/07/final-multiple-1.gif" class="post-card-image" alt="How to build a reusable animation component using React Hooks" width="600" height="400" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/animating-visibility-with-css-an-example-of-react-hooks/">
+                            How to build a reusable animation component using React Hooks
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2019-07-18T06:50:00.000Z">6 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                        
+    
+    
+    
+
+    <article class="post-card" data-test-label="post-card">
+        <a class="post-card-image-link" href="/news/how-to-build-a-reddit-inspired-loading-spinner-with-only-html-and-css-5b2fca3fdca/" aria-label="How to build a Reddit-inspired loading spinner with only HTML and CSS">
+            
+    <img srcset="https://cdn-media-1.freecodecamp.org/images/1*Z6M1Fyrg8Hh_WKzMhSoWWg.jpeg" sizes="(max-width: 360px) 300px, (max-width: 655px) 600px, (max-width: 767px) 1000px, (min-width: 768px) 300px, 92vw" src="https://cdn-media-1.freecodecamp.org/images/1*Z6M1Fyrg8Hh_WKzMhSoWWg.jpeg" class="post-card-image" alt="How to build a Reddit-inspired loading spinner with only HTML and CSS" width="800" height="533" onerror="this.style.display='none'" loading="lazy" data-test-label="feature-image">
+  
+        </a>
+        <div class="post-card-content">
+            <div class="post-card-content-link">
+                <header class="post-card-header">
+                    
+                        <span class="post-card-tags">
+                            <a dir="ltr" href="/news/tag/animation/">
+                                #animation
+                            </a>
+                        </span>
+                    
+                    <h2 class="post-card-title">
+                        <a href="/news/how-to-build-a-reddit-inspired-loading-spinner-with-only-html-and-css-5b2fca3fdca/">
+                            How to build a Reddit-inspired loading spinner with only HTML and CSS
+                        </a>
+                    </h2>
+                </header>
+            </div>
+            <footer class="post-card-meta">
+                
+                    <time class="meta-item-single" datetime="2019-02-19T17:48:42.000Z">7 years ago</time>
+                
+            </footer>
+        </div>
+    </article>
+
+                    
+                
+            </section>
+            
+    <div class="read-more-row">
+        <button id="readMoreBtn" data-test-label="load-more-articles-button">Load More Articles</button>
+    </div>
+
+    
+    <script>(async()=>{const e=document.getElementById("readMoreBtn"),t=document.querySelector(".read-more-row"),r=document.querySelector(".post-feed");let o=1;const n=async()=>{try{const e=document.querySelector('link[rel="next"]');let r=window.location.href;r.endsWith("/")||(r=`${r}/`);const n=`${r}${o}/`,c=await fetch(n);if(e&&(e.href=n),c.ok){const e=await c.text(),t=new DOMParser;return o++,t.parseFromString(e,"text/html")}t.remove()}catch(e){console.error(`Connection error: ${e}`)}};let c=await n();e.addEventListener("click",async()=>{[...c.querySelectorAll(".post-card")].forEach(e=>r.appendChild(e)),c=await n()})})();</script>
+
+
+        </div>
+    </main>
+
+
+            
+
+
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-desc-col">
+            <p data-test-label="tax-exempt-status">freeCodeCamp is a donor-supported tax-exempt 501(c)(3) charity organization (United States Federal Tax Identification Number: 82-0779546)</p>
+            <p data-test-label="mission-statement">Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public.</p>
+            <p data-test-label="donation-initiatives">Donations to freeCodeCamp go toward our education initiatives, and help pay for servers, services, and staff.</p>
+            <p class="footer-donation" data-test-label="donate-text">
+                You can <a href="https://www.freecodecamp.org/donate/" class="inline" rel="noopener noreferrer" target="_blank">make a tax-deductible donation here</a>.
+            </p>
+        </div>
+        <div class="trending-guides" data-test-label="trending-guides">
+            <h2 id="trending-guides" class="col-header">Trending Books and Handbooks</h2>
+            <ul class="trending-guides-articles" aria-labelledby="trending-guides">
+                <li>
+                    <a href="https://www.freecodecamp.org/news/build-consume-and-document-a-rest-api/" rel="noopener noreferrer" target="_blank">REST APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-write-clean-code/" rel="noopener noreferrer" target="_blank">Clean Code
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-typescript-with-react-handbook/" rel="noopener noreferrer" target="_blank">TypeScript
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-javascript-for-beginners/" rel="noopener noreferrer" target="_blank">JavaScript
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-build-an-ai-chatbot-with-redis-python-and-gpt/" rel="noopener noreferrer" target="_blank">AI Chatbots
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/command-line-for-beginners/" rel="noopener noreferrer" target="_blank">Command Line
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/building-consuming-and-documenting-a-graphql-api/" rel="noopener noreferrer" target="_blank">GraphQL APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/complete-guide-to-css-transform-functions-and-properties/" rel="noopener noreferrer" target="_blank">CSS Transforms
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-build-scalable-access-control-for-your-web-app/" rel="noopener noreferrer" target="_blank">Access Control
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/" rel="noopener noreferrer" target="_blank">REST API Design
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-php-handbook/" rel="noopener noreferrer" target="_blank">PHP
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-java-handbook/" rel="noopener noreferrer" target="_blank">Java
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-linux-for-beginners-book-basic-to-advanced/" rel="noopener noreferrer" target="_blank">Linux
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/react-for-beginners-handbook/" rel="noopener noreferrer" target="_blank">React
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-continuous-integration-delivery-and-deployment/" rel="noopener noreferrer" target="_blank">CI/CD
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-docker-handbook/" rel="noopener noreferrer" target="_blank">Docker
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-golang-handbook/" rel="noopener noreferrer" target="_blank">Golang
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-python-handbook/" rel="noopener noreferrer" target="_blank">Python
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/get-started-with-nodejs/" rel="noopener noreferrer" target="_blank">Node.js
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/build-crud-operations-with-dotnet-core-handbook/" rel="noopener noreferrer" target="_blank">Todo APIs
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/how-to-use-classes-in-javascript-handbook/" rel="noopener noreferrer" target="_blank">JavaScript Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/front-end-javascript-development-react-angular-vue-compared/" rel="noopener noreferrer" target="_blank">Front-End Libraries
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/the-express-handbook/" rel="noopener noreferrer" target="_blank">Express and Node.js
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/python-code-examples-sample-script-coding-tutorial-for-beginners/" rel="noopener noreferrer" target="_blank">Python Code Examples
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/clustering-in-python-a-machine-learning-handbook/" rel="noopener noreferrer" target="_blank">Clustering in Python
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/" rel="noopener noreferrer" target="_blank">Software Architecture
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/what-is-programming-tutorial-for-beginners/" rel="noopener noreferrer" target="_blank">Programming Fundamentals
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-to-code-book/" rel="noopener noreferrer" target="_blank">Coding Career Preparation
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/become-a-full-stack-developer-and-get-a-job/" rel="noopener noreferrer" target="_blank">Full-Stack Developer Guide
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.freecodecamp.org/news/learn-python-for-javascript-developers-handbook/" rel="noopener noreferrer" target="_blank">Python for JavaScript Devs
+                    </a>
+                </li>
+            </ul>
+            <div class="spacer" style="padding: 15px 0;"></div>
+            <div>
+                <h2 id="mobile-app" class="col-header">
+                    Mobile App
+                </h2>
+                <div class="min-h-[1px] px-[15px] md:w-2/3 md:ml-[16.6%]">
+                    <ul aria-labelledby="mobile-app" class="mobile-app-container">
+                        <li>
+                            <a href="https://apps.apple.com/us/app/freecodecamp/id6446908151?itsct=apps_box_link&itscg=30200" rel="noopener noreferrer" target="_blank">
+                                <img src="https://cdn.freecodecamp.org/platform/universal/apple-store-badge.svg" lang="en" alt="Download on the App Store">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=org.freecodecamp" rel="noopener noreferrer" target="_blank">
+                                <img src="https://cdn.freecodecamp.org/platform/universal/google-play-badge.svg" lang="en" alt="Get it on Google Play">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h2 class="col-header" data-test-label="our-nonprofit">Our Charity</h2>
+        <div class="our-nonprofit">
+             
+                <span data-test-label="powered-by">
+                    Publication powered by Hashnode
+                </span>
+            
+            <a href="https://www.freecodecamp.org/news/about/" rel="noopener noreferrer" target="_blank" data-test-label="about">
+                About
+            </a>
+            <a href="https://www.linkedin.com/school/free-code-camp/people/" rel="noopener noreferrer" target="_blank" data-test-label="alumni">
+                Alumni Network
+            </a>
+            <a href="https://github.com/freeCodeCamp/" rel="noopener noreferrer" target="_blank" data-test-label="open-source">
+                Open Source
+            </a>
+            <a href="https://www.freecodecamp.org/news/shop/" rel="noopener noreferrer" target="_blank" data-test-label="shop">
+                Shop
+            </a>
+            <a href="https://www.freecodecamp.org/news/support/" rel="noopener noreferrer" target="_blank" data-test-label="support">
+                Support
+            </a>
+            <a href="https://www.freecodecamp.org/news/sponsors/" rel="noopener noreferrer" target="_blank" data-test-label="sponsors">
+                Sponsors
+            </a>
+            <a href="https://www.freecodecamp.org/news/academic-honesty-policy/" rel="noopener noreferrer" target="_blank" data-test-label="honesty">
+                Academic Honesty
+            </a>
+            <a href="https://www.freecodecamp.org/news/code-of-conduct/" rel="noopener noreferrer" target="_blank" data-test-label="coc">
+                Code of Conduct
+            </a>
+            <a href="https://www.freecodecamp.org/news/privacy-policy/" rel="noopener noreferrer" target="_blank" data-test-label="privacy">
+                Privacy Policy
+            </a>
+            <a href="https://www.freecodecamp.org/news/terms-of-service/" rel="noopener noreferrer" target="_blank" data-test-label="tos">
+                Terms of Service
+            </a>
+            <a href="https://www.freecodecamp.org/news/copyright-policy/" rel="noopener noreferrer" target="_blank" data-test-label="copyright">
+                Copyright Policy
+            </a>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+        
+        
+        
+
+        
+        
+    </body>
+</html>

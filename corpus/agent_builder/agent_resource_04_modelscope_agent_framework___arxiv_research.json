@@ -1,0 +1,20 @@
+{
+  "title": "ModelScope-Agent Framework - arXiv Research",
+  "content": "# ModelScope-Agent: A Customizable and Open-Source Framework\n\n## Visão Geral\n\nModelScope-Agent é um framework open-source para criação de agentes AI personalizáveis com suporte a múltiplas APIs, memória persistente e treinamento customizado.\n\n## Componentes Principais\n\n### Sistema de Memória Hierárquica\n- Working Memory: Contexto atual\n- Episodic Memory: Histórico de interações\n- Semantic Memory: Conhecimento factual\n- Procedural Memory: Habilidades e procedimentos\n\n### Sistema de Ferramentas Extensível\n- Registro dinâmico de ferramentas\n- Execução segura\n- Validação de parâmetros\n\n## Treinamento e Personalização\n\n### Fine-tuning de Agentes\n- Exemplos de treinamento\n- Feedback loop\n- Avaliação contínua\n\n### Aprendizado por Reforço\n- Ambiente de treinamento\n- Replay buffer\n- Policy updates\n\n## Vantagens\n\n1. **Modularidade**: Componentes intercambiáveis\n2. **Extensibilidade**: Fácil adição de novas ferramentas\n3. **Personalização**: Treinamento customizado\n4. **Escalabilidade**: Deployment distribuído\n5. **Observabilidade**: Monitoramento completo\n6. **Open Source**: Código aberto e comunidade ativa",
+  "metadata": {
+    "source": "arXiv",
+    "type": "research_paper",
+    "category": "agent_building",
+    "difficulty": "advanced",
+    "format": "pdf",
+    "topics": [
+      "framework",
+      "customization",
+      "training",
+      "deployment"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder",
+    "paper_id": "2023.modelscope.agent"
+  }
+}

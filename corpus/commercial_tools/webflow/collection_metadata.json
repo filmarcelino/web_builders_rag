@@ -1,0 +1,12 @@
+{
+  "source_name": "webflow",
+  "total_items": 4,
+  "total_tokens": 2389,
+  "collected_at": "2025-09-03T01:07:54.478505",
+  "urls_processed": [
+    "https://developers.webflow.com/reference",
+    "https://university.webflow.com/",
+    "https://university.webflow.com/courses",
+    "https://developers.webflow.com/docs"
+  ]
+}

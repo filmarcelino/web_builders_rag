@@ -1,0 +1,20 @@
+{
+  "title": "AgentLite - Lightweight LLM Agent Library",
+  "content": "# AgentLite: Lightweight LLM Agent Library\n\n## Visão Geral\n\nBiblioteca leve para construir agentes LLM orientados a tarefas, com foco em experimentos na evolução de estratégias como ReAct e multi-agent em Python.\n\n## Características\n\n### Lightweight Design\n- Mínimas dependências\n- Rápida inicialização\n- Baixo overhead\n\n### Task-Oriented\n- Foco em tarefas específicas\n- Otimização de performance\n- Resultados mensuráveis\n\n### Experimental Framework\n- Teste de estratégias\n- Comparação de abordagens\n- Métricas detalhadas\n\n## Estratégias Suportadas\n\n### ReAct (Reasoning + Acting)\n1. Observe o problema\n2. Think (raciocine sobre próximos passos)\n3. Act (execute uma ação)\n4. Observe o resultado\n5. Repita até completar a tarefa\n\n### Multi-Agent Coordination\n- Divisão de tarefas\n- Comunicação entre agentes\n- Agregação de resultados\n\n### Chain-of-Thought\n- Raciocínio passo a passo\n- Transparência de processo\n- Debugging facilitado\n\n## Casos de Uso\n\n1. **Pesquisa Acadêmica**: Experimentos controlados\n2. **Prototipagem**: Validação rápida\n3. **Educação**: Aprendizado de conceitos\n4. **Benchmarking**: Comparação de métodos",
+  "metadata": {
+    "source": "arXiv",
+    "type": "research_paper",
+    "category": "agent_building",
+    "difficulty": "intermediate",
+    "format": "pdf",
+    "topics": [
+      "lightweight",
+      "react",
+      "multi-agent",
+      "experimentation"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder",
+    "paper_id": "2024.agentlite"
+  }
+}

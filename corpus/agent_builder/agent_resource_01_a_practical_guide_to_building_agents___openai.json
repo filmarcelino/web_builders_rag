@@ -1,0 +1,18 @@
+{
+  "title": "A Practical Guide to Building Agents - OpenAI",
+  "content": "# A Practical Guide to Building Agents - OpenAI\n\n## O que é um Agente AI?\n\nUm agente AI é um sistema que pode perceber seu ambiente, tomar decisões e executar ações para alcançar objetivos específicos. Diferente de modelos de linguagem tradicionais que apenas respondem a prompts, agentes podem:\n\n- **Planejar** sequências de ações\n- **Usar ferramentas** externas (APIs, bancos de dados, etc.)\n- **Manter memória** de interações anteriores\n- **Adaptar comportamento** baseado em feedback\n- **Executar tarefas complexas** de forma autônoma\n\n## Componentes Fundamentais de um Agente\n\n### 1. Modelo de Linguagem (LLM)\nO \"cérebro\" do agente, responsável por:\n- Compreender instruções\n- Gerar planos de ação\n- Tomar decisões\n- Comunicar resultados\n\n### 2. Sistema de Prompts\n- **System Prompt**: Define personalidade e comportamento\n- **Task Prompts**: Instruções específicas para tarefas\n- **Context Prompts**: Informações relevantes do ambiente\n\n### 3. Ferramentas (Tools)\n- APIs externas\n- Funções de código\n- Acesso a bancos de dados\n- Integração com sistemas\n\n### 4. Memória\n- **Memória de curto prazo**: Contexto da conversa atual\n- **Memória de longo prazo**: Conhecimento persistente\n- **Memória episódica**: Histórico de interações\n\n### 5. Sistema de Planejamento\n- Decomposição de tarefas complexas\n- Sequenciamento de ações\n- Tratamento de erros e re-planejamento",
+  "metadata": {
+    "source": "OpenAI",
+    "type": "guide",
+    "category": "agent_building",
+    "difficulty": "beginner",
+    "format": "pdf",
+    "topics": [
+      "agent fundamentals",
+      "architecture",
+      "getting started"
+    ],
+    "restricted": true,
+    "access_level": "agent_builder"
+  }
+}

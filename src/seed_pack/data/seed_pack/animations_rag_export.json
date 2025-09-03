@@ -1,0 +1,695 @@
+{
+  "export_info": {
+    "created_at": "2025-08-23T17:48:28.407167",
+    "source": "animation_seed_pack",
+    "total_documents": 20,
+    "document_types": {
+      "animation_library": 12,
+      "animation_category": 5,
+      "animation_guide": 3
+    }
+  },
+  "documents": [
+    {
+      "id": "animation_framer_motion",
+      "title": "Framer Motion - Animation Library",
+      "content": "# Framer Motion\n**Categoria:** react_js\n**Descrição:** Biblioteca de animações declarativas para React com suporte a gestures e layout animations\n**Licença:** MIT\n**URL:** https://www.framer.com/motion/\n**Instalação:** npm install framer-motion\n**Bundle Size:** ~50kb gzipped\n\n**Casos de uso:**\n- Animações de componentes React\n- Transitions entre páginas\n- Gestures e drag interactions\n- Layout animations automáticas\n- Scroll-triggered animations\n\n**Problemas comuns:**\n- Performance degradada em listas grandes\n- Nuances com Server-Side Rendering (SSR)\n- Bundle size considerável (~50kb)\n- Conflitos com outras bibliotecas de animação\n\n**Exemplos de código:**\n```javascript\n<motion.div animate={{x: 100}} />\n```\n```javascript\n<AnimatePresence><motion.div exit={{opacity: 0}} /></AnimatePresence>\n```\n```javascript\nconst controls = useAnimation(); controls.start({scale: 1.2})\n```\n\n**Performance:** Otimizar com layoutId para shared element transitions\n\n**Acessibilidade:** Respeita prefers-reduced-motion automaticamente",
+      "url": "https://www.framer.com/motion/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "react_js",
+        "license": "MIT",
+        "bundle_size": "~50kb gzipped",
+        "tags": [
+          "react",
+          "animation",
+          "gestures",
+          "layout",
+          "ui"
+        ],
+        "installation": "npm install framer-motion",
+        "last_updated": "2024-01-15",
+        "priority": "medium",
+        "use_cases": [
+          "Animações de componentes React",
+          "Transitions entre páginas",
+          "Gestures e drag interactions",
+          "Layout animations automáticas",
+          "Scroll-triggered animations"
+        ],
+        "common_issues": [
+          "Performance degradada em listas grandes",
+          "Nuances com Server-Side Rendering (SSR)",
+          "Bundle size considerável (~50kb)",
+          "Conflitos com outras bibliotecas de animação"
+        ],
+        "examples": [
+          "<motion.div animate={{x: 100}} />",
+          "<AnimatePresence><motion.div exit={{opacity: 0}} /></AnimatePresence>",
+          "const controls = useAnimation(); controls.start({scale: 1.2})"
+        ],
+        "performance_notes": "Otimizar com layoutId para shared element transitions",
+        "accessibility_notes": "Respeita prefers-reduced-motion automaticamente",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406863"
+      }
+    },
+    {
+      "id": "animation_gsap_(greensock)",
+      "title": "GSAP (GreenSock) - Animation Library",
+      "content": "# GSAP (GreenSock)\n**Categoria:** react_js\n**Descrição:** Biblioteca de animação de alta performance com timeline avançada\n**Licença:** Dual (GreenSock free, extras comerciais)\n**URL:** https://greensock.com/gsap/\n**Instalação:** npm install gsap\n**Bundle Size:** ~35kb core, ~100kb+ com plugins\n\n**Casos de uso:**\n- Animações complexas com timelines\n- Efeitos visuais avançados\n- Animações de alta performance\n- Morphing de SVG\n- Scroll-triggered animations (ScrollTrigger)\n\n**Problemas comuns:**\n- Bundle size grande para recursos completos\n- Curva de aprendizado íngreme\n- Licença comercial para alguns plugins\n- Conflitos com React strict mode\n\n**Exemplos de código:**\n```javascript\ngsap.to('.box', {duration: 2, x: 100, rotation: 360})\n```\n```javascript\nconst tl = gsap.timeline(); tl.to('.item1', {x: 100}).to('.item2', {y: 50})\n```\n```javascript\ngsap.registerPlugin(ScrollTrigger); gsap.to('.element', {scrollTrigger: '.trigger', x: 100})\n```\n\n**Performance:** Usa requestAnimationFrame e otimizações de GPU\n\n**Acessibilidade:** Configurar manualmente prefers-reduced-motion",
+      "url": "https://greensock.com/gsap/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "react_js",
+        "license": "Dual (GreenSock free, extras comerciais)",
+        "bundle_size": "~35kb core, ~100kb+ com plugins",
+        "tags": [
+          "animation",
+          "timeline",
+          "performance",
+          "svg",
+          "scroll"
+        ],
+        "installation": "npm install gsap",
+        "last_updated": "2024-01-10",
+        "priority": "high",
+        "use_cases": [
+          "Animações complexas com timelines",
+          "Efeitos visuais avançados",
+          "Animações de alta performance",
+          "Morphing de SVG",
+          "Scroll-triggered animations (ScrollTrigger)"
+        ],
+        "common_issues": [
+          "Bundle size grande para recursos completos",
+          "Curva de aprendizado íngreme",
+          "Licença comercial para alguns plugins",
+          "Conflitos com React strict mode"
+        ],
+        "examples": [
+          "gsap.to('.box', {duration: 2, x: 100, rotation: 360})",
+          "const tl = gsap.timeline(); tl.to('.item1', {x: 100}).to('.item2', {y: 50})",
+          "gsap.registerPlugin(ScrollTrigger); gsap.to('.element', {scrollTrigger: '.trigger', x: 100})"
+        ],
+        "performance_notes": "Usa requestAnimationFrame e otimizações de GPU",
+        "accessibility_notes": "Configurar manualmente prefers-reduced-motion",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406871"
+      }
+    },
+    {
+      "id": "animation_react_spring",
+      "title": "React Spring - Animation Library",
+      "content": "# React Spring\n**Categoria:** react_js\n**Descrição:** Animações baseadas em física/springs para interfaces naturais\n**Licença:** MIT\n**URL:** https://react-spring.dev/\n**Instalação:** npm install @react-spring/web\n**Bundle Size:** ~25kb gzipped\n\n**Casos de uso:**\n- Animações com física natural\n- Micro-interações suaves\n- Animações de lista (useTransition)\n- Parallax effects\n- Drag and drop animations\n\n**Problemas comuns:**\n- Tuning de parâmetros de spring pode ser difícil\n- Performance em animações simultâneas\n- Documentação pode ser confusa\n- Debugging de animações complexas\n\n**Exemplos de código:**\n```javascript\nconst springs = useSpring({from: {opacity: 0}, to: {opacity: 1}})\n```\n```javascript\nconst transitions = useTransition(items, {from: {opacity: 0}, enter: {opacity: 1}})\n```\n```javascript\nconst [springs, api] = useSpring(() => ({x: 0})); api.start({x: 100})\n```\n\n**Performance:** Otimizar com config presets para performance\n\n**Acessibilidade:** Suporte a prefers-reduced-motion via config",
+      "url": "https://react-spring.dev/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "react_js",
+        "license": "MIT",
+        "bundle_size": "~25kb gzipped",
+        "tags": [
+          "react",
+          "physics",
+          "spring",
+          "natural",
+          "ui"
+        ],
+        "installation": "npm install @react-spring/web",
+        "last_updated": "2024-01-08",
+        "priority": "medium",
+        "use_cases": [
+          "Animações com física natural",
+          "Micro-interações suaves",
+          "Animações de lista (useTransition)",
+          "Parallax effects",
+          "Drag and drop animations"
+        ],
+        "common_issues": [
+          "Tuning de parâmetros de spring pode ser difícil",
+          "Performance em animações simultâneas",
+          "Documentação pode ser confusa",
+          "Debugging de animações complexas"
+        ],
+        "examples": [
+          "const springs = useSpring({from: {opacity: 0}, to: {opacity: 1}})",
+          "const transitions = useTransition(items, {from: {opacity: 0}, enter: {opacity: 1}})",
+          "const [springs, api] = useSpring(() => ({x: 0})); api.start({x: 100})"
+        ],
+        "performance_notes": "Otimizar com config presets para performance",
+        "accessibility_notes": "Suporte a prefers-reduced-motion via config",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406875"
+      }
+    },
+    {
+      "id": "animation_motion_one",
+      "title": "Motion One - Animation Library",
+      "content": "# Motion One\n**Categoria:** react_js\n**Descrição:** API moderna sobre Web Animations, leve e fácil de usar\n**Licença:** MIT\n**URL:** https://motion.dev/\n**Instalação:** npm install motion\n**Bundle Size:** ~12kb gzipped\n\n**Casos de uso:**\n- Animações simples e rápidas\n- Keyframe animations\n- Scroll-driven animations\n- Timeline sequences\n- CSS-in-JS animations\n\n**Problemas comuns:**\n- Cobertura menor que GSAP/Framer Motion\n- Menos recursos avançados\n- Comunidade menor\n- Limitações em browsers antigos\n\n**Exemplos de código:**\n```javascript\nanimate('.box', {x: 100}, {duration: 1})\n```\n```javascript\ntimeline([['#item1', {x: 100}], ['#item2', {y: 50}]])\n```\n```javascript\nscroll(animate('.element', {opacity: [0, 1]}))\n```\n\n**Performance:** Usa Web Animations API nativa\n\n**Acessibilidade:** Respeita prefers-reduced-motion por padrão",
+      "url": "https://motion.dev/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "react_js",
+        "license": "MIT",
+        "bundle_size": "~12kb gzipped",
+        "tags": [
+          "animation",
+          "web-animations",
+          "lightweight",
+          "modern"
+        ],
+        "installation": "npm install motion",
+        "last_updated": "2024-01-12",
+        "priority": "high",
+        "use_cases": [
+          "Animações simples e rápidas",
+          "Keyframe animations",
+          "Scroll-driven animations",
+          "Timeline sequences",
+          "CSS-in-JS animations"
+        ],
+        "common_issues": [
+          "Cobertura menor que GSAP/Framer Motion",
+          "Menos recursos avançados",
+          "Comunidade menor",
+          "Limitações em browsers antigos"
+        ],
+        "examples": [
+          "animate('.box', {x: 100}, {duration: 1})",
+          "timeline([['#item1', {x: 100}], ['#item2', {y: 50}]])",
+          "scroll(animate('.element', {opacity: [0, 1]}))"
+        ],
+        "performance_notes": "Usa Web Animations API nativa",
+        "accessibility_notes": "Respeita prefers-reduced-motion por padrão",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406879"
+      }
+    },
+    {
+      "id": "animation_three.js",
+      "title": "Three.js - Animation Library",
+      "content": "# Three.js\n**Categoria:** 3d_webgl\n**Descrição:** Motor 3D/WebGL completo para web\n**Licença:** MIT\n**URL:** https://threejs.org/\n**Instalação:** npm install three\n**Bundle Size:** ~600kb+ dependendo dos módulos\n\n**Casos de uso:**\n- Cenas 3D complexas\n- Visualizações de dados 3D\n- Jogos web\n- Product showcases 3D\n- Realidade virtual (WebXR)\n\n**Problemas comuns:**\n- Curva de aprendizado muito alta\n- Performance limitada em mobile\n- Bundle size grande\n- Complexidade de setup inicial\n- Debugging de shaders\n\n**Exemplos de código:**\n```javascript\nconst scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera()\n```\n```javascript\nconst geometry = new THREE.BoxGeometry(); const material = new THREE.MeshBasicMaterial()\n```\n```javascript\nconst mesh = new THREE.Mesh(geometry, material); scene.add(mesh)\n```\n\n**Performance:** Otimizar geometrias, usar instancing, LOD\n\n**Acessibilidade:** Fornecer alternativas para usuários com limitações visuais",
+      "url": "https://threejs.org/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "3d_webgl",
+        "license": "MIT",
+        "bundle_size": "~600kb+ dependendo dos módulos",
+        "tags": [
+          "3d",
+          "webgl",
+          "graphics",
+          "visualization",
+          "vr"
+        ],
+        "installation": "npm install three",
+        "last_updated": "2024-01-20",
+        "priority": "medium",
+        "use_cases": [
+          "Cenas 3D complexas",
+          "Visualizações de dados 3D",
+          "Jogos web",
+          "Product showcases 3D",
+          "Realidade virtual (WebXR)"
+        ],
+        "common_issues": [
+          "Curva de aprendizado muito alta",
+          "Performance limitada em mobile",
+          "Bundle size grande",
+          "Complexidade de setup inicial",
+          "Debugging de shaders"
+        ],
+        "examples": [
+          "const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera()",
+          "const geometry = new THREE.BoxGeometry(); const material = new THREE.MeshBasicMaterial()",
+          "const mesh = new THREE.Mesh(geometry, material); scene.add(mesh)"
+        ],
+        "performance_notes": "Otimizar geometrias, usar instancing, LOD",
+        "accessibility_notes": "Fornecer alternativas para usuários com limitações visuais",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406883"
+      }
+    },
+    {
+      "id": "animation_react_three_fiber_(r3f)",
+      "title": "React Three Fiber (R3F) - Animation Library",
+      "content": "# React Three Fiber (R3F)\n**Categoria:** 3d_webgl\n**Descrição:** Binding React para Three.js com componetização de cenas\n**Licença:** MIT\n**URL:** https://docs.pmnd.rs/react-three-fiber\n**Instalação:** npm install @react-three/fiber three\n**Bundle Size:** ~50kb + Three.js\n\n**Casos de uso:**\n- Integração 3D em apps React\n- Componentes 3D reutilizáveis\n- Animações 3D declarativas\n- Interactive 3D UIs\n- 3D data visualization\n\n**Problemas comuns:**\n- Integração complexa com UI/estado externo\n- Performance em re-renders\n- Debugging de componentes 3D\n- Sincronização com React lifecycle\n\n**Exemplos de código:**\n```javascript\n<Canvas><mesh><boxGeometry /><meshStandardMaterial /></mesh></Canvas>\n```\n```javascript\nconst meshRef = useRef(); useFrame(() => meshRef.current.rotation.x += 0.01)\n```\n```javascript\n<animated.mesh {...springs}><sphereGeometry /></animated.mesh>\n```\n\n**Performance:** Usar useFrame com cuidado, otimizar re-renders\n\n**Acessibilidade:** Implementar controles de teclado para navegação 3D",
+      "url": "https://docs.pmnd.rs/react-three-fiber",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "3d_webgl",
+        "license": "MIT",
+        "bundle_size": "~50kb + Three.js",
+        "tags": [
+          "react",
+          "3d",
+          "three.js",
+          "declarative",
+          "components"
+        ],
+        "installation": "npm install @react-three/fiber three",
+        "last_updated": "2024-01-18",
+        "priority": "medium",
+        "use_cases": [
+          "Integração 3D em apps React",
+          "Componentes 3D reutilizáveis",
+          "Animações 3D declarativas",
+          "Interactive 3D UIs",
+          "3D data visualization"
+        ],
+        "common_issues": [
+          "Integração complexa com UI/estado externo",
+          "Performance em re-renders",
+          "Debugging de componentes 3D",
+          "Sincronização com React lifecycle"
+        ],
+        "examples": [
+          "<Canvas><mesh><boxGeometry /><meshStandardMaterial /></mesh></Canvas>",
+          "const meshRef = useRef(); useFrame(() => meshRef.current.rotation.x += 0.01)",
+          "<animated.mesh {...springs}><sphereGeometry /></animated.mesh>"
+        ],
+        "performance_notes": "Usar useFrame com cuidado, otimizar re-renders",
+        "accessibility_notes": "Implementar controles de teclado para navegação 3D",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406898"
+      }
+    },
+    {
+      "id": "animation_@react-three_drei",
+      "title": "@react-three/drei - Animation Library",
+      "content": "# @react-three/drei\n**Categoria:** 3d_webgl\n**Descrição:** Helpers e primitives para React Three Fiber\n**Licença:** MIT\n**URL:** https://github.com/pmndrs/drei\n**Instalação:** npm install @react-three/drei\n**Bundle Size:** ~30kb + componentes usados\n\n**Casos de uso:**\n- OrbitControls para navegação 3D\n- Loaders para modelos 3D\n- Text 3D components\n- Environment e lighting helpers\n- Post-processing effects\n\n**Problemas comuns:**\n- Dependência total do R3F\n- Alguns helpers podem impactar performance\n- Documentação esparsa para alguns componentes\n- Versionamento acoplado ao R3F\n\n**Exemplos de código:**\n```javascript\n<OrbitControls enablePan={false} />\n```\n```javascript\n<Text3D font='/fonts/helvetiker.json'>Hello World</Text3D>\n```\n```javascript\n<Environment preset='sunset' />\n```\n\n**Performance:** Importar apenas componentes necessários\n\n**Acessibilidade:** OrbitControls suporta navegação por teclado",
+      "url": "https://github.com/pmndrs/drei",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "3d_webgl",
+        "license": "MIT",
+        "bundle_size": "~30kb + componentes usados",
+        "tags": [
+          "react",
+          "three.js",
+          "helpers",
+          "controls",
+          "effects"
+        ],
+        "installation": "npm install @react-three/drei",
+        "last_updated": "2024-01-15",
+        "priority": "medium",
+        "use_cases": [
+          "OrbitControls para navegação 3D",
+          "Loaders para modelos 3D",
+          "Text 3D components",
+          "Environment e lighting helpers",
+          "Post-processing effects"
+        ],
+        "common_issues": [
+          "Dependência total do R3F",
+          "Alguns helpers podem impactar performance",
+          "Documentação esparsa para alguns componentes",
+          "Versionamento acoplado ao R3F"
+        ],
+        "examples": [
+          "<OrbitControls enablePan={false} />",
+          "<Text3D font='/fonts/helvetiker.json'>Hello World</Text3D>",
+          "<Environment preset='sunset' />"
+        ],
+        "performance_notes": "Importar apenas componentes necessários",
+        "accessibility_notes": "OrbitControls suporta navegação por teclado",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406904"
+      }
+    },
+    {
+      "id": "animation_lottie",
+      "title": "Lottie - Animation Library",
+      "content": "# Lottie\n**Categoria:** interactive_assets\n**Descrição:** Animações em JSON exportadas do After Effects\n**Licença:** Apache-2.0\n**URL:** https://airbnb.io/lottie/#/\n**Instalação:** npm install lottie-web lottie-react\n**Bundle Size:** ~150kb + animation files\n\n**Casos de uso:**\n- Animações complexas de designers\n- Loading animations\n- Micro-interactions elaboradas\n- Ilustrações animadas\n- Onboarding animations\n\n**Problemas comuns:**\n- Limitações de recursos complexos do AE\n- Performance com SVG muito complexo\n- Tamanho de arquivo pode ser grande\n- Debugging de animações quebradas\n- Compatibilidade entre versões AE/Lottie\n\n**Exemplos de código:**\n```javascript\n<Lottie animationData={animationData} loop={true} />\n```\n```javascript\nconst lottie = Lottie.loadAnimation({container, animationData})\n```\n```javascript\nlottie.setSpeed(0.5); lottie.goToAndStop(30, true)\n```\n\n**Performance:** Otimizar animações no AE, usar renderer canvas para performance\n\n**Acessibilidade:** Fornecer controles de play/pause, respeitar prefers-reduced-motion",
+      "url": "https://airbnb.io/lottie/#/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "interactive_assets",
+        "license": "Apache-2.0",
+        "bundle_size": "~150kb + animation files",
+        "tags": [
+          "animation",
+          "after-effects",
+          "json",
+          "svg",
+          "interactive"
+        ],
+        "installation": "npm install lottie-web lottie-react",
+        "last_updated": "2024-01-10",
+        "priority": "medium",
+        "use_cases": [
+          "Animações complexas de designers",
+          "Loading animations",
+          "Micro-interactions elaboradas",
+          "Ilustrações animadas",
+          "Onboarding animations"
+        ],
+        "common_issues": [
+          "Limitações de recursos complexos do AE",
+          "Performance com SVG muito complexo",
+          "Tamanho de arquivo pode ser grande",
+          "Debugging de animações quebradas",
+          "Compatibilidade entre versões AE/Lottie"
+        ],
+        "examples": [
+          "<Lottie animationData={animationData} loop={true} />",
+          "const lottie = Lottie.loadAnimation({container, animationData})",
+          "lottie.setSpeed(0.5); lottie.goToAndStop(30, true)"
+        ],
+        "performance_notes": "Otimizar animações no AE, usar renderer canvas para performance",
+        "accessibility_notes": "Fornecer controles de play/pause, respeitar prefers-reduced-motion",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406909"
+      }
+    },
+    {
+      "id": "animation_rive",
+      "title": "Rive - Animation Library",
+      "content": "# Rive\n**Categoria:** interactive_assets\n**Descrição:** Animações vetoriais interativas com state machines\n**Licença:** Free tier (Runtime open source, editor SaaS)\n**URL:** https://rive.app/\n**Instalação:** npm install @rive-app/react-canvas\n**Bundle Size:** ~200kb runtime + animation files\n\n**Casos de uso:**\n- Animações interativas complexas\n- Character animations\n- Game UI animations\n- Interactive illustrations\n- State-driven animations\n\n**Problemas comuns:**\n- Lock-in no editor proprietário\n- Curva de aprendizado do editor\n- Runtime ainda em evolução\n- Limitações na versão gratuita\n- Debugging de state machines\n\n**Exemplos de código:**\n```javascript\n<Rive src='animation.riv' stateMachines='State Machine 1' />\n```\n```javascript\nconst rive = useRive({src: 'animation.riv', autoplay: true})\n```\n```javascript\nrive.setTextRunValue('textRun', 'New Text')\n```\n\n**Performance:** Usar canvas renderer para melhor performance\n\n**Acessibilidade:** Implementar controles customizados para acessibilidade",
+      "url": "https://rive.app/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "interactive_assets",
+        "license": "Free tier (Runtime open source, editor SaaS)",
+        "bundle_size": "~200kb runtime + animation files",
+        "tags": [
+          "animation",
+          "interactive",
+          "state-machine",
+          "vector",
+          "game"
+        ],
+        "installation": "npm install @rive-app/react-canvas",
+        "last_updated": "2024-01-05",
+        "priority": "medium",
+        "use_cases": [
+          "Animações interativas complexas",
+          "Character animations",
+          "Game UI animations",
+          "Interactive illustrations",
+          "State-driven animations"
+        ],
+        "common_issues": [
+          "Lock-in no editor proprietário",
+          "Curva de aprendizado do editor",
+          "Runtime ainda em evolução",
+          "Limitações na versão gratuita",
+          "Debugging de state machines"
+        ],
+        "examples": [
+          "<Rive src='animation.riv' stateMachines='State Machine 1' />",
+          "const rive = useRive({src: 'animation.riv', autoplay: true})",
+          "rive.setTextRunValue('textRun', 'New Text')"
+        ],
+        "performance_notes": "Usar canvas renderer para melhor performance",
+        "accessibility_notes": "Implementar controles customizados para acessibilidade",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406913"
+      }
+    },
+    {
+      "id": "animation_anime.js",
+      "title": "Anime.js - Animation Library",
+      "content": "# Anime.js\n**Categoria:** micro_interactions\n**Descrição:** Biblioteca leve para animações em SVG, DOM e CSS\n**Licença:** MIT\n**URL:** https://animejs.com/\n**Instalação:** npm install animejs\n**Bundle Size:** ~17kb gzipped\n\n**Casos de uso:**\n- Micro-interações simples\n- Animações de SVG\n- Hover effects\n- Loading animations\n- Morphing de paths SVG\n\n**Problemas comuns:**\n- Desenvolvimento menos ativo\n- Recursos limitados comparado a GSAP\n- Performance em animações complexas\n- Documentação pode estar desatualizada\n\n**Exemplos de código:**\n```javascript\nanime({targets: '.element', translateX: 250, duration: 800})\n```\n```javascript\nanime({targets: 'path', d: [{value: 'M10 10L90 90'}, {value: 'M10 90L90 10'}]})\n```\n```javascript\nanime.timeline().add({targets: '.item1', opacity: 1}).add({targets: '.item2', scale: 1.2})\n```\n\n**Performance:** Otimizar seletores, evitar animações simultâneas excessivas\n\n**Acessibilidade:** Implementar prefers-reduced-motion manualmente",
+      "url": "https://animejs.com/",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "micro_interactions",
+        "license": "MIT",
+        "bundle_size": "~17kb gzipped",
+        "tags": [
+          "animation",
+          "svg",
+          "lightweight",
+          "micro-interactions",
+          "css"
+        ],
+        "installation": "npm install animejs",
+        "last_updated": "2023-12-15",
+        "priority": "high",
+        "use_cases": [
+          "Micro-interações simples",
+          "Animações de SVG",
+          "Hover effects",
+          "Loading animations",
+          "Morphing de paths SVG"
+        ],
+        "common_issues": [
+          "Desenvolvimento menos ativo",
+          "Recursos limitados comparado a GSAP",
+          "Performance em animações complexas",
+          "Documentação pode estar desatualizada"
+        ],
+        "examples": [
+          "anime({targets: '.element', translateX: 250, duration: 800})",
+          "anime({targets: 'path', d: [{value: 'M10 10L90 90'}, {value: 'M10 90L90 10'}]})",
+          "anime.timeline().add({targets: '.item1', opacity: 1}).add({targets: '.item2', scale: 1.2})"
+        ],
+        "performance_notes": "Otimizar seletores, evitar animações simultâneas excessivas",
+        "accessibility_notes": "Implementar prefers-reduced-motion manualmente",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406917"
+      }
+    },
+    {
+      "id": "animation_micro-interactions_guidelines",
+      "title": "Micro-interactions Guidelines - Animation Library",
+      "content": "# Micro-interactions Guidelines\n**Categoria:** micro_interactions\n**Descrição:** Diretrizes e patterns para micro-interações em UX\n**Licença:** Creative Commons\n**URL:** https://material.io/design/interaction/micro-interactions.html\n**Instalação:** Referência de design - não requer instalação\n**Bundle Size:** N/A\n\n**Casos de uso:**\n- Design de hover states\n- Button feedback animations\n- Form validation feedback\n- Loading states\n- Navigation transitions\n\n**Problemas comuns:**\n- Over-animation prejudica UX\n- Inconsistência entre componentes\n- Ignorar contexto de acessibilidade\n- Performance em dispositivos lentos\n\n**Exemplos de código:**\n```javascript\nButton: scale(0.95) on press, bounce back on release\n```\n```javascript\nInput focus: border-color transition + subtle glow\n```\n```javascript\nCard hover: translateY(-2px) + box-shadow increase\n```\n\n**Performance:** Usar transform e opacity para animações performáticas\n\n**Acessibilidade:** Sempre considerar usuários com sensibilidade a movimento",
+      "url": "https://material.io/design/interaction/micro-interactions.html",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "micro_interactions",
+        "license": "Creative Commons",
+        "bundle_size": "N/A",
+        "tags": [
+          "ux",
+          "design",
+          "patterns",
+          "guidelines",
+          "best-practices"
+        ],
+        "installation": "Referência de design - não requer instalação",
+        "last_updated": "2024-01-01",
+        "priority": "medium",
+        "use_cases": [
+          "Design de hover states",
+          "Button feedback animations",
+          "Form validation feedback",
+          "Loading states",
+          "Navigation transitions"
+        ],
+        "common_issues": [
+          "Over-animation prejudica UX",
+          "Inconsistência entre componentes",
+          "Ignorar contexto de acessibilidade",
+          "Performance em dispositivos lentos"
+        ],
+        "examples": [
+          "Button: scale(0.95) on press, bounce back on release",
+          "Input focus: border-color transition + subtle glow",
+          "Card hover: translateY(-2px) + box-shadow increase"
+        ],
+        "performance_notes": "Usar transform e opacity para animações performáticas",
+        "accessibility_notes": "Sempre considerar usuários com sensibilidade a movimento",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406921"
+      }
+    },
+    {
+      "id": "animation_accessibility_&_motion",
+      "title": "Accessibility & Motion - Animation Library",
+      "content": "# Accessibility & Motion\n**Categoria:** accessibility\n**Descrição:** Diretrizes de acessibilidade para animações e movimento\n**Licença:** W3C\n**URL:** https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html\n**Instalação:** CSS: @media (prefers-reduced-motion: reduce)\n**Bundle Size:** N/A\n\n**Casos de uso:**\n- Implementação de prefers-reduced-motion\n- Animações acessíveis\n- Feedback visual inclusivo\n- Controles de animação\n- Alternativas para usuários com limitações\n\n**Problemas comuns:**\n- Ignorar preferências de movimento reduzido\n- Animações que causam vertigem\n- Falta de controles de pausa\n- Animações essenciais sem alternativas\n\n**Exemplos de código:**\n```javascript\n@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; } }\n```\n```javascript\nconst prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches\n```\n```javascript\n<button onClick={toggleAnimations}>Pausar Animações</button>\n```\n\n**Performance:** Animações reduzidas melhoram performance em dispositivos lentos\n\n**Acessibilidade:** Essencial para usuários com vestibular disorders e epilepsia",
+      "url": "https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html",
+      "source_type": "animation_library",
+      "metadata": {
+        "category": "accessibility",
+        "license": "W3C",
+        "bundle_size": "N/A",
+        "tags": [
+          "accessibility",
+          "a11y",
+          "reduced-motion",
+          "inclusive",
+          "wcag"
+        ],
+        "installation": "CSS: @media (prefers-reduced-motion: reduce)",
+        "last_updated": "2024-01-01",
+        "priority": "medium",
+        "use_cases": [
+          "Implementação de prefers-reduced-motion",
+          "Animações acessíveis",
+          "Feedback visual inclusivo",
+          "Controles de animação",
+          "Alternativas para usuários com limitações"
+        ],
+        "common_issues": [
+          "Ignorar preferências de movimento reduzido",
+          "Animações que causam vertigem",
+          "Falta de controles de pausa",
+          "Animações essenciais sem alternativas"
+        ],
+        "examples": [
+          "@media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; } }",
+          "const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches",
+          "<button onClick={toggleAnimations}>Pausar Animações</button>"
+        ],
+        "performance_notes": "Animações reduzidas melhoram performance em dispositivos lentos",
+        "accessibility_notes": "Essencial para usuários com vestibular disorders e epilepsia",
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406925"
+      }
+    },
+    {
+      "id": "animation_category_react_js",
+      "title": "React/JS Animations - Animation Category Overview",
+      "content": "# React/JS Animations - Visão Geral\n\nEsta categoria contém 4 fontes de animação especializadas em react/js animations.\n\n## Fontes Disponíveis:\n\n### Framer Motion\n- **Bundle Size:** ~50kb gzipped\n- **Licença:** MIT\n- **Tags:** react, animation, gestures, layout, ui\n- **Descrição:** Biblioteca de animações declarativas para React com suporte a gestures e layout animations\n\n### GSAP (GreenSock)\n- **Bundle Size:** ~35kb core, ~100kb+ com plugins\n- **Licença:** Dual (GreenSock free, extras comerciais)\n- **Tags:** animation, timeline, performance, svg, scroll\n- **Descrição:** Biblioteca de animação de alta performance com timeline avançada\n\n### React Spring\n- **Bundle Size:** ~25kb gzipped\n- **Licença:** MIT\n- **Tags:** react, physics, spring, natural, ui\n- **Descrição:** Animações baseadas em física/springs para interfaces naturais\n\n### Motion One\n- **Bundle Size:** ~12kb gzipped\n- **Licença:** MIT\n- **Tags:** animation, web-animations, lightweight, modern\n- **Descrição:** API moderna sobre Web Animations, leve e fácil de usar\n\n\n## Recomendações para React:\n- Para projetos novos: Framer Motion (mais completo)\n- Para performance: Motion One (mais leve)\n- Para física natural: React Spring\n- Para animações complexas: GSAP",
+      "url": "#category-react_js",
+      "source_type": "animation_category",
+      "metadata": {
+        "category": "react_js",
+        "total_sources": 4,
+        "tags": [
+          "overview",
+          "category",
+          "animations",
+          "react_js"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406963"
+      }
+    },
+    {
+      "id": "animation_category_3d_webgl",
+      "title": "3D / WebGL - Animation Category Overview",
+      "content": "# 3D / WebGL - Visão Geral\n\nEsta categoria contém 3 fontes de animação especializadas em 3d / webgl.\n\n## Fontes Disponíveis:\n\n### Three.js\n- **Bundle Size:** ~600kb+ dependendo dos módulos\n- **Licença:** MIT\n- **Tags:** 3d, webgl, graphics, visualization, vr\n- **Descrição:** Motor 3D/WebGL completo para web\n\n### React Three Fiber (R3F)\n- **Bundle Size:** ~50kb + Three.js\n- **Licença:** MIT\n- **Tags:** react, 3d, three.js, declarative, components\n- **Descrição:** Binding React para Three.js com componetização de cenas\n\n### @react-three/drei\n- **Bundle Size:** ~30kb + componentes usados\n- **Licença:** MIT\n- **Tags:** react, three.js, helpers, controls, effects\n- **Descrição:** Helpers e primitives para React Three Fiber\n\n\n## Recomendações para 3D:\n- Para iniciantes em React: React Three Fiber\n- Para projetos complexos: Three.js puro\n- Para helpers úteis: @react-three/drei",
+      "url": "#category-3d_webgl",
+      "source_type": "animation_category",
+      "metadata": {
+        "category": "3d_webgl",
+        "total_sources": 3,
+        "tags": [
+          "overview",
+          "category",
+          "animations",
+          "3d_webgl"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406971"
+      }
+    },
+    {
+      "id": "animation_category_interactive_assets",
+      "title": "Assets Interativos - Animation Category Overview",
+      "content": "# Assets Interativos - Visão Geral\n\nEsta categoria contém 2 fontes de animação especializadas em assets interativos.\n\n## Fontes Disponíveis:\n\n### Lottie\n- **Bundle Size:** ~150kb + animation files\n- **Licença:** Apache-2.0\n- **Tags:** animation, after-effects, json, svg, interactive\n- **Descrição:** Animações em JSON exportadas do After Effects\n\n### Rive\n- **Bundle Size:** ~200kb runtime + animation files\n- **Licença:** Free tier (Runtime open source, editor SaaS)\n- **Tags:** animation, interactive, state-machine, vector, game\n- **Descrição:** Animações vetoriais interativas com state machines\n\n\n## Recomendações para Assets:\n- Para animações de designer: Lottie\n- Para interatividade complexa: Rive",
+      "url": "#category-interactive_assets",
+      "source_type": "animation_category",
+      "metadata": {
+        "category": "interactive_assets",
+        "total_sources": 2,
+        "tags": [
+          "overview",
+          "category",
+          "animations",
+          "interactive_assets"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406975"
+      }
+    },
+    {
+      "id": "animation_category_micro_interactions",
+      "title": "Micro-interações / SVG / CSS - Animation Category Overview",
+      "content": "# Micro-interações / SVG / CSS - Visão Geral\n\nEsta categoria contém 2 fontes de animação especializadas em micro-interações / svg / css.\n\n## Fontes Disponíveis:\n\n### Anime.js\n- **Bundle Size:** ~17kb gzipped\n- **Licença:** MIT\n- **Tags:** animation, svg, lightweight, micro-interactions, css\n- **Descrição:** Biblioteca leve para animações em SVG, DOM e CSS\n\n### Micro-interactions Guidelines\n- **Bundle Size:** N/A\n- **Licença:** Creative Commons\n- **Tags:** ux, design, patterns, guidelines, best-practices\n- **Descrição:** Diretrizes e patterns para micro-interações em UX\n",
+      "url": "#category-micro_interactions",
+      "source_type": "animation_category",
+      "metadata": {
+        "category": "micro_interactions",
+        "total_sources": 2,
+        "tags": [
+          "overview",
+          "category",
+          "animations",
+          "micro_interactions"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.406992"
+      }
+    },
+    {
+      "id": "animation_category_accessibility",
+      "title": "Accessibility & Motion - Animation Category Overview",
+      "content": "# Accessibility & Motion - Visão Geral\n\nEsta categoria contém 1 fontes de animação especializadas em accessibility & motion.\n\n## Fontes Disponíveis:\n\n### Accessibility & Motion\n- **Bundle Size:** N/A\n- **Licença:** W3C\n- **Tags:** accessibility, a11y, reduced-motion, inclusive, wcag\n- **Descrição:** Diretrizes de acessibilidade para animações e movimento\n",
+      "url": "#category-accessibility",
+      "source_type": "animation_category",
+      "metadata": {
+        "category": "accessibility",
+        "total_sources": 1,
+        "tags": [
+          "overview",
+          "category",
+          "animations",
+          "accessibility"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.407000"
+      }
+    },
+    {
+      "id": "animation_performance_guide",
+      "title": "Guia de Performance para Animações",
+      "content": "# Guia de Performance para Animações\n\nEste guia ajuda a escolher e otimizar bibliotecas de animação para melhor performance.\n\n## Bibliotecas Otimizadas para Performance:\n\n### Motion One\n- **Bundle Size:** ~12kb gzipped\n- **Performance Notes:** Usa Web Animations API nativa\n- **Recomendado para:** Animações simples e rápidas, Keyframe animations\n\n### Anime.js\n- **Bundle Size:** ~17kb gzipped\n- **Performance Notes:** Otimizar seletores, evitar animações simultâneas excessivas\n- **Recomendado para:** Micro-interações simples, Animações de SVG\n\n### GSAP (GreenSock)\n- **Bundle Size:** ~35kb core, ~100kb+ com plugins\n- **Performance Notes:** Usa requestAnimationFrame e otimizações de GPU\n- **Recomendado para:** Animações complexas com timelines, Efeitos visuais avançados\n\n\n## Dicas Gerais de Performance:\n- Prefira `transform` e `opacity` para animações CSS\n- Use `will-change` com moderação\n- Implemente `prefers-reduced-motion` sempre\n- Considere lazy loading para bibliotecas grandes\n- Teste performance em dispositivos móveis",
+      "url": "#performance-guide",
+      "source_type": "animation_guide",
+      "metadata": {
+        "guide_type": "performance",
+        "tags": [
+          "performance",
+          "optimization",
+          "guide",
+          "animations"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.407043"
+      }
+    },
+    {
+      "id": "animation_accessibility_guide",
+      "title": "Guia de Acessibilidade para Animações",
+      "content": "# Guia de Acessibilidade para Animações\n\nAnimações devem ser inclusivas e respeitar as necessidades de todos os usuários.\n\n## Bibliotecas com Suporte a Acessibilidade:\n\n### Framer Motion\n- **Suporte:** Respeita prefers-reduced-motion automaticamente\n- **Implementação:** npm install framer-motion\n\n### GSAP (GreenSock)\n- **Suporte:** Configurar manualmente prefers-reduced-motion\n- **Implementação:** npm install gsap\n\n### React Spring\n- **Suporte:** Suporte a prefers-reduced-motion via config\n- **Implementação:** npm install @react-spring/web\n\n### Motion One\n- **Suporte:** Respeita prefers-reduced-motion por padrão\n- **Implementação:** npm install motion\n\n### Three.js\n- **Suporte:** Fornecer alternativas para usuários com limitações visuais\n- **Implementação:** npm install three\n\n### React Three Fiber (R3F)\n- **Suporte:** Implementar controles de teclado para navegação 3D\n- **Implementação:** npm install @react-three/fiber three\n\n### @react-three/drei\n- **Suporte:** OrbitControls suporta navegação por teclado\n- **Implementação:** npm install @react-three/drei\n\n### Lottie\n- **Suporte:** Fornecer controles de play/pause, respeitar prefers-reduced-motion\n- **Implementação:** npm install lottie-web lottie-react\n\n### Rive\n- **Suporte:** Implementar controles customizados para acessibilidade\n- **Implementação:** npm install @rive-app/react-canvas\n\n### Anime.js\n- **Suporte:** Implementar prefers-reduced-motion manualmente\n- **Implementação:** npm install animejs\n\n### Micro-interactions Guidelines\n- **Suporte:** Sempre considerar usuários com sensibilidade a movimento\n- **Implementação:** Referência de design - não requer instalação\n\n### Accessibility & Motion\n- **Suporte:** Essencial para usuários com vestibular disorders e epilepsia\n- **Implementação:** CSS: @media (prefers-reduced-motion: reduce)\n\n\n## Diretrizes Essenciais:\n\n### 1. Respeitar prefers-reduced-motion\n```css\n@media (prefers-reduced-motion: reduce) {\n  * {\n    animation-duration: 0.01ms !important;\n    transition-duration: 0.01ms !important;\n  }\n}\n```\n\n### 2. Fornecer controles de pausa\n- Animações que duram mais de 5 segundos devem ter controles\n- Permitir pausar/retomar animações\n\n### 3. Evitar animações que causam convulsões\n- Não usar flashes rápidos (mais de 3 por segundo)\n- Evitar padrões estroboscópicos\n\n### 4. Manter funcionalidade sem animações\n- Interface deve funcionar completamente sem animações\n- Animações devem ser progressively enhanced",
+      "url": "#accessibility-guide",
+      "source_type": "animation_guide",
+      "metadata": {
+        "guide_type": "accessibility",
+        "tags": [
+          "accessibility",
+          "a11y",
+          "inclusive",
+          "guide",
+          "animations"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.407064"
+      }
+    },
+    {
+      "id": "animation_library_selection_guide",
+      "title": "Como Escolher a Biblioteca de Animação Certa",
+      "content": "# Como Escolher a Biblioteca de Animação Certa\n\nEste guia ajuda a decidir qual biblioteca usar baseado no seu projeto.\n\n## Árvore de Decisão:\n\n### 1. Você está usando React?\n\n**SIM** → Continue para React-specific\n**NÃO** → Considere GSAP, Anime.js ou Motion One\n\n### 2. React: Qual o foco do projeto?\n\n**Performance crítica** → Motion One (~12kb)\n**Animações complexas** → GSAP\n**Física natural** → React Spring\n**Facilidade de uso** → Framer Motion\n\n### 3. Você precisa de 3D?\n\n**SIM, com React** → React Three Fiber + Drei\n**SIM, vanilla JS** → Three.js\n**NÃO** → Continue com 2D\n\n### 4. Você tem animações de designer?\n\n**After Effects** → Lottie\n**Interativas complexas** → Rive\n**Simples** → CSS + biblioteca 2D\n\n## Comparação Rápida:\n\n| Biblioteca | Bundle | Curva | Performance | React |\n| --- | --- | --- | --- | --- |\n| Motion One | 12kb | Baixa | Alta | ❌ |\n| Anime.js | 17kb | Baixa | Média | ❌ |\n| React Spring | 25kb | Média | Alta | ✅ |\n| GSAP | 35kb+ | Alta | Muito Alta | ⚠️ |\n| Framer Motion | 50kb | Baixa | Alta | ✅ |\n| Lottie | 150kb+ | Baixa | Média | ✅ |\n\n## Recomendações por Cenário:\n\n**Landing Page** → Motion One ou Anime.js\n**App React** → Framer Motion ou React Spring\n**Dashboard** → GSAP para gráficos complexos\n**Game/Interactive** → GSAP + Three.js\n**Mobile-first** → Motion One ou React Spring",
+      "url": "#library-selection-guide",
+      "source_type": "animation_guide",
+      "metadata": {
+        "guide_type": "selection",
+        "tags": [
+          "selection",
+          "comparison",
+          "guide",
+          "animations",
+          "decision"
+        ],
+        "seed_pack": "animations",
+        "indexed_at": "2025-08-23T17:48:28.407070"
+      }
+    }
+  ]
+}
