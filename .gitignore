@@ -49,6 +49,26 @@ Thumbs.db
 *.log
 logs/
 
+# Arquivos de dados grandes
+rag_data/
+corpus/
+corpus-complete.zip
+*.bin
+*.faiss
+*.db
+*.db-shm
+*.db-wal
+
+# Arquivos de backup
+*.backup*
+*.json.backup*
+
+# Data files
+data/
+*.csv
+*.xlsx
+*.parquet
+
 # Data
 data/
 vector_store/
